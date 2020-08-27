@@ -21,7 +21,7 @@ body
 .footertext 
 {
 	font-family: Arial;
-	text-align: bottom;
+	text-align: bottom; /* <-- text allign is for left, right and justify, not valignment */
 }
 
 .logoDiv
