@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta>
+        <link rel="stylesheet" type="text/css" href="stylesheet1.css">
+        <title> User Type Selection Page </title>
+    </head>
+    
+    <body class="loginStyle">
+        <span class="logoDiv">
+            <a id="homePage" href="#main">
+                <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+            </a>
+        </span>
+
+        <!--Planning different changes, such as moving block area to centre of the screen instead-->
+        <h1 class="title"> Selection Placeholder </h1>
+
+        <div class="signUp">
+            <form>
+                <h1 class="h1"> Selecting appropriately, </h1>
+                <h2 class="h2"> Are you a...? </h2>
+                <button type="button" class="button doctorBtn" onclick="location.href='SignupDoctorPage.html'"> Doctor </button>
+                <button type="button" class="button patientBtn" onclick="location.href='SignupPatientPage.html'"> Patient </button>
+                <!--Not sure how to make my buttons not do that "enlarge" effect, but if you want to keep it I don't mind-->
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById("homePage").onclick = function () {
+                location.href = "LandingPage.html"
+            };
+        </script>
+
+    </body>
+
+</html>

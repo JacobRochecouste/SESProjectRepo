@@ -2,17 +2,6 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-    <meta>
-    <link rel="stylesheet" type="text/css" href="stylesheet1.css">
-    <title> TeleHealth Login User Login </title>
-</head>
-
-<body>
-    <!-- this is a test sentence-->
-    <h1 class="Login"> Please Login Here </h1>
-</body>
-
     <head>
         <meta>
         <link rel="stylesheet" type="text/css" href="stylesheet1.css">
@@ -22,7 +11,6 @@
     <body class="loginStyle">
         <span class="logoDiv">
             <a id="homePage" href="#main">
-
                 <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
             </a>
         </span>
@@ -31,7 +19,8 @@
 
         <!--<h2>Login Page</h2><br>-->
         <div class="login">
-            <form id="login" method="get" action="login.php">
+            <form id="login" method="get" action="LoginHandler.php">
+                <!-- might have to change this if it doesn't work-->
                 <label>
                     <b>
                         User Name
@@ -51,7 +40,7 @@
                 <input type="checkbox" id="cbox">
                 <span>Remember Me</span>
                 <br><br>
-                Forgot <a href="#">Password</a>
+                Forgotten your Password? Click <a href="ResetPasswordPage.html">here</a>!
             </form>
         </div>
 
@@ -62,10 +51,6 @@
                     location.href = "LandingPage.html"
                 };
             </script>
-
-        <!-- this is a test sentence-->
-        <h1 class="Login"> Please Login Here </h1>
-
 
     </body>
 
