@@ -5,23 +5,17 @@
 	font-size: 70px;
 	text-align: center;
 	padding: 20px;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #323232;
-	margin: 30px 30px 10px 0px;
-	padding-bottom: 60px;
+	margin: 0px 0px 0px -10px;
+	padding-bottom: 70px;
+	background-color: #DCDCDC;
+	color: white;
 }
 
-body 
+body, html
 {
+	height: 3000px;
 	font-family: Arial;
-	background-color: grey;
-}
-
-.footertext 
-{
-	font-family: Arial;
-	text-align: bottom; /* <-- text allign is for left, right and justify, not valignment */
+	margin: 0px 0px 0px 0px;
 }
 
 .logoDiv
@@ -29,7 +23,6 @@ body
 	width: 100px; 
 	float:left; 
 	height:100px; 
-	background:gray; 
 	margin:10px
 }
 
@@ -41,6 +34,7 @@ body
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	font: Arial;
 }
 
 .navBar a
@@ -63,4 +57,30 @@ body
 {
 	background-color: #FF6341;
 	color: white;
+}
+
+.parallax
+{
+	background-image: url('Landing Background.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	
+}
+
+.logtable 
+{
+    width: 800px;
+    float: left;
+}
+
+.divMessage 
+{
+    width: 350px;
+    position:relative;
+    right:-5px;
+    top: -20px;
 }
