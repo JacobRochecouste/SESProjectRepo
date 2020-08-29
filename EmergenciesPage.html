@@ -10,11 +10,11 @@
 	</head>
 
 	<body>
-	<span class="logoDiv">
-		<a id="homePage" href="#home">
-		<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
-		</a>
-	</span>
+		<span class="logoDiv">
+			<a id="homePage" href="#home">
+				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+			</a>
+		</span>
 	<h1 class="title">Welcome to TeleHealth</h1>
 	
 		<!-- Navigation Menu -->
@@ -36,6 +36,22 @@
 	<br>
 	<br>
 	<br>
+	<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
+		<u><b>Need help?</b></u>
+		<br><b>In case of emergency, do not hesitate to contact us.</b>
+		<br><b>Telephone</b> - (711) 265-9193
+		<br><b>Online consultation</b> - Find a doctor to communicate with anytime, anywhere.
+		<br><b>Help Centre</b> - Need a question answered? Just ask our help line <a id="hereLink" href="#contactHereLink">Here!</a>
+		<br><b>Email</b> - telehealth@hotmail.au
+	</p>	
+	
+	<!--is something supposed to be here? the <div> tag is missing for the </div> -->
+	<!--</div>-->
+		
+	<br>
+	<br>
+	<br>
+	<br>
 	<br>
 	
 
@@ -44,6 +60,10 @@
 	// Button Functions -->
 
 	document.getElementById("homeLink").onclick = function () {
+		location.href = "LandingPage.html"
+	};
+
+	document.getElementById("logoHomeLink").onclick = function () {
 		location.href = "LandingPage.html"
 	};
 

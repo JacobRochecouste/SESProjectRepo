@@ -8,7 +8,7 @@ CREATE TABLE Users (
     PhoneNo varchar(15) NOT NULL,
     Address varchar(100) NOT NULL,
     Pass varchar(100) NOT NULL,
-    PersonType enum('patient', 'doctor'),
+    UserType enum('patient', 'doctor'),
     DoctorID INT UNSIGNED
 );
 
