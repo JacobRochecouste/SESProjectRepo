@@ -63,4 +63,85 @@ body
 {
 	background-color: #FF6341;
 	color: white;
+<<<<<<< Updated upstream
+=======
+}
+
+.parallax
+{
+	background-image: url('Landing Background.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	
+}
+
+.logtable 
+{
+    width: 800px;
+    float: left;
+}
+
+.divMessage 
+{
+    width: 350px;
+    position:relative;
+    right:-5px;
+    top: -20px;
+}
+
+.login {
+	width: 382px;
+	overflow: hidden;
+	margin: auto;
+	margin: 20 0 0 450px;
+	padding: 80px;
+	background: #90EE90;
+	border-radius: 15px;
+}
+
+h2 {
+	text-align: center;
+	color: #277582;
+	padding: 20px;
+}
+
+label {
+	color: #000000;
+	font-size: 22px;
+}
+
+#Uname {
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#Pass {
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#log {
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 17px;
+	padding-left: 7px;
+	color: darkblue;
+	font-size: 16px;
+}
+
+span {
+	color: black;
+	font-size: 17px;
+>>>>>>> Stashed changes
 }
