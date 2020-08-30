@@ -165,7 +165,7 @@ span {
 }
 
 /*default button style declaration*/
-.button:hover {
+.button {
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -179,16 +179,40 @@ span {
 	transition-duration: 0.4s;
 }
 
-.doctorBtn {
+/*I do not know how to move the buttons to the center of the screen*/
+.doctorBtn:hover {
 	background-color: #2CC2FA;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-	float: left;
-	width: 49%;
+	border-radius: 10px;
 }
 
-.patientBtn {
+.patientBtn:hover {
 	background-color: #CE404D;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-	float: right;
-	width: 49%;
+	border-radius: 10px;
+}
+
+/*this is the form style for the ResetPassword page*/
+.resetPassword {
+	width: 325px;
+	height: 225px;
+	overflow: hidden;
+	margin: auto;
+	margin: 20 0 0 450px;
+	padding: 30px;
+	background: #90EE90;
+	border-radius: 20px;
+}
+
+.passwordLbl {
+	color: #000000;
+	font-size: 30px;
+	padding: 0px;
+}
+
+.continueBtn:hover {
+	background-color: #E7E7E7;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	float: left;
+	color: black;
 }
