@@ -13,10 +13,10 @@ $lastname= $_POST['LastName'];
 $email= $_POST['Email'];
 $phoneno= $_POST['PhoneNo'];
 $address= $_POST['Address'];
-$pass= $_POST['Pass'];
+$pass= $_POST['Password'];
 $type = 'patient';
 
-$query = "INSERT INTO Users (UserID, FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES (NULL, '$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', NULL)";
+$query = "INSERT INTO Users (UserID, FirstName, LastName, Email, PhoneNo, Address, Password, UserType, DoctorID) VALUES (NULL, '$firstname', '$lastname', '$email', '$phoneno', '$address', '$password', '$type', NULL)";
 if($dbc->query($query) === TRUE)
 {
     echo "Sign Up Successful";
