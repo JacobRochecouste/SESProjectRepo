@@ -5,7 +5,7 @@ $dbuser='site';
 $dbpass='securepassword';
 $dbname='TeleHealth';
 
-$dbc = new mqsqli($dbhost, $dbuser, $dbpass, $dbname)
+$dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error);
 
 $firstname = $_POST['FirstName'];

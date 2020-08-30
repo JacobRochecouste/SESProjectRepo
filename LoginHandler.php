@@ -5,13 +5,13 @@ $dbuser='site';
 $dbpass='securepassword';
 $dbname='TeleHealth';
 
-$dbc = new mqsqli($dbhost, $dbuser, $dbpass, $dbname)
+$dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error);
 
-$username = $_POST['Email'];
-$password = $_POST['Pass'];
+$username = $_GET['Uname'];
+$password = $_GET['Pass'];
 
-$query = "SELECT * FROM 'Users' WHERE 'Email'='$username' AND 'Pass'='$password'";
+$query = "SELECT * FROM Users WHERE Email='$username' AND Pass='$password'";
 $result = mysqli_query($dbc, $query);
 
 if(mysqli_num_rows($result) == 1)
