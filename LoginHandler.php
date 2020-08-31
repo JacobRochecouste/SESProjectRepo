@@ -11,7 +11,7 @@ or die('Could not connect %s\n'. $dbc->connect_error);
 $username = $_GET['Uname'];
 $password = $_GET['Pass'];
 
-$query = "SELECT * FROM Users WHERE Email='$username' AND Pass='$password'";
+$query = "SELECT * FROM Users WHERE Email='$username' AND Pass=MD5('$password')";
 $result = mysqli_query($dbc, $query);
 
 if(mysqli_num_rows($result) == 1)
