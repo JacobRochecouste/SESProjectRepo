@@ -15,12 +15,14 @@ $phoneno= $_GET['PhoneNo'];
 $address= $_GET['Address'];
 $pass= MD5($_GET['Password']);
 $type = 'doctor';
-$doctorid = $_GET['DoctorID']
+$doctorid = $_GET['DoctorID'];
 
 $query = "INSERT INTO Users (UserID, FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES (NULL, '$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', '$doctorid')";
 if($dbc->query($query) === TRUE)
 {
     echo "Sign Up Successful";
+    include "LandingPage.html";
+
 } 
 else 
 {
