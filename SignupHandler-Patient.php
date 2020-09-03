@@ -1,9 +1,9 @@
 <?php
 
-$dbhost='localhost';
-$dbuser='site';
+$dbhost='db4free.net';
+$dbuser='siteuser';
 $dbpass='securepassword';
-$dbname='TeleHealth';
+$dbname='telehealth';
 
 $dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error);
