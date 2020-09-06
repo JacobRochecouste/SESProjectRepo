@@ -20,7 +20,7 @@ $doctorid = $_GET['DoctorID'];
 $query = "INSERT INTO Users (UserID, FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES (NULL, '$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', '$doctorid')";
 if($dbc->query($query) === TRUE)
 {
-    echo "Sign Up Successful";
+    echo "<script>alert('Registration Successful');</script>";
     include "LandingPage.html";
 
 } 
