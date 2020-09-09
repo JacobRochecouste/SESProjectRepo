@@ -1,11 +1,102 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
 
-</body>
+    <head>
+        <meta>
+        <link rel="stylesheet" type="text/css" href="stylesheet1.css">
+        <title> Create Subscription </title>
+    </head>
+
+    <body>
+        
+        <!--Logo--> 
+        <span class="logoDiv">
+            <a id="homePage" href="#main">
+                <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+            </a>
+        </span>
+
+        <!--Title Bar-->
+        <h1 class="title"> Create Patient Subscription</h1>
+
+        <!-- Navigation Menu -->
+        <div class="navBar">
+            <a id="homeLink" class="active" href="#home">Home</a>
+            <a id="aboutLink" href="#About">About</a>
+            <a id="servicesLink" href="#Services">Services</a>
+            <a id="emergenciesLink" href="#emergencies">Emergencies</a>
+            <a id="contactLink" href="#contact">Contact Us</a>
+            <a id="logout" href="#logout" style="float:right">Log Out</a>
+        </div>
+
+        <!--Content of Page-->
+        <div class="createSub">
+            <form class="subForm" onsubmit="" method="get" action="createSubHandler.php">
+                <label id="subFormLbl"><b> Post-Consultation Subscription Form </b> </label>
+                <hr>
+                <p>
+                    This form is to be created and fully filled out upon completion of a medical consultation with a patient.
+                    <br>
+                    The form should contain various descriptions and details the patient should be informed about.
+                </p>
+                <!--my label for subFormLbl at line 36, idk how to center it help me please w-->
+                <!--more stuff to come for flavour text-->
+
+                <label for="patientsDetails" id="patientsDetails"><b> Patients Details </b></label>
+                <hr>
+                <label id="pdLabels"><b>First Name</b></label> 
+                <br>
+                    <input type="text" name="patFirstName" id="patFirstName" placeholder="Enter the Patient's First Name" required>
+                <br><br>
+                <label id="pdLabels"><b>Last Name</b></label> 
+                <br>
+                    <input type="text" name="patLastName" id="patLastName" placeholder="Enter the Patient's Last Name" required>
+                <br><br>
+                <label id="pdLabels"><b>Email</b></label> 
+                <br>
+                    <input type="email" name="patEmail" id="patEmail" placeholder="Enter the Patient's e-mail" required>
+                <br><br>
+                <label id="pdLabels"><b> Patient ID </b></label> 
+                <br>
+                    <input type="text" name="patID" id="patID" placeholder="Enter the Patient's ID" required>
+
+            </form>
+        </div>
+
+        <!-- Button Functions -->
+        <script type="text/javascript">
+
+	    document.getElementById("homeLink").onclick = function () {
+		    location.href = "LandingPage.html"
+	    };
+
+	    document.getElementById("aboutLink").onclick = function () {
+		    location.href = "AboutPage.html"
+	    };
+
+	    document.getElementById("servicesLink").onclick = function () {
+		    location.href = "ServicesPage.html"
+	    };
+
+	    document.getElementById("emergenciesLink").onclick = function () {
+		    location.href = "EmergenciesPage.html"
+	    };
+
+	    document.getElementById("contactLink").onclick = function () {
+		    location.href = "ContactPage.html"
+	    };
+
+	    document.getElementById("logout").onclick = function () {
+		    location.href = "LandingPage.html"
+	    };
+
+        document.getElementById("homePage").onclick = function () {
+            location.href = "LandingPage.html"
+        };
+
+        </script>
+
+    </body>
+
 </html>
