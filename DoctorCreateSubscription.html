@@ -41,25 +41,89 @@
                     The form should contain various descriptions and details the patient should be informed about.
                 </p>
                 <!--my label for subFormLbl at line 36, idk how to center it help me please w-->
+                <!--basically I want the text Post-Consultation Subscription Form to be centered that^-->
                 <!--more stuff to come for flavour text-->
 
+                <!--Patient Details Section-->
                 <label for="patientsDetails" id="patientsDetails"><b> Patients Details </b></label>
                 <hr>
-                <label id="pdLabels"><b>First Name</b></label> 
+                <label id="pdLabels" for="patFirstName"><b>First Name</b></label> 
                 <br>
                     <input type="text" name="patFirstName" id="patFirstName" placeholder="Enter the Patient's First Name" required>
                 <br><br>
-                <label id="pdLabels"><b>Last Name</b></label> 
+                <label id="pdLabels" for="patLastName"><b>Last Name</b></label> 
                 <br>
                     <input type="text" name="patLastName" id="patLastName" placeholder="Enter the Patient's Last Name" required>
                 <br><br>
-                <label id="pdLabels"><b>Email</b></label> 
+                <label id="pdLabels" for="patEmail"><b>Email</b></label> 
                 <br>
                     <input type="email" name="patEmail" id="patEmail" placeholder="Enter the Patient's e-mail" required>
                 <br><br>
-                <label id="pdLabels"><b> Patient ID </b></label> 
+                <label id="pdLabels" for="patID"><b> Patient ID </b></label> 
                 <br>
                     <input type="text" name="patID" id="patID" placeholder="Enter the Patient's ID" required>
+                <br><br><br>
+
+                <!--Doctor's Details Section-->
+                <label for="doctorsDetails" id="doctorsDetails"><b> Doctor's Details </b></label>
+				<hr>		
+				<label id="pdLabels" for="docFirstName"><b> Doctor's First Name </b></label>
+                <br>
+					<input type="text" id="docFirstName" name="docFirstName" placeholder="Enter your First Name" required>
+                    <br><br>	
+				<label id="pdLabels" for="docLastName"><b>Last Name</b></label>
+                <br>
+                    <input type="text" id="docLastName" name="docLastName" placeholder="Enter your Last Name" required>
+                    <br><br>	
+				<label id="pdLabels" for="docEmail"><b>Email</b></label>
+                <br>
+                    <input type="email" id="docEmail" name="docEmail" placeholder="Enter your e-mail" required>
+                    <br><br>		
+				<label id="pdLabels" for="docPhoneNum"><b>Phone Number</b></label>
+                <br>
+                    <input type="tel" id="docPhoneNum" name="docPhoneNum" placeholder="Enter your Phone Number" required>
+                    <br><br>
+                <label id="pdLabels"><b> Doctor's ID </b></label> 
+                <br>
+                    <input type="text" name="patID" id="patID" placeholder="Enter your Doctors ID" required>
+
+                <br><br><br>
+
+                <!--Consultation Details Section-->
+                <label for="consultationDetails" id="consultationDetails"><b> Consultation Details </b></label>
+                <hr>
+                <label id="consultationPText"><b> What was the consultation type for the session? <br> Please select accordingly from the options below:</b></label>
+                <div>
+                    <label class="radio-inline">
+                        <input type="radio" name="radioOption" required> General Consultation </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="radioOption" required> Follow-Up Consultation </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="radioOption" required> Emergency Consultation </label>
+                </div>
+                <br>
+                <label id="pdLabels"><b> Session ID </b></label> 
+                <br>
+                    <input type="text" name="sessionID" id="sessionID" placeholder="Enter the Session ID" required>
+                <br><br>
+
+                <label id="consultationText" for="cdSummary"><b> Consultation Discussion Summary </b></label>
+					<textarea id="cdSummary" name="cdSummary" placeholder="Write the consultation summary here" style="height:150px" required></textarea>
+						
+				<label id="consultationText" for="doctorsNotes"><b> Doctor's Notes </b></label>
+					<textarea id="doctorsNotes" name="doctorsNotes" placeholder="Write your notes here in layman terms" style="height:150px" required></textarea>
+						
+				<label id="consultationText" for="treatmentMethod"><b> Recommended Treatment Method(s) </b></label>
+					<textarea id="treatmentMethod" name="treatmentMethod" placeholder="Write your recommended treament methods here" style="height:150px" ></textarea>
+                
+                <table class="tableCreateSub">
+                    <tr>
+                        <td align="left"> <button class="button cancelBtn" type="reset" onclick="location.href='DoctorHome.html'"> Cancel </button> </td>
+                        <td align="right"> <button class="button submitBtn" type="submit"> Submit </button> </td>
+                    </tr>
+                </table>
+                
+                
 
             </form>
         </div>
