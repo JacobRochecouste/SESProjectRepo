@@ -35,14 +35,19 @@
             <form class="subForm" onsubmit="" method="get" action="createSubHandler.php">
                 <label id="subFormLbl"><b> Post-Consultation Subscription Form </b> </label>
                 <hr>
-                <p>
+                <label id="pcsfLabelTxt">
                     This form is to be created and fully filled out upon completion of a medical consultation with a patient.
                     <br>
                     The form should contain various descriptions and details the patient should be informed about.
-                </p>
+                    <br>
+                    Every field within this subscription form must be filled out. 
+                    <br>
+                    If there is nothing to note of in the consultation details section please write N/A.
+                    <br>
+                </label>
+                <br>
                 <!--my label for subFormLbl at line 36, idk how to center it help me please w-->
                 <!--basically I want the text Post-Consultation Subscription Form to be centered that^-->
-                <!--more stuff to come for flavour text-->
 
                 <!--Patient Details Section-->
                 <label for="patientsDetails" id="patientsDetails"><b> Patients Details </b></label>
@@ -114,7 +119,7 @@
 					<textarea id="doctorsNotes" name="doctorsNotes" placeholder="Write your notes here in layman terms" style="height:150px" required></textarea>
 						
 				<label id="consultationText" for="treatmentMethod"><b> Recommended Treatment Method(s) </b></label>
-					<textarea id="treatmentMethod" name="treatmentMethod" placeholder="Write your recommended treament methods here" style="height:150px" ></textarea>
+					<textarea id="treatmentMethod" name="treatmentMethod" placeholder="Write your recommended treament methods here" style="height:150px" required></textarea>
                 
                 <table class="tableCreateSub">
                     <tr>

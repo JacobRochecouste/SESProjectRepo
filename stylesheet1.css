@@ -249,6 +249,10 @@ hr {
 	font-size: 30px;
 }
 
+.subForm #pcsfLabelTxt {
+	font-size: 16px;
+}
+
 /*Patient Details Section in the CreateSubscription Page*/
 .subForm #patientsDetails {
 	font-size: 26px;
