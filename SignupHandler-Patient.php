@@ -16,16 +16,17 @@ $address= $_GET['Address'];
 $pass= MD5($_GET['Password']);
 $type = 'patient';
 
-$query = "INSERT INTO Users (UserID, FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES (NULL, '$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', NULL)";
+$query = "INSERT INTO Users (FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES ('$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', NULL)";
 if($dbc->query($query) === TRUE)
 {
     echo "<script>alert('Registration Successful');</script>";
-    include "LandingPage.html";
+    include "Signup-Success.html";
 
 } 
 else 
 {
-    echo "Sign up Failed " . $dbc->error;    
+    echo "Sign up Failed " . $dbc->error; 
+    include "Signup-Fail.html";   
 }
 
 $dbc->close()
