@@ -3,87 +3,92 @@
 <html lang="en">
 
 	<head>
+		<meta>
 		<link rel="stylesheet" type="text/css" href="stylesheet1.css">
 		<title>TeleHealth</title>
-
 	</head>
 
 	<body>
 
+		<!--Logo-->
 		<span class="logoDiv">
 			<a id="logoHomePage" href="#homelogo">
 				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
 			</a>
 		</span>
 
-		
-	<h1 class="title">Welcome to TeleHealth</h1>
-	
+		<h1 class="title">Welcome to TeleHealth</h1>
+
 		<!-- Navigation Menu -->
+		<div class="navBar">
+			<a id="homeLink" class="active" href="#home">Home</a>
+			<a id="aboutLink" href="#About">About</a>
+			<a id="servicesLink" href="#Services">Services</a>
+			<a id="emergenciesLink" href="#emergencies">Emergencies</a>
+			<a id="contactLink" href="#contact">Contact Us</a>
+			<a id="loginLink" href="#login" style="float:right">Log In</a>
+			<a id="signupLink" href="#signup" style="float:right">Sign Up</a>
+		</div>
 
-	<div class="navBar">
-		<a id="homeLink" class="active" href="#home">Home</a>
-		<a id="aboutLink" href="#About">About</a>
-		<a id="servicesLink" href="#Services">Services</a>
-		<a id="emergenciesLink" href="#emergencies">Emergencies</a>
-		<a id="contactLink" href="#contact">Contact Us</a>
-		<a id="loginLink" href="#login" style="float:right">Log In</a>
-		<a id="signupLink" href="#signup" style="float:right">Sign Up</a>
-	</div>
-
+		<!--Body of Website Here-->
 		<div class="parallax"></div>
+		<br>
+		<br>
+		<br>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+		<!--This won't work the jpg image is not in the github repo so it won't load properly-->
+		<span class="logtable">
+			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:392px;margin:0px 0px 0px 0px;">
+		</span>
 
-	<!-- Button Functions -->
-	<script type="text/javascript">
+		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
+			<u><b>Welcome to Telehealth!</b></u>
+			<br> - We help provide you with the best quality healthcare and consultations anytime, anywhere.
+			<br> - With a wide range of doctors and medical personnel from all around the country, we aim to bring a better healthcare system for all.
+			<br> - Thanks to Telehealth, you won't have to worry about all your medical problems again.
+			<br> - Join us <a href="SignupUserTypePage.html">now!</a>
 
-	document.getElementById("homeLink").onclick = function () {
-		location.href = "LandingPage.html"
-	};
+			<br>
+			<br>
+			<br>
 
-	/*
-	document.getElementById("logoHomeLink").onclick = function () {
-		location.href = "LandingPage.html"
-	};
-	*/
+		<!-- Button Functions -->
+		<script type="text/javascript">
 
-	document.getElementById("aboutLink").onclick = function () {
-		location.href = "AboutPage.html"
-	};
+			document.getElementById("homeLink").onclick = function () {
+				location.href = "LandingPage.html"
+			};
 
-	document.getElementById("servicesLink").onclick = function () {
-		location.href = "ServicesPage.html"
-	};
+			document.getElementById("aboutLink").onclick = function () {
+				location.href = "AboutPage.html"
+			};
 
-	document.getElementById("emergenciesLink").onclick = function () {
-		location.href = "EmergenciesPage.html"
-	};
+			document.getElementById("servicesLink").onclick = function () {
+				location.href = "ServicesPage.html"
+			};
 
-	document.getElementById("contactLink").onclick = function () {
-		location.href = "ContactPage.html"
-	};
+			document.getElementById("emergenciesLink").onclick = function () {
+				location.href = "EmergenciesPage.html"
+			};
 
-	document.getElementById("signupLink").onclick = function () {
-        location.href = "SignupUserTypePage.html"
-	};
+			document.getElementById("contactLink").onclick = function () {
+				location.href = "ContactPage.html"
+			};
 
-	document.getElementById("loginLink").onclick = function () {
-		location.href = "LoginPage.html"
-	};
+			document.getElementById("signupLink").onclick = function () {
+				location.href = "SignupUserTypePage.html"
+			};
 
-    document.getElementById("homePage").onclick = function () {
-        location.href = "LandingPage.html"
-    };
+			document.getElementById("loginLink").onclick = function () {
+				location.href = "LoginPage.html"
+			};
 
-	</script>
+			document.getElementById("homePage").onclick = function () {
+				location.href = "LandingPage.html"
+			};
 
+		</script>
 
 	</body>
+
 </html>
