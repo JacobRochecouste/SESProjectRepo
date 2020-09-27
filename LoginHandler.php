@@ -19,8 +19,13 @@ if(mysqli_num_rows($result) == 1)
     while($row = $result->fetch_assoc())
     {
         $firstname=$row['FirstName'];
-        $firstname=$row['FirstName'];
+        $lastname=$row['LastName'];
         $usertype=$row['UserType'];
+        session_start();
+        $_SESSION["email"]=$username;
+        $_SESSION["FName"]=$firstname;
+        $_SESSION["LName"]=$lastname;
+        $_SESSION["LoggedIn"]=true;
         if($usertype=="patient")
         {
             include("PatientHome.html");
