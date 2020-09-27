@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -67,12 +70,14 @@
 		<a id="servicesLink" href="#Services">Services</a>
 		<a id="emergenciesLink" href="#emergencies">Emergencies</a>
 		<a id="contactLink" href="#contact">Contact Us</a>
-		<a id="loginLink" href="#login" style="float:right">Log In</a>
-		<a id="signupLink" href="#signup" style="float:right">Sign Up</a>
-	</div>
+		<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
+        <a style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
+		    
+    </div>
 
 		<div class="parallax">
             <br> <br> <br>
+            <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
             <button type="button" onclick="showPosition();">Find Medical Clinics Near Me</button>
             <br
             <div id="embedMap" style="width: 600px; height: 600px;align: center">
