@@ -21,6 +21,7 @@ CREATE TABLE MedSubscriptions (
     DocEmail varchar(100) NOT NULL,
     DocPhoneNo varchar(15) NOT NULL,
     DocID INT UNSIGNED,
+    ConsultType varchar(100) NOT NULL,
     ConsultationSummary longtext NOT NULL,
     DocNotes longtext NOT NULL,
     TreatmentMethod longtext NOT NULL

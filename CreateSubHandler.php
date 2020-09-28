@@ -16,6 +16,7 @@ $docLname = $_GET['docLastName'];
 $docEmail = $_GET['docEmail'];
 $docPhone = $_GET['docPhoneNum'];
 $docID = $_GET['docID'];
+$consType = $_GET['radioOption'];
 $sesID = $_GET['sessionID'];
 $cdSum = $_GET['cdSummary'];
 $docNotes = $_GET['doctorsNotes'];
