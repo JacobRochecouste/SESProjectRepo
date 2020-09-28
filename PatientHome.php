@@ -4,6 +4,10 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
     header("location: LoginPage.html");
     exit;
 }
+if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
+    header("location: DoctorHome.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +19,7 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
 	<title>TeleHealth</title>
 
     <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-
+    <script src="SiteJavascript.js"></script>
     <script>
         function showPosition() {
             if(navigator.geolocation) {
@@ -62,7 +66,7 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
     <body>
 
         <span class="logoDiv">
-			<a id="logoHomePage" href="#homelogo">
+			<a id="homePage" href="LandingPage.php">
 				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
 			</a>
 		</span>
@@ -70,15 +74,14 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
         <h1 class="title">Welcome to TeleHealth</h1>
 
         <div class="navBar">
-		<a id="homeLink" class="active" href="#home">Home</a>
-		<a id="aboutLink" href="#About">About</a>
-		<a id="servicesLink" href="#Services">Services</a>
-		<a id="emergenciesLink" href="#emergencies">Emergencies</a>
-		<a id="contactLink" href="#contact">Contact Us</a>
-		<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-        <a id="patHome" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-		    
-    </div>
+		    <a id="homeLink" href="LandingPage.php">Home</a>
+	    	<a id="aboutLink" href="AboudPage.php">About</a>
+    		<a id="servicesLink" href="ServicesPage.php">Services</a>
+    		<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
+		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
+		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
+            <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
+		</div>
 
 		<div class="parallax">
             <br> <br> <br>
@@ -99,53 +102,5 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
 	<br>
 	<br>
 	<br>
-
-
-
-    
-
-	<!-- Button Functions -->
-	<script type="text/javascript">
-
-	    document.getElementById("homeLink").onclick = function () {
-		    location.href = "LandingPage.html"
-	    };
-
-        /*
-	    document.getElementById("logoHomeLink").onclick = function () {
-		    location.href = "LandingPage.html"
-	    };
-	    */
-
-	    document.getElementById("aboutLink").onclick = function () {
-		    location.href = "AboutPage.html"
-	    };
-
-	    document.getElementById("servicesLink").onclick = function () {
-		    location.href = "ServicesPage.html"
-	    };
-
-	    document.getElementById("emergenciesLink").onclick = function () {
-		    location.href = "EmergenciesPage.html"
-	    };
-
-	    document.getElementById("contactLink").onclick = function () {
-		    location.href = "ContactPage.html"
-	    };
-
-	    document.getElementById("signupLink").onclick = function () {
-            location.href = "SignupUserTypePage.html"
-	    };
-
-	    document.getElementById("loginLink").onclick = function () {
-		    location.href = "LoginPage.html"
-	    };
-
-        document.getElementById("homePage").onclick = function () {
-            location.href = "LandingPage.html"
-        };
-
-	    </script>
-
     </body>
 </html>

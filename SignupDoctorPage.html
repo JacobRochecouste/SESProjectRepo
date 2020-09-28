@@ -9,7 +9,7 @@
 <body class="loginStyle">
     <span class="logoDiv">
         <!--can move logo to the right if u remove the class and add float:right to the image to align with the storyboard-->
-        <a id="homePage" href="#main">
+        <a id="homePage" href="LandingPage.php">
             <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
         </a>
     </span>
@@ -59,13 +59,7 @@
 </body>
 
 <script type="text/javascript">
-	// Button Functions
-
-	document.getElementById("homePage").onclick = function () {
-	    location.href = "LandingPage.html"
-    };
-    
-    // Password Validation
+	// Password Validation
     function passValidate() {
         var password = document.getElementById("Password").value;
         var confirm = document.getElementById("Confirm").value;

@@ -4,6 +4,10 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
     header("location: LoginPage.html");
     exit;
 }
+if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
+    header("location: PatientHome.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,33 +19,28 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
 		<link rel="stylesheet" type="text/css" href="stylesheet1.css">
 		<title>TeleHealth</title>
 
-	</head>
+</head>
 
-	<body>
+<body>
 	<span class="logoDiv">
-		<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+		<a id="homePage" href="LandingPage.php">
+			<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+		</a>
 	</span>
 	<h1 class="title">Welcome to TeleHealth</h1>
 	
 		<!-- Navigation Menu -->
 
 	<div class="navBar">
-		<a id="homeLink" href="#home">Home</a>
-		<a id="aboutLink" href="#About" >About</a>
-		<a id="servicesLink" href="#Services" >Services</a>
-		<a id="emergenciesLink" href="#emergencies" >Emergencies</a>
-		<a id="contactLink" href="#contact">Contact Us</a>
-		<a id="createSub" href="DoctorCreateSubscription.html">Create Subscription</a>
+		<a id="homeLink" href="LandingPage.php">Home</a>
+		<a id="aboutLink" href="AboutPage.php" >About</a>
+		<a id="servicesLink" href="ServicesPage.php" >Services</a>
+		<a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+		<a id="contactLink" href="ContactPage.php">Contact Us</a>
+		<a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>
 		<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-		
+		<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 	</div>
-
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 
 	<div class="parallax">
 			<br> <br> <br> 
@@ -51,42 +50,6 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
         
             
         </div>
-
-	
-
-	<script type="text/javascript">
-	// Button Functions
-
-	document.getElementById("homeLink").onclick = function () {
-		location.href = "LandingPage.html"
-	};
-
-	document.getElementById("aboutLink").onclick = function () {
-		location.href = "AboutPage.html"
-	};
-
-	document.getElementById("servicesLink").onclick = function () {
-		location.href = "ServicesPage.html"
-	};
-
-	document.getElementById("emergenciesLink").onclick = function () {
-		location.href = "EmergenciesPage.html"
-	};
-
-	document.getElementById("contactLink").onclick = function () {
-		location.href = "ContactPage.html"
-	};
-
-	document.getElementById("signupLink").onclick = function () {
-		location.href = "SignupUserTypePage.html"
-	};
-
-	document.getElementById("loginLink").onclick = function () {
-		location.href = "LoginPage.html"
-	};	
-
-	</script>
-
 
 	</body>
 </html>

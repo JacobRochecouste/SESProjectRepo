@@ -26,6 +26,7 @@ if(mysqli_num_rows($result) == 1)
         $_SESSION["FName"]=$firstname;
         $_SESSION["LName"]=$lastname;
         $_SESSION["LoggedIn"]=true;
+        $_SESSION["UserType"]=$usertype;
         if($usertype=="patient")
         {
             header("Location: PatientHome.php");

@@ -9,5 +9,5 @@ $_SESSION = array();
 session_destroy();
  
 
-include("LandingPage.html");
+include("LandingPage.php");
 ?>

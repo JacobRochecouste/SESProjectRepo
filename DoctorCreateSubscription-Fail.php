@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+session_start();
+?>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -12,7 +15,7 @@
 
         <!--Logo-->
         <span class="logoDiv">
-            <a id="homePage" href="#main">
+            <a id="homePage" href="LandingPage.php">
                 <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
             </a>
         </span>
@@ -22,12 +25,14 @@
 
         <!-- Navigation Menu -->
         <div class="navBar">
-            <a id="homeLink" class="active" href="#home">Home</a>
-            <a id="aboutLink" href="#About">About</a>
-            <a id="servicesLink" href="#Services">Services</a>
-            <a id="emergenciesLink" href="#emergencies">Emergencies</a>
-            <a id="contactLink" href="#contact">Contact Us</a>
-            <a id="logout" href="#logout" style="float:right">Log Out</a>
+            <a id="homeLink" href="LandingPage.php">Home</a>
+            <a id="aboutLink" href="AboutPage.php" >About</a>
+            <a id="servicesLink" href="ServicesPage.php" >Services</a>
+            <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+            <a id="contactLink" href="ContactPage.php">Contact Us</a>
+            <a id="createSub" class="active" href="DoctorCreateSubscription.php">Create Subscription</a>
+            <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
+            <a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
         </div>
 
         <br><br><br><br>
@@ -53,39 +58,6 @@
                 <label id="statusPText"> <br><br>We greatly apologise for any inconveniences caused. </label>
             </form>
         </div>
-
-        <!-- Button Functions -->
-        <script type="text/javascript">
-
-            document.getElementById("homeLink").onclick = function () {
-                location.href = "LandingPage.html"
-            };
-
-            document.getElementById("aboutLink").onclick = function () {
-                location.href = "AboutPage.html"
-            };
-
-            document.getElementById("servicesLink").onclick = function () {
-                location.href = "ServicesPage.html"
-            };
-
-            document.getElementById("emergenciesLink").onclick = function () {
-                location.href = "EmergenciesPage.html"
-            };
-
-            document.getElementById("contactLink").onclick = function () {
-                location.href = "ContactPage.html"
-            };
-
-            document.getElementById("logout").onclick = function () {
-                location.href = "LandingPage.html"
-            };
-
-            document.getElementById("homePage").onclick = function () {
-                location.href = "LandingPage.html"
-            };
-
-        </script>
 
     </body>
 
