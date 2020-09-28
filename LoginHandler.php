@@ -28,11 +28,11 @@ if(mysqli_num_rows($result) == 1)
         $_SESSION["LoggedIn"]=true;
         if($usertype=="patient")
         {
-            include("PatientHome.html");
+            header("Location: PatientHome.php");
         }
         elseif($usertype=="doctor")
         {
-            include("DoctorHome.html");
+            header("Location: DoctorHome.php");
         }
             
     }

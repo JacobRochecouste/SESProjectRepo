@@ -1,4 +1,9 @@
 ﻿<?php
+session_start();
+if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
+    header("location: LoginPage.html");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +32,7 @@
 		<a id="emergenciesLink" href="#emergencies" >Emergencies</a>
 		<a id="contactLink" href="#contact">Contact Us</a>
 		<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-		<a style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
+		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		
 	</div>
 
