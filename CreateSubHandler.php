@@ -22,7 +22,7 @@ $cdSum = $_GET['cdSummary'];
 $docNotes = $_GET['doctorsNotes'];
 $treatMethod = $_GET['treatmentMethod'];
 
-$query = "INSERT INTO MedSubscriptions (SessionID, PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultationSummary, DocNotes, TreatmentMethod) VALUES ('$sesID', '$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$cdSum', '$docNotes', '$treatMethod')";
+$query = "INSERT INTO MedSubscriptions (SessionID, PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultType, ConsultationSummary, DocNotes, TreatmentMethod) VALUES ('$sesID', '$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$consType', '$cdSum', '$docNotes', '$treatMethod')";
 if($dbc->query($query) === TRUE)
 {
     include "DoctorCreateSubscription-Success.html";
