@@ -31,6 +31,7 @@ if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
 		<a id="servicesLink" href="#Services" >Services</a>
 		<a id="emergenciesLink" href="#emergencies" >Emergencies</a>
 		<a id="contactLink" href="#contact">Contact Us</a>
+		<a id="createSub" href="DoctorCreateSubscription.html">Create Subscription</a>
 		<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
 		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		
