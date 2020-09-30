@@ -101,13 +101,13 @@ h2 {
 	color: #277582;
 }
 
-label {
+.loginForm #loginFormLbl {
 	color: #000000;
 	font-size: 26px;
 }
 
 /*Login Page Username Text*/
-#Uname {
+.loginForm #Uname {
 	width: 300px;
 	height: 30px;
 	border: none;
@@ -116,7 +116,7 @@ label {
 }
 
 /*Login Page Password Text*/
-#Pass {
+.loginForm #Pass {
 	width: 300px;
 	height: 30px;
 	border: none;
@@ -125,7 +125,7 @@ label {
 }
 
 /*Login Page Login Text*/
-#log {
+.loginForm #log {
 	width: 300px;
 	height: 30px;
 	border: none;
