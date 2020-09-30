@@ -22,16 +22,17 @@ $cdSum = $_GET['cdSummary'];
 $docNotes = $_GET['doctorsNotes'];
 $treatMethod = $_GET['treatmentMethod'];
 
-$query = "INSERT INTO MedSubscriptions (SessionID, PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultType, ConsultationSummary, DocNotes, TreatmentMethod) VALUES ('$sesID', '$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$consType', '$cdSum', '$docNotes', '$treatMethod')";
+$query = "INSERT INTO MedSubscriptions (FormID, PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultType, ConsultationSummary, DocNotes, TreatmentMethod, CreationDate) VALUES ('$sesID', '$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$consType', '$cdSum', '$docNotes', '$treatMethod', CURRENT_DATE)";
 if($dbc->query($query) === TRUE)
 {
-    header("Location: DoctorCreateSubscription-Success.php");
     echo "<script>alert('Form Creation Successful');</script>";
+    include("DoctorCreateSubscription-Success.php");    
 }
 else
 {
-    header("Location: DoctorCreateSubscription-Fail.php");
-    echo "<script>alert('Form Creation Failed" . $dbc->error . "');</script>";
+    $errMsg = "Form Creation Failed: " . addslashes($dbc->error);
+    include("DoctorCreateSubscription-Fail.php");
+    echo "<script type='text/javascript'>alert('$errMsg');</script>";
 }
 
 
