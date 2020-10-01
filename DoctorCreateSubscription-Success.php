@@ -42,7 +42,7 @@ session_start();
             <form class="formStatus">
                 <label id="successLbl"><b> Form Creation Succesful! </b></label>
                 <br><br>
-                <label id="statusPText"> The form has been created and saved, you may now return to your <a href="DoctorHome.html">home page</a> and perform other actions. </label>
+                <label id="statusPText"> The form has been created and saved, you may now return to your <a href="DoctorHome.php">home page</a> and perform other actions. </label>
             </form>
         </div>
 

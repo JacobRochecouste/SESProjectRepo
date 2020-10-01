@@ -43,7 +43,7 @@ session_start();
                 <label id="failLbl"><b> Form Creation Failed! ( ╯°□°)╯ ┻━━┻ </b></label>
                 <br><br>
                 <label id="statusPText"> An error has occured and your document was not submitted, please return to the 
-                <a href="DoctorCreateSubscription.html"> form creation page</a> 
+                <a href="DoctorCreateSubscription.php"> form creation page</a> 
                 and complete the form once again. Common causes of error may include: </label>
                 <ul id="reasonsList">
                     <li> Incorrectly Entered Patient ID </li>
@@ -54,7 +54,7 @@ session_start();
                     <li> Entered Details does not match Database Details Stored </li>
                 </ul>
                 <label id="statusPText">Should the problem persist, please notify us using the details located in the 
-                <a href="ContactPage.html"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>
+                <a href="ContactPage.php"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>
                 <label id="statusPText"> <br><br>We greatly apologise for any inconveniences caused. </label>
             </form>
         </div>
