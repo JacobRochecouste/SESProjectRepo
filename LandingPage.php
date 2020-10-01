@@ -62,7 +62,6 @@ session_start();
 			<u><b>Welcome to Telehealth!</b></u>
 			<br> - We help provide you with the best quality healthcare and consultations anytime, anywhere.
 			<br> - With a wide range of doctors and medical personnel from all around the country, we aim to bring a better healthcare system for all.
-			<br> - Thanks to Telehealth, you won't have to worry about all your medical problems again.
 			<br> - Join us <a href="SignupUserTypePage.html">now!</a>
 
 			<br>
