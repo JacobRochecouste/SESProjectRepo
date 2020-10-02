@@ -1,11 +1,24 @@
-﻿<!DOCTYPE html>
+﻿<?php
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+$dbhost='db4free.net';
+$dbuser='siteuser';
+$dbpass='securepassword';
+$dbname='telehealth';
 
-</body>
-</html>
+$dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
+or die('Could not connect %s\n'. $dbc->connect_error);
+
+$IDName = $_GET['drugSummary'];
+$IssueNote = $_GET['issueSummary'];
+
+$query = "INSERT INTO IssueList (IDName, IssueNote) VALUES ('$IDName', '$IssueNote')";
+if($dbc->query($query) === TRUE)
+{
+    echo "<script>alert('Issue Succesfully Notified');</script>";
+    include("DoctorViewDrugsList.php");
+}
+else
+{
+    echo "Incorrectly Filled Form Request";
+}
+?>

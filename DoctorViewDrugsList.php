@@ -30,7 +30,7 @@ session_start();
 		    <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
 		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
 		    <a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>
-            <a id="drugsList" class="active" href="DoctorViewDrugsList.php">View Drugs</a>
+            <a id="drugsTable" class="active" href="DoctorViewDrugsList.php">View Drugs</a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
     		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
     	</div>

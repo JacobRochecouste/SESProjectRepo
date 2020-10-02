@@ -26,3 +26,21 @@ CREATE TABLE MedSubscriptions (
     DocNotes longtext NOT NULL,
     TreatmentMethod longtext NOT NULL
 );
+
+CREATE TABLE Drugs (
+  DrugID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  DrugName varchar(100) NOT NULL,
+  PrescriptionCause varchar(150)  NOT NULL,
+  DrugDose varchar(10) NOT NULL,
+  DrugFreq varchar(100) NOT NULL,
+  DrugType varchar(100) NOT NULL,
+  DrugEffects varchar(150)  NOT NULL,
+  DrugPrice decimal(6,2) NOT NULL,
+  DrugStock int UNSIGNED NOT NULL
+);
+
+CREATE TABLE IssueList (
+  IssueID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  IDName varchar(100) NOT NULL,
+  IssueNote varchar(250) NOT NULL
+);
