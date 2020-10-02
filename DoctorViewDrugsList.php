@@ -1,5 +1,16 @@
 ﻿<?php
 session_start();
+
+$dbhost='db4free.net';
+$dbuser='siteuser';
+$dbpass='securepassword';
+$dbname='telehealth';
+
+$dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
+or die('Could not connect %s\n'. $dbc->connect_error);
+
+$query = "SELECT * FROM Drugs";
+$result = mysqli_query($dbc, $query);
 ?>
 <!DOCTYPE html>
 
@@ -55,19 +66,37 @@ session_start();
                 </t>
                 <?php
                 if(mysqli_num_rows($result) >= 1)
-                while($row = $result->fetch_assoc())
+                {
+                    while($row = $result->fetch_assoc())
+                    {
+                        echo '<tr>
+                        <td>' . $row['DrugID'] . '</td>
+                        <td>' . $row['DrugName'] . '</td>
+                        <td>' . $row['PrescriptionCause'] . '</td>
+                        <td>' . $row['DrugDose'] . '</td>
+                        <td>' . $row['DrugFreq'] . '</td>
+                        <td>' . $row['DrugType'] . '</td>
+                        <td>' . $row['DrugEffects'] . '</td>
+                        <td>AUD$' . $row['DrugPrice'] . '</td>
+                        <td>' . $row['DrugStock'] . '</td>
+                        </tr>';
+                    }
+                }
+                else
+                {
+                    echo '<tr>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        </tr>';
+                }
                 ?>
-                    <tr>
-                        <td> drugid here </td>
-                        <td> drug name here </td>
-                        <td> cause here </td>
-                        <td> dosage here </td>
-                        <td> frequency here </td>
-                        <td> type here (pill, cream, liquid, etc) </td>
-                        <td> effect here </td>
-                        <td> price here (price per default dosage amt)</td>
-                        <td> amount here (availability)</td>
-                    </tr>
             </table>
             <br><br>
             <label id="drugsListNote" for="drugsListNote"><b> Note: These values are purely the standard the drug comes in and is by no means the final prescription! </b></label>
