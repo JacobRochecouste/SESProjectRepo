@@ -1,6 +1,7 @@
-﻿<?php
-require('vendor/webeweb/fpdf-library/fpdf.php');
-$pdf = new FPDF('P', 'mm', 'A4');
+<?php
+require('../fpdf.php');
+
+$pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
 $pdf->Cell(40,10,'Hello World!');
