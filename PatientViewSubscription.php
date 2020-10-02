@@ -1,5 +1,5 @@
 ﻿<?php
-session_start();
+session_start(); 
 
 $dbhost='db4free.net';
 $dbuser='siteuser';
@@ -12,7 +12,7 @@ or die('Could not connect %s\n'. $dbc->connect_error);
 $patfirstname = $_SESSION["FName"];
 $patlastname = $_SESSION["LName"];
 
-$query = "SELECT * FROM MedSubscriptions WHERE patFirstName ='$patfirstname' AND patLastName = '$patlastname'";
+$query = "SELECT * FROM MedSubscriptions WHERE PatFirstName ='$patfirstname' AND PatLastName = '$patlastname'";
 $result = mysqli_query($dbc, $query);
 ?>
 <!DOCTYPE html>
@@ -63,14 +63,27 @@ $result = mysqli_query($dbc, $query);
                 </t>
                 <?php
                 if(mysqli_num_rows($result) >= 1)
-                while($row = $result->fetch_assoc())
+                {
+                    while($row = $result->fetch_assoc())
+                    {
+                        echo '<tr>
+                        <td>' . $row['FormID'] . '</td>
+                        <td>' . $row['ConsultType'] . '</td>
+                        <td>' . $row['CreationDate'] . '</td>
+                        <td>Dr. ' . $row['DocFirstName'] . ' ' . $row['DocLastName'] . '</td>
+                        </tr>';
+                    }
+                }
+                else
+                {
+                    echo '<tr>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        </tr>';
+                }
                 ?>
-                    <tr>
-                        <td><?php echo $row['FormID']; ?></td>
-                        <td><?php echo $row['ConsultType']; ?></td>
-                        <td><?php echo $row['CreationDate']; ?></td>
-                        <td>Dr.<?php echo $row['DocFirstName'] + $row['DocLastName']; ?></td>
-                    </tr>
             </table>
             <br><br>
             <label id="viewReportLbl" for="viewReportLbl"> Select a report to generate! </label>
@@ -79,9 +92,9 @@ $result = mysqli_query($dbc, $query);
                 <select name='formID'>
                     <option> Select a form </option>
                     <?php
-                        $query = mysqli_query($dbc, "SELECT * FROM MedSubscriptions");
+                        $query = mysqli_query($dbc, "SELECT * FROM MedSubscriptions WHERE PatFirstName ='$patfirstname' AND PatLastName = '$patlastname'");
                         while($form = mysqli_fetch_array($query)) {
-                            echo "option value='".$form['formID']."'>".$form['formID']."</option>";
+                            echo "<option value='".$form['FormID']."'>".$form['FormID']."</option>";
                         } 
                     ?>
                 </select>
