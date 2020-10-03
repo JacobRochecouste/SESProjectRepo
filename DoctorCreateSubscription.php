@@ -125,12 +125,12 @@ session_start();
 					<textarea id="doctorsNotes" name="doctorsNotes" placeholder="Write your notes here in layman terms" style="height:150px" required></textarea>
 						
 				<label id="consultationText" for="treatmentMethod"><b> Recommended Treatment Method(s) </b></label>
-					<textarea id="treatmentMethod" name="treatmentMethod" placeholder="Write your recommended treament methods here" style="height:150px" required></textarea>
-                
+					<textarea id="treatmentMethod" name="treatmentMethod" placeholder="Write your recommended treament methods here including frequency or length of usage for medicine or drugs" style="height:150px" required></textarea>
+                <br><br>
                 <table class="tableCreateSub">
                     <tr>
-                        <td align="left"> <button class="button cancelBtn" type="reset" onclick="location.href='DoctorHome.html'"> Cancel </button> </td>
-                        <td align="right"> <button class="button submitBtn" type="submit"> Submit </button> </td>
+                        <td align="left"> <button class="buttonRounded cancelBtn" type="reset" onclick="location.href='DoctorHome.html'"> Cancel </button> </td>
+                        <td align="right"> <button class="buttonRounded submitBtn" type="submit"> Submit </button> </td>
                     </tr>
                 </table>
                 
