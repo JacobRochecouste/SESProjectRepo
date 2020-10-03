@@ -82,25 +82,24 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
-
+        
 		<div class="parallax">
             <br> <br> <br>
-            <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
-            <button type="button" onclick="showPosition();">Find Medical Clinics Near Me</button>
-            <br
-            <div id="embedMap" style="width: 600px; height: 600px;align: center">
-            <!--Google map will be embedded here-->
+                <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
+            <br>
+            <br><br>
+            <br>
+            <div id="embedMap" class="container1" >
+                <!--Google map will be embedded here-->
+                <img src="LocationImage.jpg" alt="Image" style="width:100%"> 
+                <button class="btn" type="button" onclick="showPosition();">Find Medical Clinics Near Me</button>
             </div>
-            <br> <br> <br> <br> <br> <br> <br> <br> <br>
-            <iframe src="https://telehealth3623.setmore.com" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+            <div class="container2">
+                <img src="BookingIcon.png" alt="Image" style="width:100%"> 
+                <a class="btn" type="button" href="BookingPage.php">Make a Booking</a>
+            </div>
+
+
     </body>
 </html>
