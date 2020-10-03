@@ -12,7 +12,7 @@ CREATE TABLE Users (
 );
 
 CREATE TABLE MedSubscriptions (
-	SessionID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	FormID INT UNSIGNED NOT NULL PRIMARY KEY,
     PatFirstName varchar(100) NOT NULL,
     PatLastName varchar(100) NOT NULL,
     PatEmail varchar(100) NOT NULL,
@@ -24,7 +24,8 @@ CREATE TABLE MedSubscriptions (
     ConsultType varchar(100) NOT NULL,
     ConsultationSummary longtext NOT NULL,
     DocNotes longtext NOT NULL,
-    TreatmentMethod longtext NOT NULL
+    TreatmentMethod longtext NOT NULL,
+    CreationDate date NOT NULL
 );
 
 CREATE TABLE Drugs (

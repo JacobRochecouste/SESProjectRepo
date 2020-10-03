@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+session_start();
+?>
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -34,11 +38,18 @@
         <div class="loginPage">
             <form id="loginForm" method="get" action="LoginHandler.php">
                 <label id="loginFormLbl"><b> Email Address: </b><br></label>
-                <input type="text" name="Uname" id="Uname" placeholder="Email Address" required>
+                <input type="text" name="Uname" id='Uname' placeholder="Email Address" required>
                 <br><br>
                 <label id="loginFormLbl"><b> Password: </b><br></label>
                 <input type="Password" name="Pass" id="Pass" placeholder="Password" required>
                 <br><br>
+                <?php 
+                if(isset($_SESSION["Error"]))
+                {
+                    $error = $_SESSION["Error"];
+                    echo "<span id='error'>$error</span><br>";
+                }
+                ?>
                 <input type="submit" name="log" id="log" value="Log In">
                 <br><br>
                 <input type="checkbox" id="cbox">
@@ -51,3 +62,6 @@
     </body>
 
 </html>
+<?php 
+unset($_SESSION["Error"]);
+?>

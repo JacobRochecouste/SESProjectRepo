@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $dbhost='db4free.net';
 $dbuser='siteuser';
@@ -21,7 +22,6 @@ if(mysqli_num_rows($result) == 1)
         $firstname=$row['FirstName'];
         $lastname=$row['LastName'];
         $usertype=$row['UserType'];
-        session_start();
         $_SESSION["email"]=$username;
         $_SESSION["FName"]=$firstname;
         $_SESSION["LName"]=$lastname;
@@ -40,7 +40,9 @@ if(mysqli_num_rows($result) == 1)
 }
 else
 {
-    echo "Incorrect Username or Password";
+    $_SESSION["Error"] = "Incorrect Username/Password";
+    echo $_SESSION["Error"];
+    header("Location: LoginPage.php");
 }
 
 

@@ -135,6 +135,11 @@ h2 {
 	font-size: 16px;
 }
 
+#error {
+	padding-left: 25px;
+	color: red;
+	font-weight: bold;
+}
 span {
 	color: black;
 	font-size: 17px;
