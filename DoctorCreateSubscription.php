@@ -37,6 +37,7 @@ session_start();
     	</div>
 
         <!--Content of Page-->
+        <br>
         <div class="createSub">
             <form class="subForm" method="get" action="CreateSubHandler.php">
                 <label id="subFormLbl"><b> Post-Consultation Subscription Form </b> </label>
@@ -133,12 +134,9 @@ session_start();
                         <td align="right"> <button class="buttonRounded submitBtn" type="submit"> Submit </button> </td>
                     </tr>
                 </table>
-                
-                
-
             </form>
         </div>
-
+        <br><br><br><br>
     </body>
 
 </html>

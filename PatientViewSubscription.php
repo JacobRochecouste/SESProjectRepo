@@ -49,7 +49,7 @@ $result = mysqli_query($dbc, $query);
     	</div>
 
         <!--Content of Page-->
-        <div class="viewPatientSubscriptions" id="viewPatientSubscriptions">
+        <div class="viewPatientSubscriptions" id="viewPatientSubscriptions" align="center"> <!--Well idk if left or center looks better someone else decide please -->
 			<br>
             <table align="center">
                 <tr>

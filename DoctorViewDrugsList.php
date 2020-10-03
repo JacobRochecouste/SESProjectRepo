@@ -130,6 +130,7 @@ $result = mysqli_query($dbc, $query);
                 </table>
             </form>
         </div>
+        <br><br><br><br>
 
     </body>
 

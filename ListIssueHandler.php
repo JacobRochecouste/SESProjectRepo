@@ -15,10 +15,12 @@ $query = "INSERT INTO IssueList (IDName, IssueNote) VALUES ('$IDName', '$IssueNo
 if($dbc->query($query) === TRUE)
 {
     echo "<script>alert('Issue Succesfully Notified');</script>";
-    include("DoctorViewDrugsList.php");
+    include("DoctorViewDrugsList-Success.php");
 }
 else
 {
-    echo "Incorrectly Filled Form Request";
+    $errMsg = "Incorrectly Filled Form Request: " . addslashes($dbc->error);
+    include("DoctorCreateSubscription-Fail.php");
+    echo "<script type='text/javascript'>alert('$errMsg');</script>";
 }
 ?>
