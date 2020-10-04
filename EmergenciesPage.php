@@ -15,10 +15,9 @@ session_start();
 	<body>
 		<span class="logoDiv">
 			<a id="homePage" href="LandingPage.php">
-				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:200px;height:200px;">
 			</a>
 		</span>
-	<h1 class="title">Welcome to TeleHealth</h1>
 	
 		<!-- Navigation Menu -->
 
@@ -31,7 +30,7 @@ session_start();
 		<?php
 		if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
 		{
-			echo '<a id="loginLink" href="LoginPage.html" style="float:right">Log In</a>';
+			echo '<a id="loginLink" href="LoginPage.php" style="float:right">Log In</a>';
 			echo '<a id="signupLink" href="SignupUserTypePage.html" style="float:right">Sign Up</a>';
 		}
 		else
@@ -54,7 +53,7 @@ session_start();
 	<br>
 	<br>
 
-	<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
+	<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#ffffff;size:700px 400px">
 		<b>In an emergency, always call 000.</b>
 		<br>
 		<br>

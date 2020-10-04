@@ -16,11 +16,10 @@ session_start();
 		<!--Logo-->
 		<span class="logoDiv">
 			<a id="homePage" href="LandingPage.php">
-				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:200px;height:200px;">
 			</a>
 		</span>
 
-		<h1 class="title">Welcome to TeleHealth</h1>
 
 		<!-- Navigation Menu -->
 		<div class="navBar">
@@ -32,7 +31,7 @@ session_start();
 			<?php
 			if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
 			{	
-				echo '<a id="loginLink" href="LoginPage.html" style="float:right">Log In</a>';
+				echo '<a id="loginLink" href="LoginPage.php" style="float:right">Log In</a>';
 				echo '<a id="signupLink" href="SignupUserTypePage.html" style="float:right">Sign Up</a>';
 			}
 			else
@@ -58,7 +57,7 @@ session_start();
 			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:392px;margin:0px 0px 0px 0px;">
 		</span>
 		<br>
-		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
+		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#ffffff;size:700px 400px">
 			<u><b>Welcome to Telehealth!</b></u>
 			<br> - We help provide you with the best quality healthcare and consultations anytime, anywhere.
 			<br> - With a wide range of doctors and medical personnel from all around the country, we aim to bring a better healthcare system for all.
