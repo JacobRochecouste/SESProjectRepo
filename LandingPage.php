@@ -20,19 +20,20 @@ session_start();
 			</a>
 		</span>
 
+		<!--Title Bar-->
 		<h1 class="title">Welcome to TeleHealth</h1>
 
 		<!-- Navigation Menu -->
 		<div class="navBar">
 			<a id="homeLink" class="active" href="LandingPage.php">Home</a>
-			<a id="aboutLink" href="AboutPage.php" >About</a>
-			<a id="servicesLink" href="ServicesPage.php" >Services</a>
-			<a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+			<a id="aboutLink" href="AboutPage.php">About</a>
+			<a id="servicesLink" href="ServicesPage.php">Services</a>
+			<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<?php
 			if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
 			{	
-				echo '<a id="loginLink" href="LoginPage.html" style="float:right">Log In</a>';
+				echo '<a id="loginLink" href="LoginPage.php" style="float:right">Log In</a>';
 				echo '<a id="signupLink" href="SignupUserTypePage.html" style="float:right">Sign Up</a>';
 			}
 			else
@@ -48,14 +49,13 @@ session_start();
 
 		</div>
 
-		<!--Body of Website Here-->
+		<!--Content of Page-->
 		<div class="parallax">
+		<br><br>
 		<br>
-		<br>
-		<br>
-		<!--This won't work the jpg image is not in the github repo so it won't load properly-->
+		
 		<span class="logtable">
-			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:392px;margin:0px 0px 0px 0px;">
+			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:386px;margin:18px 0px 0px 0px;">
 		</span>
 		<br>
 		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
@@ -66,8 +66,7 @@ session_start();
 
 			<br>
 			<br>
-			<br>
-		</P>
+		</p>
 		
 		</div>	
 

@@ -26,9 +26,9 @@ session_start();
         <!-- Navigation Menu -->
         <div class="navBar">
             <a id="homeLink" href="LandingPage.php">Home</a>
-            <a id="aboutLink" href="AboutPage.php" >About</a>
-            <a id="servicesLink" href="ServicesPage.php" >Services</a>
-            <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+            <a id="aboutLink" href="AboutPage.php">About</a>
+            <a id="servicesLink" href="ServicesPage.php">Services</a>
+            <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
             <a id="createSub" class="active" href="DoctorCreateSubscription.php">Create Subscription</a>
             <a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
@@ -38,7 +38,7 @@ session_start();
 
         <br><br><br><br>
 
-        <!--Body of Website Here-->
+        <!--Content of Page-->
         <div class="subFormStatusF" align="justify">
             <form class="formStatus">
                 <label id="failLbl"><b> Form Creation Failed! ( ╯°□°)╯ ┻━━┻ </b></label>

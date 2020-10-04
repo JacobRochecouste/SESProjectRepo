@@ -1,7 +1,6 @@
 ﻿<?php 
 session_start();
 ?>
-
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -11,30 +10,22 @@ session_start();
         <link rel="stylesheet" type="text/css" href="stylesheet1.css">
         <title> User Login </title>
     </head>
-
+    
     <body class="loginStyle">
+        
+        <!--Logo--> 
         <span class="logoDiv">
             <a id="homePage" href="LandingPage.php">
                 <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
             </a>
         </span>
 
-        <!--<h2>Login Page</h2><br>-->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <br><br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
 
+        <!--Content of Page-->
         <div class="loginPage">
             <form id="loginForm" method="get" action="LoginHandler.php">
                 <label id="loginFormLbl"><b> Email Address: </b><br></label>

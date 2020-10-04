@@ -26,9 +26,9 @@ session_start();
         <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
-		    <a id="aboutLink" href="AboutPage.php" >About</a>
-	    	<a id="servicesLink" href="ServicesPage.php" >Services</a>
-		    <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+		    <a id="aboutLink" href="AboutPage.php">About</a>
+	    	<a id="servicesLink" href="ServicesPage.php">Services</a>
+		    <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
 		    <a id="createSub" class="active" href="DoctorCreateSubscription.php">Create Subscription</a>
             <a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>

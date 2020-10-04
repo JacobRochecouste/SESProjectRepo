@@ -1,7 +1,6 @@
 ﻿<?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -22,19 +21,19 @@ session_start();
 		</span>
 
 		<!--Title Bar-->
-		<h1 class="title">Welcome to TeleHealth</h1>
+		<h1 class="title">Contact Us</h1>
 
 		<!-- Navigation Menu -->
 		<div class="navBar">
 			<a id="homeLink" href="LandingPage.php">Home</a>
-			<a id="aboutLink" href="AboutPage.php" >About</a>
-			<a id="servicesLink" href="ServicesPage.php" >Services</a>
-			<a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+			<a id="aboutLink" href="AboutPage.php">About</a>
+			<a id="servicesLink" href="ServicesPage.php">Services</a>
+			<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 			<a id="contactLink" class="active" href="ContactPage.php">Contact Us</a>
 			<?php
 			if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
 			{
-				echo '<a id="loginLink" href="LoginPage.html" style="float:right">Log In</a>';
+				echo '<a id="loginLink" href="LoginPage.php" style="float:right">Log In</a>';
 				echo '<a id="signupLink" href="SignupUserTypePage.html" style="float:right">Sign Up</a>';
 			}
 			else
@@ -50,29 +49,21 @@ session_start();
 	
 		</div>
 
-		<!--Body of Website Here-->
+		<!--Content of Page-->
 		<div class="parallax">
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+			<br><br>
+			<br><br>
 
-		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
-		<b>Contact Us:</b>
-		<br><b>Telephone</b> - (711) 265-9193
-		<br><b>Email</b> - telehealth@hotmail.com
-		<br>
-		<br><b>If you want to speak to a doctor, please sign up/log in to Telehealth and book an appointment.</b>
-		</p>
+			<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
+				<b>Contact Us:</b>
+				<br><b>Telephone</b> - (711) 265-9193
+				<br><b>Email</b> - telehealth@hotmail.com
+				<br>
+				<br>
+				<b>If you want to speak to a doctor, <br> please <a href="SignupUserTypePage.html">sign up</a> or <a href="LoginPage.php">log in</a> to the website and book an appointment.</b>
+			</p>
 
 		</div>
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 
 	</body>
 
