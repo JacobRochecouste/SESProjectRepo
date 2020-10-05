@@ -20,8 +20,7 @@ session_start();
 			</a>
 		</span>
 
-		<!--Title Bar-->
-		<h1 class="title">Provided Services</h1>
+
 	
 		<!-- Navigation Menu -->
 

@@ -20,8 +20,7 @@ session_start();
 			</a>
 		</span>
 
-		<!--Title Bar-->
-		<h1 class="title2">Contact Us</h1>
+
 
 		<!-- Navigation Menu -->
 		<div class="navBar">

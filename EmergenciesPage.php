@@ -20,8 +20,7 @@ session_start();
 			</a>
 		</span>
 		
-		<!--Title Bar-->
-		<h1 class="title">Emergency</h1>
+
 	
 		<!-- Navigation Menu -->
 		<div class="navBar">
