@@ -18,7 +18,7 @@
     <br>
 
 
-
+    <!--Content of Page-->
     <div class="signUp">
         <form method="get" action="SignupHandler-Patient.php">
             <label id="signUpFormLbl"> <b> First Name: </b><br> </label>
@@ -48,19 +48,20 @@
     </div>    
 
 
-</body>
+        
 
-<script type="text/javascript">
-	// Password Validation
-    function passValidate() {
-        var password = document.getElementById("Password").value;
-        var confirm = document.getElementById("Confirm").value;
-        if (password != confirm) {
-            alert("Passwords do not match.");
-            return false;
-        }
-        return true;
-    };
-</script>
+
+    <script type="text/javascript">
+	    // Password Validation
+        function passValidate() {
+            var password = document.getElementById("Password").value;
+            var confirm = document.getElementById("Confirm").value;
+            if (password != confirm) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        };
+    </script>
 
 </html>

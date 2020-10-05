@@ -9,7 +9,6 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -66,16 +65,20 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
         </script>
     </head>
     
-    <!--Content of Page-->
+    
     <body>
+
+        <!--Logo-->
         <span class="logoDiv">
 			<a id="homePage" href="LandingPage.php">
 				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
 			</a>
 		</span>
 
-        <h1 class="title">Welcome to TeleHealth</h1>
+        <!--Title Bar-->
+        <h1 class="title">Hello!</h1>
 
+        <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
 	    	<a id="aboutLink" href="AboudPage.php">About</a>
@@ -87,6 +90,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
 
+        <!--Content of Page-->
 		<div class="parallax">
             <br> <br> <br>
             <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>

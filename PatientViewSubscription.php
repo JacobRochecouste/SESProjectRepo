@@ -26,6 +26,7 @@ $result = mysqli_query($dbc, $query);
     </head>
 
     <body>
+
         <!--Logo--> 
         <span class="logoDiv">
             <a id="homePage" href="LandingPage.php">
@@ -49,7 +50,7 @@ $result = mysqli_query($dbc, $query);
     	</div>
 
         <!--Content of Page-->
-        <div class="viewPatientSubscriptions" id="viewPatientSubscriptions" align="center"> <!--Well idk if left or center looks better someone else decide please -->
+        <div class="viewPatientSubscriptions" id="viewPatientSubscriptions" align="center">
 			<br>
             <table align="center">
                 <tr>

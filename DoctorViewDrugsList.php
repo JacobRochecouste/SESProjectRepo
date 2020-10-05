@@ -23,6 +23,7 @@ $result = mysqli_query($dbc, $query);
     </head>
 
     <body>
+
         <!--Logo--> 
         <span class="logoDiv">
             <a id="homePage" href="LandingPage.php">

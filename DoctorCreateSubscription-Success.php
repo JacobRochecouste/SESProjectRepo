@@ -38,7 +38,7 @@ session_start();
         
         <br><br><br><br>
         
-        <!--Body of Website Here-->
+        <!--Content of Page-->
         <div class="issueFormStatusS" align="justify">
             <form class="issueStatus">
                 <label id="successLbl"><b> Form Creation Succesful! </b></label>
