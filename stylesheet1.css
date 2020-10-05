@@ -283,9 +283,8 @@ span {
 	overflow: hidden;
 	margin: auto;
 	padding: 15px;
-	background: #90EE90;
 	text-align: left;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 /*Use <hr> in the html code to get a straight black line across the screen */
@@ -300,6 +299,7 @@ hr {
 
 .subForm #subFormLbl {
 	font-size: 30px;
+	color: #277582; 
 }
 
 .subForm #pcsfLabelTxt {
@@ -314,7 +314,7 @@ hr {
 .subForm #patFirstName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box ;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -322,7 +322,7 @@ hr {
 .subForm #patLastName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -330,7 +330,7 @@ hr {
 .subForm #patEmail {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -338,7 +338,7 @@ hr {
 .subForm #patID {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -362,7 +362,7 @@ hr {
 .subForm #sessionID {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -392,7 +392,7 @@ hr {
 .subForm #docFirstName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -400,7 +400,7 @@ hr {
 .subForm #docLastName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -408,7 +408,7 @@ hr {
 .subForm #docEmail {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -416,7 +416,7 @@ hr {
 .subForm #docPhoneNum {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -424,7 +424,7 @@ hr {
 .subForm #docID {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }

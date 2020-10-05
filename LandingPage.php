@@ -50,7 +50,6 @@ session_start();
 		<!--Content of Page-->
 		<div class="parallax">
 		<br><br>
-		<br>
 		
 		<span class="logtable">
 			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:386px;margin:75px 0px 0px 0px;">
