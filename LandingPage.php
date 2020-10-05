@@ -55,7 +55,7 @@ session_start();
 		<br>
 		
 		<span class="logtable">
-			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:386px;margin:18px 0px 0px 0px;">
+			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:386px;margin:75px 0px 0px 0px;">
 		</span>
 		<br>
 		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 18px 0px 0px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
