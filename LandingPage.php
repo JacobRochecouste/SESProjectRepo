@@ -58,9 +58,9 @@ session_start();
 		<br>
 		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 18px 0px 0px 0px;padding:75px;background-color:#ffffff;size:700px 400px">
 			<u><b>Welcome to Telehealth!</b></u>
-			<br> - We help provide you with the best quality healthcare and consultations anytime, anywhere.
-			<br> - With a wide range of doctors and medical personnel from all around the country, we aim to bring a better healthcare system for all.
-			<br> - Join us <a href="SignupUserTypePage.html">now!</a>
+			<br> <li> We help provide you with the best quality healthcare and consultations anytime, anywhere.</li>
+			<br> <li> With a wide range of doctors and medical personnel from all around the country, we aim to bring a better healthcare system for all.</li>
+			<br> <li> Join us <a href="SignupUserTypePage.html">now!</a></li>
 
 			<br>
 			<br>
