@@ -58,7 +58,7 @@ session_start();
 			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:386px;margin:18px 0px 0px 0px;">
 		</span>
 		<br>
-		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
+		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 18px 0px 0px 0px;padding:75px;background-color:#DCDCDC;size:700px 400px">
 			<u><b>Welcome to Telehealth!</b></u>
 			<br> - We help provide you with the best quality healthcare and consultations anytime, anywhere.
 			<br> - With a wide range of doctors and medical personnel from all around the country, we aim to bring a better healthcare system for all.
