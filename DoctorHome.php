@@ -45,10 +45,45 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 	<div class="parallax">
 			<br> <br> <br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
-            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-            <iframe src="https://telehealth3623.setmore.com/jacob" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
-        
-            
+            <br> <br> <br> <br>
+           
+			<div style="display: inline-block;">
+			<form  action="https://my.setmore.com/calendar#weekly/r65041600744361542/05102020">
+
+				<input type="submit" value="Go to Booking Page" style="background-color: gray; 
+																		border: 2px white;
+																		padding: 60px 60px;
+																		color: #e6e6e6;
+																		margin: 0px 200px;
+																		cursor: pointer;
+																		font-size: 30px;
+																		display: inline-block;"
+																		
+																		
+
+				/>
+
+			</form>
+			</div>
+
+			<div style="display: inline-block">
+			<form  action="DoctorCreateSubscription.php">
+
+				<input type="submit" value="Create Subscription" style="background-color: gray; 
+																		border: 2px white;
+																		padding: 60px 60px;
+																		color: #e6e6e6;
+																		margin: 0px 200px;
+																		cursor: pointer;
+																		font-size: 30px;
+																		"
+																		
+
+				/>
+
+			</form>
+			</div>
+
         </div>
 
 	</body>
