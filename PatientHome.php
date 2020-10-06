@@ -90,7 +90,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 		<div class="parallax">
             <br> <br> <br>
             <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
-            <button type="button" onclick="showPosition();">Find Medical Clinics Near Me</button>
+            <button type="button" onclick="showPosition();" style="width=100px; height=150px;">Find Medical Clinics Near Me</button>
             <br
             <div id="embedMap" style="width: 600px; height: 600px;align: center">
             <!--Google map will be embedded here-->
