@@ -2,15 +2,24 @@
 	font-family: Arial;
 }
 
-.title {
+title {
 	font-family: Arial;
 	font-size: 70px;
 	text-align: center;
-	padding: 20px;
+	padding-bottom: 120px;
+	background-color: #ffffff;
+	color: rgb(65, 63, 63);
+}
+
+.title2 {
+	font-family: Arial;
+	font-size: 70px;
+	text-align: center;
+	padding: 70px;
 	margin: 0px 0px 0px -20px;
-	padding-bottom: 70px;
-	background-color: #DCDCDC;
-	color: white;
+	padding-bottom: 80px;
+	background-color: #ffffff;
+	color: rgb(65, 63, 63);
 }
 
 body, html {
@@ -22,7 +31,7 @@ body, html {
 .logoDiv {
 	width: 100px; 
 	float:left; 
-	height:100px; 
+	height:200px; 
 	margin:10px
 }
 
@@ -85,10 +94,10 @@ body, html {
 	overflow: hidden;
 	margin: auto;
 	padding: 50px;
-	background: #90EE90;
+	background: #ffffff;
 	border-radius: 10px;
 	text-align: left;
-	border: 4px solid #9A7B4F;
+	border: 4px solid #333333;
 }
 
 h1 {
@@ -110,7 +119,7 @@ h2 {
 #Uname {
 	width: 300px;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -119,7 +128,7 @@ h2 {
 #Pass {
 	width: 300px;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -157,14 +166,28 @@ span {
 
 /*this is the form style for the SignupUserType page*/
 .signUp {
-	width: 450px;
+	width: 300px;
 	height: auto;
 	overflow: hidden;
 	margin: auto;
-	padding: 20px;
-	background: #90EE90;
+	padding: 50px;
+	background: #ffffff;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	text-align: left;
+	border: 4px solid #333333;
+}
+
+#signUpFormLbl {
+	color: #000000;
+	font-size: 26px;
+}
+
+#signUpField {
+	width: 300px;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
 }
 
 /*Default Button Style Declaration*/
@@ -260,9 +283,8 @@ span {
 	overflow: hidden;
 	margin: auto;
 	padding: 15px;
-	background: #90EE90;
 	text-align: left;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 /*Use <hr> in the html code to get a straight black line across the screen */
@@ -277,6 +299,7 @@ hr {
 
 .subForm #subFormLbl {
 	font-size: 30px;
+	color: #277582; 
 }
 
 .subForm #pcsfLabelTxt {
@@ -291,7 +314,7 @@ hr {
 .subForm #patFirstName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box ;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -299,7 +322,7 @@ hr {
 .subForm #patLastName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -307,7 +330,7 @@ hr {
 .subForm #patEmail {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -315,7 +338,7 @@ hr {
 .subForm #patID {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -339,7 +362,7 @@ hr {
 .subForm #sessionID {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -369,7 +392,7 @@ hr {
 .subForm #docFirstName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -377,7 +400,7 @@ hr {
 .subForm #docLastName {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -385,7 +408,7 @@ hr {
 .subForm #docEmail {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -393,7 +416,7 @@ hr {
 .subForm #docPhoneNum {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -401,7 +424,7 @@ hr {
 .subForm #docID {
 	width: 50%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -476,9 +499,9 @@ hr {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: #ffffff;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid #333333;
 }
 
 .signUpStatusF {
@@ -487,9 +510,9 @@ hr {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: #ffffff;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid #333333;
 }
 
 .signUpStatus #successLbl {
@@ -538,7 +561,7 @@ hr {
 
 .viewPatientSubscriptions td, th {
 	border: 1px solid black;
-	text-align: left;
+	text-align: center;
 	padding: 8px;
 }
 
@@ -656,4 +679,49 @@ select.form-control {
 /* For the Table Row in View Drugs List Page */
 .createIssueForm {
 	width: 100%;
+}
+
+/*Issue Form Succes and Fail Pages*/
+.issueFormStatusS {
+	width: 500px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: #90EE90;
+	border-radius: 10px;
+	border: 4px solid #9A7B4F;
+}
+
+.issueFormStatusF {
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: #90EE90;
+	border-radius: 10px;
+	border: 4px solid #9A7B4F;
+}
+
+.issueStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.issueStatus #failLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+
+.issueStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.issueStatus #reasonsList {
+	font-size: 18px;
 }

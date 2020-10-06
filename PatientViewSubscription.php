@@ -26,6 +26,7 @@ $result = mysqli_query($dbc, $query);
     </head>
 
     <body>
+
         <!--Logo--> 
         <span class="logoDiv">
             <a id="homePage" href="LandingPage.php">
@@ -49,7 +50,7 @@ $result = mysqli_query($dbc, $query);
     	</div>
 
         <!--Content of Page-->
-        <div class="viewPatientSubscriptions" id="viewPatientSubscriptions">
+        <div class="viewPatientSubscriptions" id="viewPatientSubscriptions" align="center">
 			<br>
             <table align="center">
                 <tr>
@@ -89,7 +90,7 @@ $result = mysqli_query($dbc, $query);
             <label id="viewReportLbl" for="viewReportLbl"> Select a report to generate! </label>
             <br><br>
             <form method='get' action='ViewSubscription-Report.php'>
-                <select name='formID'>
+                <select name='FormID'>
                     <option> Select a form </option>
                     <?php
                         $query = mysqli_query($dbc, "SELECT * FROM MedSubscriptions WHERE PatFirstName ='$patfirstname' AND PatLastName = '$patlastname'");

@@ -8,67 +8,59 @@
 </head>
 <body class="loginStyle">
     <span class="logoDiv">
-        <!--can move logo to the right if u remove the class and add float:right to the image to align with the storyboard-->
         <a id="homePage" href="LandingPage.php">
-            <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+            <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:200px;height:200px;">
         </a>
     </span>
-    <h1 class="title">Doctor Sign-up</h1>
+    <h1 class="title2">Doctor Sign-up</h1>
 
-    <div class="login">
-        <form id="login" method="get" action="SignupHandler-Doctor.php">
-            <table>
-                <tr>
-                    <td align="left"> First Name: </td>
-                    <td align="right"> <input type="text" name="FirstName" id="FirstName" placeholder="John" pattern="[A-Za-z]+" required></td>
-                </tr>
-                <tr>
-                    <td align="left"> Last Name: </td>
-                    <td align="right">  <input type="text" name="LastName" id="LastName" placeholder="Smith" pattern="[A-Za-z]+" required></td>
-                </tr>
-                <tr>
-                    <td align="left"> Doctor ID: </td>
-                    <td align="right">  <input type="text" name="DoctorID" id="DoctorID" placeholder="Doctor ID" pattern="[0-9]+" required> </td>
-                </tr>
-                <tr>
-                    <td align="left"> Email: </td>
-                    <td align="right">  <input type="email" name="Email" id="Email" placeholder="johnsmith@mail.com" required> </td>
-                </tr>
-                <tr>
-                    <td align="left"> Phone Number: </td>
-                    <td align="right">  <input type="text" name="PhoneNo" id="PhoneNo" placeholder="0411-123-456" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required> </td>
-                </tr>
-                <tr>
-                    <td align="left"> Address: </td>
-                    <td align="right">  <input type="text" name="Address" id="Address" placeholder="44 Home Street" required> </td>
-                </tr>
-                <tr>
-                    <td align="left"> Password: </td>
-                    <td align="right">  <input type="password" name="Password" id="Password" placeholder="Password" required> </td>
-                </tr>
-                <tr>
-                    <td align="left"> Confirm Password:</td>
-                    <td align="right"> <input type="password" name="Confirm" id="Confirm" placeholder="Confirm Password" required> </td>
-                </tr>
-            </table>
+    <br>
+    <br>
+<!--Content of Page-->
+    <div class="signUp">
+        <form method="get" action="SignupHandler-Doctor.php">
+            <label id="signUpFormLbl"> <b> First Name: </b><br> </label>
+            <input type="text" name="FirstName" id="signUpField" placeholder="John" pattern="[A-Za-z]+" required>
+            <br><br>
+            <label id="signUpFormLbl"> <b> Last Name: </b><br> </label>
+            <input type="text" name="LastName" id="signUpField" placeholder="Smith" pattern="[A-Za-z]+" required>
+            <br><br>
+            <label id="signUpFormLbl"> <b> Doctor ID: </b><br> </label>
+            <input type="text" name="DoctorID" id="signUpField" placeholder="Doctor ID" pattern="[0-9]+" required>
+            <br><br>
+            <label id="signUpFormLbl"> <b> Email Address: </b><br> </label>
+            <input type="email" name="Email" id="signUpField" placeholder="johnsmith@mail.com" required>
+            <br><br>
+            <label id="signUpFormLbl"> <b> Phone Number: </b><br> </label>
+            <input type="text" name="PhoneNo" id="signUpField" placeholder="0411-123-456" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
+            <br><br>
+            <label id="signUpFormLbl"> <b> Address: </b><br> </label>
+            <input type="text" name="Address" id="signUpField" placeholder="44 Home Street" required>
+            <br><br>
+            <label id="signUpFormLbl"> <b> Password: </b><br> </label>
+            <input type="password" name="Password" id="signUpField" placeholder="Password" required>
+            <br><br>
+            <label id="signUpFormLbl"> <b> Confirm Password: </b><br> </label>
+            <input type="password" name="Confirm" id="signUpField" placeholder="Confirm Password" required>
+            <br><br>
 
             <input type="submit" name="signUp" id="signUp" value="Sign Up" onclick="return passValidate()" />
         </form>
-    </div>
+    </div>    
 
 </body>
 
-<script type="text/javascript">
-	// Password Validation
-    function passValidate() {
-        var password = document.getElementById("Password").value;
-        var confirm = document.getElementById("Confirm").value;
-        if (password != confirm) {
-            alert("Passwords do not match.");
-            return false;
-        }
-        return true;
-    };
-</script>
+    <script type="text/javascript">
+	    // Password Validation
+        function passValidate() {
+            var password = document.getElementById("Password").value;
+            var confirm = document.getElementById("Confirm").value;
+            if (password != confirm) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        };
+    </script>
 
 </html>

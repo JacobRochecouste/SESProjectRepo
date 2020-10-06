@@ -21,7 +21,7 @@ session_start();
         </span>
 
         <!--Title Bar-->
-        <h1 class="title"> Create Patient Subscription</h1>
+        <h1 class="title"> Drug Issue Report </h1>
 
         <!-- Navigation Menu -->
         <div class="navBar">
@@ -30,29 +30,26 @@ session_start();
             <a id="servicesLink" href="ServicesPage.php">Services</a>
             <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
-            <a id="createSub" class="active" href="DoctorCreateSubscription.php">Create Subscription</a>
-            <a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
+            <a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>
+            <a id="drugsTable" class="active" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
             <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
         </div>
-
+        
         <br><br><br><br>
-
+        
         <!--Content of Page-->
         <div class="subFormStatusF" align="justify">
             <form class="formStatus">
-                <label id="failLbl"><b> Form Creation Failed! ( ╯°□°)╯ ┻━━┻ </b></label>
+                <label id="failLbl"><b> Submission Failed! ( ╯°□°)╯ ┻━━┻ </b></label>
                 <br><br>
-                <label id="statusPText"> An error has occured and your document was not submitted, please return to the 
-                <a href="DoctorCreateSubscription.php"> form creation page</a> 
+                <label id="statusPText"> An error has occured and your report was not submitted, please return to the 
+                <a href="DoctorViewDrugsList.php"> drugs inventory page</a> 
                 and complete the form once again. Common causes of error may include: </label>
                 <ul id="reasonsList">
-                    <li> Incorrectly Entered Patient ID </li>
-                    <li> Incorrectly Entered Doctor ID</li>
-                    <li> Consultation Session ID did not exist </li>
                     <li> Server is not responding </li>
                     <li> Server is currently overloaded </li>
-                    <li> Entered Details does not match Database Details Stored </li>
+                    <li> Text Areas overloaded with words and cannot be stored </li>
                 </ul>
                 <label id="statusPText">Should the problem persist, please notify us using the details located in the 
                 <a href="ContactPage.php"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>
