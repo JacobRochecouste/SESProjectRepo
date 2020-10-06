@@ -31,18 +31,19 @@ session_start();
             <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
             <a id="createSub" class="active" href="DoctorCreateSubscription.php">Create Subscription</a>
+            <a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
             <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
         </div>
         
         <br><br><br><br>
         
-        <!--Body of Website Here-->
-        <div class="subFormStatusS" align="justify">
-            <form class="formStatus">
+        <!--Content of Page-->
+        <div class="issueFormStatusS" align="justify">
+            <form class="issueStatus">
                 <label id="successLbl"><b> Form Creation Succesful! </b></label>
                 <br><br>
-                <label id="statusPText"> The form has been created and saved, you may now return to your <a href="DoctorHome.html">home page</a> and perform other actions. </label>
+                <label id="statusPText"> The form has been created and saved, you may now return to your <a href="DoctorHome.php">home page</a> and perform other actions. </label>
             </form>
         </div>
 

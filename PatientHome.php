@@ -9,94 +9,54 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
     exit;
 }
 ?>
-
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="stylesheet1.css">
-	<title>TeleHealth</title>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYWvsmEcY5HF_GSj1bx07SFDjX4Ud_dsQ"></script>
-    <script src="SiteJavascript.js"></script>
-    <script>
-
-    /*
-        function showPosition() {
-            if(navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showMap, showError);
-            } else {
-                alert("Sorry, your browser does not support HTML5 geolocation.");
-            }
-        }
- 
-     // Define callback function for successful attempt
-    function showMap(position) {
-        // Get location data
-        lat = position.coords.latitude;
-        long = position.coords.longitude;
-        var latlong = new google.maps.LatLng(lat, long);
+    <head>
+        <meta charset="utf-8">
     
-        var myOptions = {
-            center: latlong,
-            zoom: 16,
-            mapTypeControl: true,
-            navigationControlOptions: {
-                style:google.maps.NavigationControlStyle.SMALL
+	    <title>TeleHealth</title>
+
+        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="SiteJavascript.js"></script>
+        <script>
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(-34.397, 150.644),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.SMALL
+                };
+                var map = new google.maps.Map(document.getElementById('map_canvas'),
+                mapOptions);
             }
-        }
-    
-            var map = new google.maps.Map(document.getElementById("embedMap"), myOptions);
-            var marker = new google.maps.Marker({ position:latlong, map:map, title:"You are here!" });
-        }
- 
-        // Define callback function for failed attempt
-        function showError(error) {
-            if(error.code == 1) {
-                result.innerHTML = "You've decided not to share your position, but it's OK. We won't ask you again.";
-            } else if(error.code == 2) {
-                result.innerHTML = "The network is down or the positioning service can't be reached.";
-            } else if(error.code == 3) {
-                result.innerHTML = "The attempt timed out before it could get the location data.";
-            } else {
-                result.innerHTML = "Geolocation failed due to unknown error.";
-            }
-        }
-        */
+        </script>
+    </head>
 
-    function initialize() {
-        var mapOptions = {
-            center: new google.maps.LatLng(-34.397, 150.644),
-            zoom: 8,
-            mapTypeId: google.maps.MapTypeId.SMALL
-        };
-        var map = new google.maps.Map(document.getElementById('map_canvas'),
-            mapOptions);
-    }
-
-
-    </script>
-</head>
     <body>
 
+        <!--Logo-->
         <span class="logoDiv">
 			<a id="homePage" href="LandingPage.php">
 				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
 			</a>
 		</span>
 
-        <h1 class="title">Welcome to TeleHealth</h1>
+        <!--Title Bar-->
+        <h1 class="title">Hello!</h1>
 
+        <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
 	    	<a id="aboutLink" href="AboudPage.php">About</a>
     		<a id="servicesLink" href="ServicesPage.php">Services</a>
     		<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
+            <a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
+
         
 		<div class="parallax">
             <br> <br> <br>
@@ -115,7 +75,5 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
                 <img src="BookingIcon.png" alt="Image" style="width:100%"> 
                 <a class="btn" type="button" href="BookingPage.php">Make a Booking</a>
             </div>
-
-
     </body>
 </html>

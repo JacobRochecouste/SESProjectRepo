@@ -26,24 +26,25 @@ session_start();
         <!-- Navigation Menu -->
         <div class="navBar">
             <a id="homeLink" href="LandingPage.php">Home</a>
-            <a id="aboutLink" href="AboutPage.php" >About</a>
-            <a id="servicesLink" href="ServicesPage.php" >Services</a>
-            <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+            <a id="aboutLink" href="AboutPage.php">About</a>
+            <a id="servicesLink" href="ServicesPage.php">Services</a>
+            <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
             <a id="createSub" class="active" href="DoctorCreateSubscription.php">Create Subscription</a>
+            <a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
             <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
         </div>
 
         <br><br><br><br>
 
-        <!--Body of Website Here-->
+        <!--Content of Page-->
         <div class="subFormStatusF" align="justify">
             <form class="formStatus">
                 <label id="failLbl"><b> Form Creation Failed! ( ╯°□°)╯ ┻━━┻ </b></label>
                 <br><br>
                 <label id="statusPText"> An error has occured and your document was not submitted, please return to the 
-                <a href="DoctorCreateSubscription.html"> form creation page</a> 
+                <a href="DoctorCreateSubscription.php"> form creation page</a> 
                 and complete the form once again. Common causes of error may include: </label>
                 <ul id="reasonsList">
                     <li> Incorrectly Entered Patient ID </li>
@@ -54,7 +55,7 @@ session_start();
                     <li> Entered Details does not match Database Details Stored </li>
                 </ul>
                 <label id="statusPText">Should the problem persist, please notify us using the details located in the 
-                <a href="ContactPage.html"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>
+                <a href="ContactPage.php"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>
                 <label id="statusPText"> <br><br>We greatly apologise for any inconveniences caused. </label>
             </form>
         </div>

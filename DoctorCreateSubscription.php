@@ -26,16 +26,18 @@ session_start();
         <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
-		    <a id="aboutLink" href="AboutPage.php" >About</a>
-	    	<a id="servicesLink" href="ServicesPage.php" >Services</a>
-		    <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
+		    <a id="aboutLink" href="AboutPage.php">About</a>
+	    	<a id="servicesLink" href="ServicesPage.php">Services</a>
+		    <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
 		    <a id="createSub" class="active" href="DoctorCreateSubscription.php">Create Subscription</a>
+            <a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
     		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
     	</div>
 
         <!--Content of Page-->
+        <br>
         <div class="createSub">
             <form class="subForm" method="get" action="CreateSubHandler.php">
                 <label id="subFormLbl"><b> Post-Consultation Subscription Form </b> </label>
@@ -124,20 +126,17 @@ session_start();
 					<textarea id="doctorsNotes" name="doctorsNotes" placeholder="Write your notes here in layman terms" style="height:150px" required></textarea>
 						
 				<label id="consultationText" for="treatmentMethod"><b> Recommended Treatment Method(s) </b></label>
-					<textarea id="treatmentMethod" name="treatmentMethod" placeholder="Write your recommended treament methods here" style="height:150px" required></textarea>
-                
+					<textarea id="treatmentMethod" name="treatmentMethod" placeholder="Write your recommended treament methods here including frequency or length of usage for medicine or drugs" style="height:150px" required></textarea>
+                <br><br>
                 <table class="tableCreateSub">
                     <tr>
-                        <td align="left"> <button class="button cancelBtn" type="reset" onclick="location.href='DoctorHome.html'"> Cancel </button> </td>
-                        <td align="right"> <button class="button submitBtn" type="submit"> Submit </button> </td>
+                        <td align="left"> <button class="buttonRounded cancelBtn" type="reset" onclick="location.href='DoctorHome.html'"> Cancel </button> </td>
+                        <td align="right"> <button class="buttonRounded submitBtn" type="submit"> Submit </button> </td>
                     </tr>
                 </table>
-                
-                
-
             </form>
         </div>
-
+        <br><br><br><br>
     </body>
 
 </html>
