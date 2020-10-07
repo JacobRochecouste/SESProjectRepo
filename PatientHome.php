@@ -18,19 +18,25 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
     
 	    <title>TeleHealth</title>
 
-        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-        <script src="SiteJavascript.js"></script>
         <script>
-            function initialize() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(-34.397, 150.644),
-                    zoom: 8,
-                    mapTypeId: google.maps.MapTypeId.SMALL
+            function myMap() {
+                var mapProp= {
+                    center:new google.maps.LatLng(-33.86984543,151),
+                    zoom:10,
                 };
-                var map = new google.maps.Map(document.getElementById('map_canvas'),
-                mapOptions);
-            }
+                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                
+                var ClinicPos = {lat: -33.883665,lng: 151.200807);
+                var marker = new google.maps.Marker({
+                    position: ClinicPos,
+                    map: map,
+                    title: 'Medical Clinic'
+                });
+             }   
         </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYWvsmEcY5HF_GSj1bx07SFDjX4Ud_dsQ"></script>
+
     </head>
 
     <body>
@@ -64,16 +70,17 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <br>
             <br><br>
             <br>
-            <div id="embedMap" class="container1" style="width:100%">
-                <!--Google map will be embedded here-->
+            <div id="googleMap" class="container1" style="width:50%; height: 800px;margin:50px">
+                <!--Google map will be embedded here -->
                 <img src="LocationImage.jpg" alt="Image" style="width:100%"> 
-                <button class="btn" type="button" onclick="initialize();">Find Medical Clinics Near Me</button>
-                <div id="map_canvas"></div>
+                <button class="btn" type="button" onclick="myMap();">Find Medical Clinics Near Me</button>
+               
             </div>
-
+            <!--
             <div class="container2">
                 <img src="BookingIcon.png" alt="Image" style="width:100%"> 
                 <a class="btn" type="button" href="BookingPage.php">Make a Booking</a>
             </div>
+            -->
     </body>
 </html>

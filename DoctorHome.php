@@ -46,16 +46,6 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
 
-	<div class="navBar">
-		<a id="homeLink" href="LandingPage.php">Home</a>
-		<a id="aboutLink" href="AboutPage.php" >About</a>
-		<a id="servicesLink" href="ServicesPage.php" >Services</a>
-		<a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
-		<a id="contactLink" href="ContactPage.php">Contact Us</a>
-		<a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>
-		<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-		<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-	</div>
 
 	<div class="parallax">
 			<br> <br> <br> 
@@ -67,12 +57,14 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 
 				<input type="submit" value="Go to Booking Page" style="background-color: gray; 
 																		border: 2px white;
-																		padding: 60px 60px;
+																		padding: 60px 0px;
 																		color: #e6e6e6;
 																		margin: 0px 200px;
 																		cursor: pointer;
 																		font-size: 30px;
-																		display: inline-block;"
+																		display: inline-block;
+																		width: 500px;
+																		"
 																		
 																		
 
@@ -86,11 +78,49 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 
 				<input type="submit" value="Create Subscription" style="background-color: gray; 
 																		border: 2px white;
-																		padding: 60px 60px;
+																		padding: 60px 0px;
+																		color: #e6e6e6;
+																		margin: 0px 50px;
+																		cursor: pointer;
+																		font-size: 30px;
+																		width: 500px;
+																		"
+																		
+
+				/>
+
+			</form>
+			</div>
+			<br><br><br>
+			<div style="display: inline-block">
+			<form  action="DoctorCreateSubscription.php">
+
+				<input type="submit" value="View Drugs" style="background-color: gray;
+																		border: 2px white;
+																		padding: 60px 0px;
 																		color: #e6e6e6;
 																		margin: 0px 200px;
 																		cursor: pointer;
 																		font-size: 30px;
+																		width: 500px;
+																		"
+																		
+
+				/>
+
+			</form>
+			</div>
+			<div style="display: inline-block">
+			<form  action="DoctorCreateSubscription.php">
+
+				<input type="submit" value="Create Chat with Patient" style="background-color: gray;
+																		border: 2px white;
+																		padding: 60px 0px;
+																		color: #e6e6e6;
+																		margin: 0px 50px;
+																		cursor: pointer;
+																		font-size: 30px;
+																		width: 500px;
 																		"
 																		
 
