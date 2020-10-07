@@ -47,9 +47,7 @@ session_start();
                 <a href="DoctorCreateSubscription.php"> form creation page</a> 
                 and complete the form once again. Common causes of error may include: </label>
                 <ul id="reasonsList">
-                    <li> Incorrectly Entered Patient ID </li>
                     <li> Incorrectly Entered Doctor ID</li>
-                    <li> Consultation Session ID did not exist </li>
                     <li> Server is not responding </li>
                     <li> Server is currently overloaded </li>
                     <li> Entered Details does not match Database Details Stored </li>

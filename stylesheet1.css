@@ -76,15 +76,71 @@ body, html {
 }
 
 .logtable {
-    width: 800px;
+    max-width: 500px;
+	max-height: 500px;
     float: left;
 }
 
-.divMessage {
-    width: 350px;
-    position:relative;
-    right:-5px;
-    top: -20px;
+.divText {
+	width: 90%;
+	height: 60%;
+	font-size: 26px;
+	background-color: #ffffff;
+	padding: 15px;
+	border: 4px solid #b05858;
+	margin: 0px 0px 0px 70px;
+}
+
+.mpForm {
+	width: 50%;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: #ffffff;
+	border-radius: 10px;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.mpForm #mpLbl {
+	font-size: 52px;
+	margin-left: 150px;
+}
+
+
+.mpForm #mpText {
+	font-size: 24px;
+}
+
+.mpForm #reasonsList {
+	font-size: 18px;
+}
+
+.mpForm #apLbl {
+	font-size: 52px;
+	margin-left: 315px;
+}
+
+.mpForm #mpHText {
+	font-size: 30px;
+}
+
+.mpForm #spLbl {
+	font-size: 52px;
+	color: black;
+	margin-left: 220px;
+}
+
+.mpForm #epLbl {
+	font-size: 52px;
+	color: black;
+	margin-left: 190px;
+}
+
+.mpForm #cpLbl {
+	font-size: 52px;
+	color: black;
+	/*margin-left: 280px;*/
 }
 
 /*Login Page Form Style*/
@@ -108,6 +164,12 @@ h1 {
 h2 {
 	text-align: center;
 	color: #277582;
+}
+
+.h2signUpUserType {
+	text-align: center;
+	color: #277582;
+	font-size: 36px;
 }
 
 #loginFormLbl {
@@ -165,6 +227,17 @@ span {
 }
 
 /*this is the form style for the SignupUserType page*/
+.signUpUserType {
+	width: 300px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 50px;
+	background: #ffffff;
+	border-radius: 10px;
+	border: 4px solid #333333;
+}
+
 .signUp {
 	width: 300px;
 	height: auto;
@@ -345,14 +418,6 @@ hr {
 	padding-left: 8px;
 }
 
-.subForm #patID {
-	width: 50%;
-	height: 30px;
-	border: border-box;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
 /*Consultation Details Section in the CreateSubscription Page*/
 .subForm #consultationDetails {
 	font-size: 26px;
@@ -369,7 +434,7 @@ hr {
 	line-height: 2;
 }
 
-.subForm #sessionID {
+.subForm #bookingID {
 	width: 50%;
 	height: 30px;
 	border: border-box;

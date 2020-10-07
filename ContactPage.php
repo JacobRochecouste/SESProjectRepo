@@ -50,18 +50,32 @@ session_start();
 
 		<!--Content of Page-->
 		<div class="parallax">
-			<br><br>
-			<br><br>
-
-			<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#ffffff;size:700px 400px">
-				<b>Contact Us:</b>
-				<br><b>Telephone</b> - (711) 265-9193
-				<br><b>Email</b> - telehealth@hotmail.com
+		<br><br><br><br>	
+			<form class="mpForm" id="landingPForm" align="center">
+				
+				<label id="cpLbl"><b> Contacts List </b></label>
 				<br>
-				<br>
-				<b>If you want to speak to a doctor, <br> please <a href="SignupUserTypePage.html">sign up</a> or <a href="LoginPage.php">log in</a> to the website and book an appointment.</b>
-			</p>
-
+				<label id="mpText">
+					<br><b>Telephone</b> - 0412345678 <br>
+						<b> Emergency (24/7) Hotline </b> - 0412345909 <br>
+						<b>Email</b> - telehealthsupport@tele.health.au <br>
+					</label>
+					<br><br>
+				<label id="mpHText"> <u><b>Developer Specific</b></u> </label>
+				<label id="mpText">
+					<br><b>Telephone</b> - 0412345679 <br>
+						<b>Email</b> - telehealthdev@tele.health.au <br>
+					</label>
+					<br><br>
+				<label id="mpHText"> <u><b>Where to to find us?</b></u> </label> <br><br>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3312.232515169314!2d151.1981017!3d-33.8836651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5aa7383337c73213!2sUTS%20Faculty%20of%20Engineering%20and%20IT!5e0!3m2!1sen!2sau!4v1588215213583!5m2!1sen!2sau" width="400px" height="250px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<br><br>
+				<label id="mpHText"> <u><b> Contact a Doctor</b></u> </label>
+				<label id="mpText">
+					<br>If you want to speak to a doctor, <br> please <a href="SignupUserTypePage.html">sign up</a> or <a href="LoginPage.php">log in</a> <br> to the website and book an appointment.
+					</label>
+					<br><br>
+			</form>
 		</div>
 
 	</body>

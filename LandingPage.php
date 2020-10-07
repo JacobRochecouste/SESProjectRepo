@@ -49,23 +49,28 @@ session_start();
 
 		<!--Content of Page-->
 		<div class="parallax">
-		<br><br>
-		
-		<span class="logtable">
-			<img src="doctor.jpg" alt="Doctor Image" style="width:650px;height:386px;margin:75px 0px 0px 0px;">
-		</span>
-		<br>
-		<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 18px 0px 0px 0px;padding:75px;background-color:#ffffff;size:700px 400px">
-			<u><b>Welcome to Telehealth!</b></u>
-			<br> <li> We help provide you with the best quality healthcare and consultations anytime, anywhere.</li>
-			<br> <li> With a wide range of doctors and medical personnel from all around the country, we aim to bring a better healthcare system for all.</li>
-			<br> <li> Join us <a href="SignupUserTypePage.html">now!</a></li>
-
-			<br>
-			<br>
-		</p>
-		
-		</div>	
+		<br><br><br><br>	
+			<form class="mpForm" id="landingPForm" align="justify">
+				<label id="mpLbl"><b> Welcome to Telehealth!  </b></label>
+				<br><br>
+				<label id="mpText"> 
+					As one of the best Healthcare Service Providers in the market, TeleHealth is the embodiement of proven expertise! 
+					Boasting medical personnel and doctors from different disciplines and varying tecniques all for you! <br> 
+					Our service understands the importance of our customers well-being and thus we take every situation very seriously with detailed
+					yet simple procedures for you to follow. We do not discriminate our patients and our medical team will treat you with the
+					utmost respect.
+					<br>
+					It does not matter if we are dealing with the elderly, the disabled or people affected by the coronavirus 
+					as our service supports various selectable consultation modes through the website during the booking process.
+					<br><br>
+					Our ultimate goal is to revolutionize TeleHealth as a better healthcare system.
+					<br><br>
+					Join us today! By clicking on this <a href="SignupUserTypePage.html">link!</a>
+					<br><br>
+					Have a question? Feel free to contact us <a href=ContactPage.php>here! </a>
+				</label>
+			</form>
+		</div>
 
 	</body>
 

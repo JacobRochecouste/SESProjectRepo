@@ -49,22 +49,30 @@ session_start();
 
 		<!--Content of Page-->
 		<div class="parallax">
-	
-			<br><br>
-			<br><br>	
-
-			<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#ffffff;size:700px 400px">
-				<b>In an emergency, always call 000.</b>
-				<br>
-				<br>
-				<b>If the situation is not critical, but you still need assistance,<br> please contact us through the following information:</b>
-				<br><br><b>Telephone</b> - (711) 265-9193
-				<br><b>Email</b> - telehealth@hotmail.com
-				<br><b>For appointments, please <a href="SignupUserTypePage.html">sign up</a> or <a href="LoginPage.php">log in</a> first to continue!</b>
-			</p>
-	
+		<br><br><br><br>	
+			<form class="mpForm" id="landingPForm" align="justify">
+				<label id="epLbl"><b> Emergency Situation </b></label>
+				<br><br>
+				<label id="mpHText"><u><b> Advise: </b></u></label>
+				<label id="mpText">
+					<br>In an immediate emergency we suggset contacting 000 first A.S.A.P </label>
+					<br><br>
+				<label id="mpHText"><u><b> Methods We Offer: </b></u></label>
+				<label id="mpText">
+					<br><b>Urgent Cases:</b> <br>  
+					We require you to <a href=LoginPage.php>sign in</a> with your account first or to create an account if you do not have one. Please click <a href="SignupUserTypePage.html">here to proceed</a>.</label>
+					<br><br>
+				<label id="mpHText"><u><b> Contact Details: </b></u></label>
+				<label id="mpText">
+					<br><b>Telephone</b> - 0412345678 <br>
+						<b> Emergency (24/7) Hotline </b> - 0412345909 <br>
+						<b>Email</b> - telehealthsupport@tele.health.au <br>
+						<b>Others</b> - Please refer to the <a href="ContactPage.php">Contact Us</a> page for more details.
+						</label>
+					<br><br>
+			</form>
 		</div>
-	
+
 	</body>
 
 </html>

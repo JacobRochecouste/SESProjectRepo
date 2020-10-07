@@ -12,7 +12,7 @@ CREATE TABLE Users (
 );
 
 CREATE TABLE MedSubscriptions (
-	FormID INT UNSIGNED NOT NULL PRIMARY KEY,
+	FormID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
     PatFirstName varchar(100) NOT NULL,
     PatLastName varchar(100) NOT NULL,
     PatEmail varchar(100) NOT NULL,
@@ -22,11 +22,12 @@ CREATE TABLE MedSubscriptions (
     DocPhoneNo varchar(15) NOT NULL,
     DocID INT UNSIGNED,
     ConsultType varchar(100) NOT NULL,
+    BookingID varchar(20) NOT NULL,
     ConsultationSummary longtext NOT NULL,
     DocNotes longtext NOT NULL,
     TreatmentMethod longtext NOT NULL,
     CreationDate date NOT NULL
-);
+) ENGINE=InnoDB AUTO_INCREMENT=1000;
 
 CREATE TABLE Drugs (
   DrugID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
