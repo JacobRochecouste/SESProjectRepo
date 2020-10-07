@@ -62,7 +62,8 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 																			margin: 0px 200px;
 																			cursor: pointer;
 																			font-size: 30px;
-																			display: inline-block;"
+																			display: inline-block;
+																			width: 500px"
 					/>
 
 				</form>

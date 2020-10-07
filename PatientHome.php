@@ -29,7 +29,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
                 };
                 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
                 
-                var ClinicPos = {lat: -33.883665,lng: 151.200807);
+                var ClinicPos = {lat: -33.883665,lng: 151.200807};
                 var marker = new google.maps.Marker({
                     position: ClinicPos,
                     map: map,
@@ -44,7 +44,6 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 
     <body>
 
-        <!--Logo-->
         <span class="logoDiv">
 			<a id="homePage" href="LandingPage.php">
 				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
@@ -73,17 +72,18 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <br>
             <br><br>
             <br>
-            <div id="googleMap" class="container1" style="width:50%; height: 800px;margin:50px">
+            <div id="googleMap" class="container1" style="width:800px; height: 800px; margin:50px">
                 <!--Google map will be embedded here -->
                 <img src="LocationImage.jpg" alt="Image" style="width:100%"> 
                 <button class="btn" type="button" onclick="myMap();">Find Medical Clinics Near Me</button>
                
             </div>
-            <!--
+            
             <div class="container2">
-                <img src="BookingIcon.png" alt="Image" style="width:100%"> 
-                <a class="btn" type="button" href="BookingPage.php">Make a Booking</a>
+                <img src="BookingIcon.png" alt="Image" style="width: 400px; position: center;"> 
+                <a class="btn" type="button" href="BookingPage.php" style="position: center;">Make a Booking</a>
             </div>
-            -->
+        </div>
+            
     </body>
 </html>

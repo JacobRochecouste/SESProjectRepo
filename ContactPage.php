@@ -50,7 +50,7 @@ session_start();
 
 		<!--Content of Page-->
 		<div class="parallax">
-		<br><br><br><br>	
+			<br><br><br><br>	
 			<form class="mpForm" id="landingPForm" align="center">
 				
 				<label id="cpLbl"><b> Contacts List </b></label>
