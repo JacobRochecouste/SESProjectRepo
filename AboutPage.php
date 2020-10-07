@@ -50,23 +50,28 @@ session_start();
 
 		<!--Content of Page-->
 		<div class="parallax">
-			<br><br>
-			<br><br>
+		<br><br><br><br>	
+			<form class="mpForm" id="landingPForm" align="justify">
+				<label id="apLbl"><b> About Us  </b></label>
+				<br><br>
+				<label id="mpHText"> <u><b>Our Vision:</b></u> </label>
+				<label id="mpText">
+					<br>To ensure that medical help is available anytime, anywhere in the world. </label>
+					<br><br>
+				<label id="mpHText"> 
+					<u><b>Our Mission:</b></u> </label>
+				<label id="mpText">
+					<br>To give people in faraway areas hope for an improved medical system through online consultations, appointments and prescriptions for medicine. </label>
+					<br><br>
+				<label id="mpHText"> 
+					<u><b>Additional Info:</b></u> </label>
+					<br>
+				<label id="mpText">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis turpis, vulputate quis placerat nec, pellentesque at lectus. Curabitur mattis dui mi, nec viverra velit rutrum quis. Mauris eget leo massa. Donec rutrum lectus nec diam suscipit pretium. Aenean auctor justo arcu, ut congue quam ultrices quis. Duis accumsan nisl at lectus lacinia porta. Integer at fermentum nisl. In aliquam semper efficitur. Nam nec velit lobortis, accumsan nibh id, accumsan nisi. Morbi at orci fermentum, aliquam eros non, sollicitudin turpis.
 
-			<span class="logtable">
-			<img src="LandingLaptopImage.jpg" alt="Landing Laptop Image" style="width:650px;height:357px;margin:60px 0px 0px 0px;">
-			</span>
-		
-			<p class="divmessage" style="font-family:Arial;font-size:30px;text-align:left;margin: 0px 0px 30px 0px;padding:75px;background-color:#ffffff; size:700px 400px">
-				<u><b>Our Vision:</b></u>
-				To ensure that medical help is available anytime, anywhere in the world.
-			<br>
-			<br>
-				<u><b>Our Mission:</b></u>
-				To give people in faraway areas hope for an improved medical system through online consultations, appointments and prescriptions for medicine.
-			</p>
-			<br>
-
+					Mauris semper eleifend ante et iaculis. In pulvinar id ex et pretium. Nam placerat ante blandit, congue massa a, aliquam felis. Cras dignissim massa ut rutrum maximus. Duis ut accumsan mauris. Vestibulum elementum purus nec dolor fermentum, ornare tempor quam ornare. Nam elementum accumsan efficitur.
+				</label>
+			</form>
 		</div>
 
 	<body>

@@ -20,14 +20,11 @@ session_start();
 			</a>
 		</span>
 
-
-	
 		<!-- Navigation Menu -->
-
 		<div class="navBar">
 			<a id="homeLink" href="LandingPage.php">Home</a>
-			<a id="aboutLink" href="AboutPage.php" >About</a>
-			<a id="servicesLink" class="active" href="ServicesPage.php" >Services</a>
+			<a id="aboutLink" href="AboutPage.php">About</a>
+			<a id="servicesLink" class="active" href="ServicesPage.php">Services</a>
 			<a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<?php
@@ -50,24 +47,29 @@ session_start();
 	
 		<!--Content of Page-->
 		<div class="parallax">
-		<br><br>
-		<br><br>
-		
-			<p class="divmessage" style="font-family:Arial;font-size:26px;text-align:center;margin: 0px 0px 30px 0px;padding:75px;background-color:#ffffff;size:700px 400px">
-				<u><b>Our Services</b></u>
+		<br><br><br><br>	
+			<form class="mpForm" id="landingPForm" align="justify">
+				<label id="spLbl"><b> Provided Services  </b></label>
 				<br><br>
-				<b>We provide:</b>
-				<br><br>
-				<b>Healthcare services</b> - We direct you to the quality healthcare services you deserve.
-				<br>
-				<b>Online consultations</b> - Find a doctor to communicate with anytime, anywhere.
-				<br>
-				<b>Help Centre</b> - Need a question answered? Just ask our help line <a href="ContactPage.php">here!</a>
-				<br>
-				<b>State-of-the-art software</b> - We always keep Telehealth updated with security and stability, so there's no need to worry about lost information.
-			</p>	
-
-		</div>	
+				<label id="mpHText"><u><b> Healthcare: </b></u></label>
+				<label id="mpText">
+					<br>We direct you to the quality healthcare services you deserve. </label>
+					<br><br>
+				<label id="mpHText"><u><b> Online Consultations: </b></u></label>
+				<label id="mpText">
+					<br>Find a doctor to communicate with anytime, anywhere. </label>
+					<br><br>
+				<label id="mpHText"><u><b> Support Team: </b></u></label>
+				<label id="mpText">
+					<br>Need a question answered? Something you don't understand? <br>
+					Our amazing on demand support team can be found <a href="ContactPage.php">here!</a> </label>
+					<br><br>
+				<label id="mpHText"><u><b> put something here </b></u></label>
+				<label id="mpText">
+					<br> put something here </label>
+					<br><br>
+			</form>
+		</div>
 	
 	</body>
 

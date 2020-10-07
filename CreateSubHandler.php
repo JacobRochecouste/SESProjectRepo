@@ -17,12 +17,12 @@ $docEmail = $_GET['docEmail'];
 $docPhone = $_GET['docPhoneNum'];
 $docID = $_GET['docID'];
 $consType = $_GET['radioOption'];
-$sesID = $_GET['sessionID'];
+$bookID = $_GET['bookingID'];
 $cdSum = $_GET['cdSummary'];
 $docNotes = $_GET['doctorsNotes'];
 $treatMethod = $_GET['treatmentMethod'];
 
-$query = "INSERT INTO MedSubscriptions (FormID, PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultType, ConsultationSummary, DocNotes, TreatmentMethod, CreationDate) VALUES ('$sesID', '$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$consType', '$cdSum', '$docNotes', '$treatMethod', CURRENT_DATE)";
+$query = "INSERT INTO MedSubscriptions (PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultType, BookingID, ConsultationSummary, DocNotes, TreatmentMethod, CreationDate) VALUES ('$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$consType', '$bookID','$cdSum', '$docNotes', '$treatMethod', CURRENT_DATE)";
 if($dbc->query($query) === TRUE)
 {
     echo "<script>alert('Form Creation Successful');</script>";

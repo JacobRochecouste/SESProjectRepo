@@ -54,10 +54,11 @@ $result = mysqli_query($dbc, $query);
 			<br>
             <table align="center">
                 <tr>
-                    <th colspan="4"><label for="viewSubTitle" id="viewSubTitle"><h2><b> Medical Subscriptions </b></h2></label></th>
+                    <th colspan="5"><label for="viewSubTitle" id="viewSubTitle"><h2><b> Medical Subscriptions </b></h2></label></th>
                 </tr>
                 <t>
                     <th> Form ID </th>
+                    <th> Booking ID </th>
                     <th> Consultation Type </th>
                     <th> Date </th>
                     <th> Consulted By </th>
@@ -69,6 +70,7 @@ $result = mysqli_query($dbc, $query);
                     {
                         echo '<tr>
                         <td>' . $row['FormID'] . '</td>
+                        <td>' . $row['BookingID'] . '</td>
                         <td>' . $row['ConsultType'] . '</td>
                         <td>' . $row['CreationDate'] . '</td>
                         <td>Dr. ' . $row['DocFirstName'] . ' ' . $row['DocLastName'] . '</td>
@@ -78,6 +80,7 @@ $result = mysqli_query($dbc, $query);
                 else
                 {
                     echo '<tr>
+                        <td>N/A</td>
                         <td>N/A</td>
                         <td>N/A</td>
                         <td>N/A</td>

@@ -18,7 +18,6 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<meta>
 			<link rel="stylesheet" type="text/css" href="stylesheet1.css">
 			<title>TeleHealth</title>
-
 	</head>
 
 	<body>
@@ -46,35 +45,31 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
 
-
-	<div class="parallax">
-			<br> <br> <br> 
+		<!--Content of Page-->
+		<div class="parallax">
+			<br><br><br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
-            <br> <br> <br> <br>
+			<br><br><br><br>
            
 			<div style="display: inline-block;">
-			<form  action="https://my.setmore.com/calendar#weekly/r65041600744361542/05102020">
 
-				<input type="submit" value="Go to Booking Page" style="background-color: gray; 
-																		border: 2px white;
-																		padding: 60px 0px;
-																		color: #e6e6e6;
-																		margin: 0px 200px;
-																		cursor: pointer;
-																		font-size: 30px;
-																		display: inline-block;
-																		width: 500px;
-																		"
-																		
-																		
+				<form  action="https://my.setmore.com/calendar#weekly/r65041600744361542/05102020">
 
-				/>
+					<input type="submit" value="Go to Booking Page" style="background-color: gray; 
+																			border: 2px white;
+																			padding: 60px 60px;
+																			color: #e6e6e6;
+																			margin: 0px 200px;
+																			cursor: pointer;
+																			font-size: 30px;
+																			display: inline-block;"
+					/>
 
-			</form>
+				</form>
 			</div>
 
 			<div style="display: inline-block">
-			<form  action="DoctorCreateSubscription.php">
+				<form  action="DoctorCreateSubscription.php">
 
 				<input type="submit" value="Create Subscription" style="background-color: gray; 
 																		border: 2px white;
@@ -122,13 +117,13 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 																		font-size: 30px;
 																		width: 500px;
 																		"
-																		
-
 				/>
 
-			</form>
-			</div>
+				</form>
+				</div>
 
         </div>
+
 	</body>
+
 </html>

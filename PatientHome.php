@@ -14,7 +14,10 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 <html lang="en">
 
     <head>
-        <meta charset="utf-8">
+
+        <meta>
+			<link rel="stylesheet" type="text/css" href="stylesheet1.css">
+			<title>TeleHealth</title>
     
 	    <title>TeleHealth</title>
 

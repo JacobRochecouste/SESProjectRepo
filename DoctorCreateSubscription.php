@@ -70,10 +70,6 @@ session_start();
                 <label id="pdLabels" for="patEmail"><b>Email</b></label> 
                 <br>
                     <input type="email" name="patEmail" id="patEmail" placeholder="Enter the Patient's e-mail" required>
-                <br><br>
-                <label id="pdLabels" for="patID"><b> Patient ID </b></label> 
-                <br>
-                    <input type="text" name="patID" id="patID" placeholder="Enter the Patient's ID" required>
                 <br><br><br>
 
                 <!--Doctor's Details Section-->
@@ -114,9 +110,9 @@ session_start();
                         <input type="radio" name="radioOption" value="Emergency" required> Emergency Consultation </label>
                 </div>
                 <br>
-                <label id="pdLabels"><b> Session ID </b></label> 
+                <label id="pdLabels"><b> Booking ID </b></label> 
                 <br>
-                    <input type="text" name="sessionID" id="sessionID" placeholder="Enter the Session ID" required>
+                    <input type="text" name="bookingID" id="bookingID" placeholder="Enter the Booking ID of the Session" required>
                 <br><br>
 
                 <label id="consultationText" for="cdSummary"><b> Consultation Discussion Summary </b></label>
@@ -130,7 +126,7 @@ session_start();
                 <br><br>
                 <table class="tableCreateSub">
                     <tr>
-                        <td align="left"> <button class="buttonRounded cancelBtn" type="reset" onclick="location.href='DoctorHome.html'"> Cancel </button> </td>
+                        <td align="left"> <button class="buttonRounded cancelBtn" type="reset" onclick="location.href='DoctorHome.php'"> Cancel </button> </td>
                         <td align="right"> <button class="buttonRounded submitBtn" type="submit"> Submit </button> </td>
                     </tr>
                 </table>
