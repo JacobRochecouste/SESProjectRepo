@@ -73,7 +73,7 @@ session_start();
                 <br><br><br>
 
                 <!--Doctor's Details Section-->
-                <label for="doctorsDetails" id="doctorsDetails"><b> Doctor's Details </b></label>
+                <!-- <label for="doctorsDetails" id="doctorsDetails"><b> Doctor's Details </b></label>
 				<hr>		
 				<label id="pdLabels" for="docFirstName"><b> Doctor's First Name </b></label>
                 <br>
@@ -95,7 +95,7 @@ session_start();
                 <br>
                     <input type="text" name="docID" id="docID" placeholder="Enter your Doctors ID" required>
 
-                <br><br><br>
+                <br><br><br> -->
 
                 <!--Consultation Details Section-->
                 <label for="consultationDetails" id="consultationDetails"><b> Consultation Details </b></label>

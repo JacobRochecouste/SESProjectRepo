@@ -22,7 +22,7 @@ CREATE TABLE MedSubscriptions (
     DocPhoneNo varchar(15) NOT NULL,
     DocID INT UNSIGNED,
     ConsultType varchar(100) NOT NULL,
-    BookingID varchar(20) NOT NULL,
+    BookingID varchar(20) NOT NULL UNIQUE,
     ConsultationSummary longtext NOT NULL,
     DocNotes longtext NOT NULL,
     TreatmentMethod longtext NOT NULL,

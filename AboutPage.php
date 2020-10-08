@@ -40,6 +40,11 @@ session_start();
 				if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient")
 				{
 					echo '<a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>';
+					echo '<a id="drugsTable" href="DoctorViewDrugsList.php">View Drugs</a>';
+				}
+				if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor")
+				{
+					echo '<a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>';
 				}
 				echo '<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>';
 				echo '<a id="docHome" href="DoctorHome.php" style="float: right;">', $_SESSION["FName"]," ",$_SESSION["LName"], '</a>';

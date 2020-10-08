@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
 if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
-    header("location: LoginPage.html");
+    header("location: LoginPage.php");
     exit;
 }
 if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
@@ -56,7 +56,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
         <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
-	    	<a id="aboutLink" href="AboudPage.php">About</a>
+	    	<a id="aboutLink" href="AboutPage.php">About</a>
     		<a id="servicesLink" href="ServicesPage.php">Services</a>
     		<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 		    <a id="contactLink" href="ContactPage.php">Contact Us</a>

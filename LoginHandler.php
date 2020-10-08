@@ -33,6 +33,8 @@ if(mysqli_num_rows($result) == 1)
         }
         elseif($usertype=="doctor")
         {
+            $_SESSION["DocID"]=$row['DoctorID'];
+            $_SESSION["PhoneNo"]=$row['PhoneNo'];
             header("Location: DoctorHome.php");
         }
             

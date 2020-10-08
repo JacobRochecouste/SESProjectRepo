@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
 if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
-    header("location: LoginPage.html");
+    header("location: LoginPage.php");
     exit;
 }
 if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
@@ -40,7 +40,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>
-			<a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
+			<a id="drugsTable" href="DoctorViewDrugsList.php">View Drugs</a>
 			<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
 			<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
@@ -89,7 +89,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			</div>
 			<br><br><br>
 			<div style="display: inline-block">
-			<form  action="DoctorCreateSubscription.php">
+			<form  action="DoctorViewDrugsList.php">
 
 				<input type="submit" value="View Drugs" style="background-color: gray;
 																		border: 2px white;
