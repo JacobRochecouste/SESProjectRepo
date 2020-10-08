@@ -1,13 +1,5 @@
 ﻿<?php
 session_start();
-if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
-    header("location: LoginPage.html");
-    exit;
-}
-if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
-    header("location: DoctorHome.php");
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -35,15 +27,16 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
     		<a id="servicesLink" href="ServicesPage.php">Services</a>
     		<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
+            <a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
         
 		<div class="parallax">
-            <br> <br> <br>
+
+            <br> <br> <br><br>
                 <!--Setmore Booking Service Embed-->
             <iframe src="https://telehealth3623.setmore.com" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
-        
 
         </div>
 </body>

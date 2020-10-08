@@ -20,14 +20,14 @@ $doctorid = $_GET['DoctorID'];
 $query = "INSERT INTO Users (FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES ('$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', '$doctorid')";
 if($dbc->query($query) === TRUE)
 {
-    echo "<script>alert('Registration Successful');</script>";
-    include "Signup-Success.html";
+    //echo "<script>alert('Registration Successful');</script>";
+    header("Location: Signup-Success.html");
 
 } 
 else 
 {
-    echo "Sign up Failed " . $dbc->error; 
-    include "Signup-Fail.html";   
+    //echo "Sign up Failed " . $dbc->error; 
+    header("Location: Signup-Fail.html");   
 }
 
 $dbc->close()

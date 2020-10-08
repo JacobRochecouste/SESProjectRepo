@@ -51,6 +51,8 @@ session_start();
                     <br>
                     If there is nothing to note of in the consultation details section please write N/A.
                     <br>
+                    Your detail's as a doctor will be instantly filled out so you do not have to worry about those and focus on the rest!
+                    <br>
                 </label>
                 <br>
                 <!--my label for subFormLbl at line 36, idk how to center it help me please w-->

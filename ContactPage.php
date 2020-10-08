@@ -79,7 +79,6 @@ session_start();
 				<label id="mpText">
 					<br>If you want to speak to a doctor, <br> please <a href="SignupUserTypePage.html">sign up</a> or <a href="LoginPage.php">log in</a> <br> to the website and book an appointment.
 					</label>
-					<br><br>
 			</form>
 		</div>
 

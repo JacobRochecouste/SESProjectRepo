@@ -47,10 +47,10 @@ session_start();
                 <a href="DoctorCreateSubscription.php"> form creation page</a> 
                 and complete the form once again. Common causes of error may include: </label>
                 <ul id="reasonsList">
-                    <li> Incorrectly Entered Doctor ID</li>
                     <li> Server is not responding </li>
                     <li> Server is currently overloaded </li>
                     <li> Entered Details does not match Database Details Stored </li>
+                    <li> Booking ID you have entered is already used </li>
                 </ul>
                 <label id="statusPText">Should the problem persist, please notify us using the details located in the 
                 <a href="ContactPage.php"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>

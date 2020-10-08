@@ -14,13 +14,13 @@ $IssueNote = $_GET['issueSummary'];
 $query = "INSERT INTO IssueList (IDName, IssueNote) VALUES ('$IDName', '$IssueNote')";
 if($dbc->query($query) === TRUE)
 {
-    echo "<script>alert('Issue Succesfully Notified');</script>";
-    include("DoctorViewDrugsList-Success.php");
+    //echo "<script>alert('Issue Succesfully Notified');</script>";
+    header("Location: DoctorViewDrugsList-Success.php");
 }
 else
 {
-    $errMsg = "Incorrectly Filled Form Request: " . addslashes($dbc->error);
-    include("DoctorCreateSubscription-Fail.php");
-    echo "<script type='text/javascript'>alert('$errMsg');</script>";
+    //$errMsg = "Incorrectly Filled Form Request: " . addslashes($dbc->error);
+    header("Location: DoctorCreateSubscription-Fail.php");
+    //echo "<script type='text/javascript'>alert('$errMsg');</script>";
 }
 ?>

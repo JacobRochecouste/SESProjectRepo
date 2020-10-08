@@ -40,7 +40,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>
-			<a id="drugsTable" href="DoctorViewDrugsList.php">View Drugs</a>
+			<a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
 			<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
 			<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
 		</div>
@@ -55,7 +55,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 
 				<form  action="https://my.setmore.com/calendar#weekly/r65041600744361542/05102020">
 
-					<input type="submit" value="Go to Booking Page" style="background-color: gray; 
+					<input type="submit" value="Setmore Booking Page" target="_blank" style="background-color: gray; 
 																			border: 2px white;
 																			padding: 60px 60px;
 																			color: #e6e6e6;
@@ -91,7 +91,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<div style="display: inline-block">
 			<form  action="DoctorViewDrugsList.php">
 
-				<input type="submit" value="View Drugs" style="background-color: gray;
+				<input type="submit" value="View Drugs Inventory" target="_blank" style="background-color: gray;
 																		border: 2px white;
 																		padding: 60px 0px;
 																		color: #e6e6e6;
