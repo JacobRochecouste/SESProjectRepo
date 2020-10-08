@@ -9,10 +9,9 @@ $dbname='telehealth';
 $dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error);
 	
-$patfirstname = $_SESSION["FName"];
-$patlastname = $_SESSION["LName"];
+$patEmail = $_SESSION["email"];
 
-$query = "SELECT * FROM MedSubscriptions WHERE PatFirstName ='$patfirstname' AND PatLastName = '$patlastname'";
+$query = "SELECT * FROM MedSubscriptions WHERE PatEmail ='$patEmail'";
 $result = mysqli_query($dbc, $query);
 ?>
 <!DOCTYPE html>
@@ -96,8 +95,8 @@ $result = mysqli_query($dbc, $query);
                 <select name='FormID'>
                     <option> Select a form </option>
                     <?php
-                        $query = mysqli_query($dbc, "SELECT * FROM MedSubscriptions WHERE PatFirstName ='$patfirstname' AND PatLastName = '$patlastname'");
-                        while($form = mysqli_fetch_array($query)) {
+                        $result = mysqli_query($dbc, $query);
+                        while($form = mysqli_fetch_array($result)) {
                             echo "<option value='".$form['FormID']."'>".$form['FormID']."</option>";
                         } 
                     ?>
