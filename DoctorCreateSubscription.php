@@ -42,6 +42,13 @@ session_start();
             <form class="subForm" method="get" action="CreateSubHandler.php">
                 <label id="subFormLbl"><b> Post-Consultation Subscription Form </b> </label>
                 <hr>
+                <?php 
+                if(isset($_SESSION["Error"]))
+                {
+                    $error = $_SESSION["Error"];
+                    echo "<br><span id='error'>$error</span><br><br>";
+                }
+                ?>
                 <label id="pcsfLabelTxt">
                     This form is to be created and fully filled out upon completion of a medical consultation with a patient.
                     <br>
@@ -74,32 +81,6 @@ session_start();
                     <input type="email" name="patEmail" id="patEmail" placeholder="Enter the Patient's e-mail" required>
                 <br><br><br>
 
-                <!--Doctor's Details Section-->
-                <!-- <label for="doctorsDetails" id="doctorsDetails"><b> Doctor's Details </b></label>
-				<hr>		
-				<label id="pdLabels" for="docFirstName"><b> Doctor's First Name </b></label>
-                <br>
-					<input type="text" id="docFirstName" name="docFirstName" placeholder="Enter your First Name" required>
-                    <br><br>	
-				<label id="pdLabels" for="docLastName"><b>Last Name</b></label>
-                <br>
-                    <input type="text" id="docLastName" name="docLastName" placeholder="Enter your Last Name" required>
-                    <br><br>	
-				<label id="pdLabels" for="docEmail"><b>Email</b></label>
-                <br>
-                    <input type="email" id="docEmail" name="docEmail" placeholder="Enter your e-mail" required>
-                    <br><br>		
-				<label id="pdLabels" for="docPhoneNum"><b>Phone Number</b></label>
-                <br>
-                    <input type="tel" id="docPhoneNum" name="docPhoneNum" placeholder="Enter your Phone Number" required>
-                    <br><br>
-                <label id="pdLabels"><b> Doctor's ID </b></label> 
-                <br>
-                    <input type="text" name="docID" id="docID" placeholder="Enter your Doctors ID" required>
-
-                <br><br><br> -->
-
-                <!--Consultation Details Section-->
                 <label for="consultationDetails" id="consultationDetails"><b> Consultation Details </b></label>
                 <hr>
                 <label id="consultationPText"><b> What was the consultation type for the session? <br> Please select accordingly from the options below:</b></label>
@@ -138,3 +119,6 @@ session_start();
     </body>
 
 </html>
+<?php 
+unset($_SESSION["Error"]);
+?>

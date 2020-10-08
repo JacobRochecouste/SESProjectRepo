@@ -22,16 +22,26 @@ $cdSum = $_GET['cdSummary'];
 $docNotes = $_GET['doctorsNotes'];
 $treatMethod = $_GET['treatmentMethod'];
 
-$query = "INSERT INTO MedSubscriptions (PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultType, BookingID, ConsultationSummary, DocNotes, TreatmentMethod, CreationDate) VALUES ('$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$consType', '$bookID','$cdSum', '$docNotes', '$treatMethod', CURRENT_DATE)";
-if($dbc->query($query) === TRUE)
+$query = "SELECT * FROM Users WHERE Email='$patEmail'";
+$result = mysqli_query($dbc, $query);
+
+if(mysqli_num_rows($result) == 1)
 {
-    header("Location: DoctorCreateSubscription-Success.php");    
+    $query = "INSERT INTO MedSubscriptions (PatFirstName, PatLastName, PatEmail, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, ConsultType, BookingID, ConsultationSummary, DocNotes, TreatmentMethod, CreationDate) VALUES ('$patFname', '$patLname', '$patEmail', '$docFname', '$docLname', '$docEmail', '$docPhone', '$docID', '$consType', '$bookID','$cdSum', '$docNotes', '$treatMethod', CURRENT_DATE)";
+    if($dbc->query($query) === TRUE)
+    {
+        header("Location: DoctorCreateSubscription-Success.php");    
+    }
+    else
+    {
+        $_SESSION["Error"] = "Form Creation Failed: Booking ID '" . $bookID . "' already exists.";
+        header("Location: DoctorCreateSubscription.php");
+    }
 }
 else
 {
-    // $errMsg = "Form Creation Failed: " . addslashes($dbc->error);
-    header("Location: DoctorCreateSubscription-Fail.php");
-    // echo "<script type='text/javascript'>alert('$errMsg');</script>";
+    $_SESSION["Error"] = "Form Creation Failed: Email '" . $patEmail . "' is not registered.";
+    header("Location: DoctorCreateSubscription.php");
 }
 
 
