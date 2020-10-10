@@ -98,7 +98,6 @@ body, html {
 	margin: auto;
 	padding: 45px;
 	background: #ffffff;
-	border-radius: 10px;
 	border: 4px solid rgba(0,0,0,0.24);
 }
 
@@ -143,6 +142,44 @@ body, html {
 	/*margin-left: 280px;*/
 }
 
+.mpForm #creditspLbl {
+	font-size: 52px;
+	color: black;
+}
+
+.mpForm #creditsSLbl {
+	font-size: 38px;
+	color: #277582;
+}
+
+.faqForm {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.qForm #faqpLbl {
+	font-size: 30px;
+	color: #277582;
+	margin-left: 172px;
+}
+
+.qForm #qpHText {
+	font-size: 24px;
+}
+
+.qForm #qpText {
+	font-size: 18px;
+}
+
+.qForm #reasonsList {
+	font-size: 18px;
+}
+
 /*Login Page Form Style*/
 .loginPage {
 	width: 300px;
@@ -158,12 +195,19 @@ body, html {
 
 h1 {
 	text-align: center;
-	color: #000000;
+	color: #000000#;
+	font-size: 52px;
 }
 
 h2 {
 	text-align: center;
 	color: #277582;
+}
+
+h3 {
+	text-align: center;
+	color: #000000;
+	font-size: 32px;
 }
 
 .h2signUpUserType {
@@ -372,7 +416,8 @@ hr {
 
 .subForm #subFormLbl {
 	font-size: 30px;
-	color: #277582; 
+	color: #277582;
+	margin-left: 110px;
 }
 
 .subForm #pcsfLabelTxt {
@@ -871,12 +916,13 @@ select.form-control {
 .dovHomeButtons {
 	
 }
+
 .docHomeButtons button {
 	width: 1000px;
 	height: 60px;
-	margin-left: 300px;
 	overflow: hidden;
-	box-shadow: 5px 10px ##bababa7;
+	box-shadow: 5px 10px #bababa7;
+	/* I'm assuming its supposed to be #bababa without the 7 and also maybe 3px 6px looks better than 5 10*/
 	border-radius: 4px;
 	background-color: #404040;
 	border: 2px solid #ff9900;
@@ -888,4 +934,147 @@ select.form-control {
 	background-color: #ff9900;
 	opacity: 0.8;
 	color: #404040;
+}
+
+/*Enquiry Page Stuff*/
+.enquiryPage {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.enquiryForm #enquiryLbl {
+	font-size: 32px;
+	color: #277582;
+	margin-left: 273px;
+}
+
+.enquiryForm #enquiryTxt {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.enquiryForm #enquiryLabels {
+	font-size: 20px;
+}
+
+.enquiryForm .radio-inline {
+	display: block;
+	font-size: 18px;
+	line-height: 2;
+}
+
+.enquiryForm #eqLabels {
+	font-size: 18px;
+}
+
+.enquiryForm #userFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm #userLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm #userEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm #userPhone {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm textarea {
+	width: 100%;
+	font-size: 18px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	background: #f1f1f1;
+	text-align: justify;
+}
+
+.enquiryForm .submitBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.enquiryForm .clearBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* For the Table Row in View Drugs List Page */
+.createEnquiryForm {
+	width: 100%;
+}
+
+/*Issue Form Succes and Fail Pages*/
+.enquiryFormStatusS {
+	width: 500px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: #90EE90;
+	border-radius: 10px;
+	border: 4px solid #9A7B4F;
+}
+
+.enquiryFormStatusF {
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: #90EE90;
+	border-radius: 10px;
+	border: 4px solid #9A7B4F;
+}
+
+.enquiryStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.enquiryStatus #failLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+
+.enquiryStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.enquiryStatus #reasonsList {
+	font-size: 18px;
 }

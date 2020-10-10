@@ -20,8 +20,6 @@ session_start();
 			</a>
 		</span>
 
-
-	
 		<!-- Navigation Menu -->
 		<div class="navBar">
 			<a id="homeLink" href="LandingPage.php">Home</a>

@@ -20,7 +20,6 @@ session_start();
 			</a>
 		</span>
 
-
 		<!-- Navigation Menu -->
 		<div class="navBar">
 			<a id="homeLink" class="active" href="LandingPage.php">Home</a>
@@ -57,7 +56,8 @@ session_start();
 		<br><br><br><br>	
 			<form class="mpForm" id="landingPForm" align="justify">
 				<label id="mpLbl"><b> Welcome to Telehealth!  </b></label>
-				<br><br>
+				<hr>
+				<br>
 				<label id="mpText"> 
 					As one of the best Healthcare Service Providers in the market, TeleHealth is the embodiement of proven expertise! 
 					Boasting medical personnel and doctors from different disciplines and varying tecniques all for you! <br> 

@@ -3,12 +3,12 @@ session_start();
 ?>
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-	
+<html lang="en">
+
 	<head>
 		<meta>
 		<link rel="stylesheet" type="text/css" href="stylesheet1.css">
-		<title>TeleHealth</title>
+		<title> Creation Failed! </title>
 	</head>
 
 	<body>
@@ -25,11 +25,11 @@ session_start();
 			<a id="homeLink" href="LandingPage.php">Home</a>
 			<a id="aboutLink" href="AboutPage.php">About</a>
 			<a id="servicesLink" href="ServicesPage.php">Services</a>
-			<a id="emergenciesLink" class="active" href="EmergenciesPage.php">Emergencies</a>
+			<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<?php
 			if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
-			{
+			{	
 				echo '<a id="loginLink" href="LoginPage.php" style="float:right">Log In</a>';
 				echo '<a id="signupLink" href="SignupUserTypePage.html" style="float:right">Sign Up</a>';
 			}
@@ -48,34 +48,31 @@ session_start();
 				echo '<a id="docHome" href="DoctorHome.php" style="float: right;">', $_SESSION["FName"]," ",$_SESSION["LName"], '</a>';
 			}
 			?>
-		</div>
 
-		<!--Content of Page-->
-		<div class="parallax">
-		<br><br><br><br>	
-			<form class="mpForm" id="landingPForm" align="justify">
-				<label id="epLbl"><b> Emergency Situation </b></label>
-				<br><br>
-				<label id="mpHText"><u><b> Advise: </b></u></label>
-				<label id="mpText">
-					<br>In an immediate emergency we suggset contacting 000 first A.S.A.P </label>
-					<br><br>
-				<label id="mpHText"><u><b> Methods we Offer: </b></u></label>
-				<label id="mpText">
-					<br><b>Urgent Cases:</b> <br>  
-					We require you to <a href=LoginPage.php>sign in</a> with your account first or to create an account if you do not have one. Please click <a href="SignupUserTypePage.html">here to proceed</a>.</label>
-					<br><br>
-				<label id="mpHText"><u><b> Contact Details: </b></u></label>
-				<label id="mpText">
-					<br><b>Telephone</b> - 0412345678 <br>
-						<b> Emergency (24/7) Hotline </b> - 0412345909 <br>
-						<b>Email</b> - telehealthsupport@tele.health.au <br>
-						<b>Others</b> - Please refer to the <a href="ContactPage.php">Contact Us</a> page for more details.
-						</label>
-					<br><br>
-			</form>
 		</div>
+        
+        <br><br><br><br>
+        
+        <!--Content of Page-->
+        <div class="enquiryFormStatusF" align="justify">
+            <form class="enquiryStatus">
+                <label id="failLbl"><b> Submission Failed! ( ╯°□°)╯ ┻━━┻ </b></label>
+                <br><br>
+                <label id="statusPText"> An error has occured and your enquiry was not submitted, please return to the 
+                <a href="EnquiryPage.php"> enquiry form</a> 
+                and complete it once again. Common causes of error may include: </label>
+                <ul id="reasonsList">
+                    <li> Server is not responding </li>
+                    <li> Server is currently overloaded </li>
+					<li> There is an issue with the database </li>
+                    <li> Text areas overloaded with words and cannot be stored </li>
+                </ul>
+                <label id="statusPText">Should the problem persist, please notify us using the details located in the 
+                <a href="ContactPage.php"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>
+                <label id="statusPText"> <br><br>We greatly apologise for any inconveniences caused. </label>
+            </form>
+        </div>
 
-	</body>
+    </body>
 
 </html>

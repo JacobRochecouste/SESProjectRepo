@@ -46,3 +46,14 @@ CREATE TABLE IssueList (
   IDName varchar(100) NOT NULL,
   IssueNote varchar(250) NOT NULL
 );
+
+CREATE TABLE Enquiry (
+  EnquiryID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  EnquiryType varchar(100) NOT NULL,
+  UserFirstName varchar(100) NOT NULL,
+  UserLastName varchar(100) NOT NULL,
+  UserEmail varchar(100) NOT NULL,
+  UserPhoneNo varchar(100) NOT NULL,
+  EnquiryMessage longtext NOT NULL,
+  EnquiryDate date NOT NULL
+);

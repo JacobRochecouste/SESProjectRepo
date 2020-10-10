@@ -49,7 +49,8 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 		<div class="parallax">
 			<br><br><br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
-			<br><br><br><br>
+			<h3>What would you like to do?</h3>
+			<br><br>
            
 			<!-- 
 			<div style="display: inline-block;">
@@ -124,15 +125,16 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 				</form>
 				</div>
 				-->
-				<div class="docHomeButtons">
-				<button class="button">Setmore Booking Page</button>
+				<div class="docHomeButtons" align="center">
+				<button class="button">View the Setmore Booking Page</button>
 				<br><br><br>
-				<button class="button">Create Subscription</button>
+				<button class="button">Create a Subscription</button>
 				<br><br><br>
-				<button class="button">View Drug Inventory</button>
+				<button class="button">View the Drug Inventory</button>
 				<br><br><br>
-				<button class="button">Create Chat with Patient</button>
+				<button class="button">Start a Chat with a Patient</button>
 				</div>
+				<!-- can use either white or orange text for the placeholder text i dont mind either-->
 
         </div>
 

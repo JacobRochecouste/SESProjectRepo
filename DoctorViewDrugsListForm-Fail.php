@@ -49,7 +49,7 @@ session_start();
                 <ul id="reasonsList">
                     <li> Server is not responding </li>
                     <li> Server is currently overloaded </li>
-                    <li> Text Areas overloaded with words and cannot be stored </li>
+                    <li> Text areas overloaded with words and cannot be stored </li>
                 </ul>
                 <label id="statusPText">Should the problem persist, please notify us using the details located in the 
                 <a href="ContactPage.php"> contacts page</a>, we will attempt to fix the issue with immediate efforts. </label>
