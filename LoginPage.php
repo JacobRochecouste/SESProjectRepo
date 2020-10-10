@@ -46,7 +46,7 @@ session_start();
                 <input type="checkbox" id="cbox">
                 <span>Remember Me</span>
                 <br><br>
-                Forgotten your Password? Click <a href="ResetPasswordPage.html">here</a>!
+                Forgotten your Password? Click <a href="ResetPasswordPage.php">here</a>!
             </form>
         </div>
 

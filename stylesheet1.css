@@ -367,30 +367,35 @@ span {
 	overflow: hidden;
 	margin: auto;
 	padding: 15px;
-	background: #90EE90;
-	border: 4px solid #9A7B4F;
+	background: #ffffff;
+	border: 4px solid black;
+	border-radius: 10px;
 }
 
 /*Password Page H2 Text Style*/
-.resetPassForm #passwordLbl {
+.resetForm #passwordLbl {
 	color: #000000;
 	font-size: 30px;
 	padding: 0px;
 }
 
-.resetPassForm #resetEmail {
+.resetForm #userEmail {
 	width: 95%;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
 
+.resetForm #resetText {
+	font-size: 18px;
+}
+
 /*Button used in Reset Password Page*/
-.resetPassForm .continueBtn:hover {
-	background-color: #E7E7E7;
+.resetForm .continueBtn:hover {
+	background-color: #4CAF50;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-	color: black;
+	color: white;
 }
 
 /*DoctorCreateSubscription <Form> Style*/
