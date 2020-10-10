@@ -51,6 +51,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
 			<br><br><br><br>
            
+			<!-- 
 			<div style="display: inline-block;">
 
 				<form  action="https://my.setmore.com/calendar#weekly/r65041600744361542/05102020">
@@ -121,6 +122,16 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 				/>
 
 				</form>
+				</div>
+				-->
+				<div class="docHomeButtons">
+				<button class="button">Setmore Booking Page</button>
+				<br><br><br>
+				<button class="button">Create Subscription</button>
+				<br><br><br>
+				<button class="button">View Drug Inventory</button>
+				<br><br><br>
+				<button class="button">Create Chat with Patient</button>
 				</div>
 
         </div>

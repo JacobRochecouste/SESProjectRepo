@@ -867,3 +867,25 @@ select.form-control {
 .issueStatus #reasonsList {
 	font-size: 18px;
 }
+
+.dovHomeButtons {
+	
+}
+.docHomeButtons button {
+	width: 1000px;
+	height: 60px;
+	margin-left: 300px;
+	overflow: hidden;
+	box-shadow: 5px 10px ##bababa7;
+	border-radius: 4px;
+	background-color: #404040;
+	border: 2px solid #ff9900;
+	color: #ff9900;
+	font-size: 24px;
+}
+
+.docHomeButtons button:hover {
+	background-color: #ff9900;
+	opacity: 0.8;
+	color: #404040;
+}
