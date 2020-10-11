@@ -49,6 +49,8 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 				<button class="button" onclick="location.href='DoctorViewDrugsList.php'" target="_blank">View the Drug Inventory</button>
 				<br><br><br>
 				<button class="button" onclick="location.href='http://localhost:3000/'">Start a Chat with a Patient</button>
+				<br><br><br>
+				<button class="button" onclick="location.href='UserSettingPage-Doctor.php'">Change Account Settings</button>
 				</div>
 
 				<!-- can use either white or orange text for the placeholder text i dont mind either I quite like the orange, the white is a little off, up to you though.-->
