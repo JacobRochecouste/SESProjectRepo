@@ -71,7 +71,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 				    <br><br><br>
 				    <button class="button" onclick="location.href='PatientViewSubscription.php'">View your Medical Reports</button>
 				    <br><br><br>
-				    <button class="button" onclick="location.href='x'">Start a Chat with a Doctor</button>
+				    <button class="button" onclick="location.href='http://localhost:3000/'">Start a Chat with a Doctor</button>
                     <br><br><br>
                     <button class="button" onclick="location.href='EnquiryPage.php'">Make an Enquiry</button>
 				</div>
