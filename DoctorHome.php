@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
     header("location: LoginPage.php");
@@ -51,7 +51,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 				<br><br><br>
 
 				<!-- currently references itself, Ivan to fix -->
-				<button class="button" onclick="location.href='DoctorHome.php'">Start a Chat with a Patient</button>
+				<button class="button" onclick="location.href='http://localhost:3000/'">Start a Chat with a Patient</button>
 				</div>
 
 				<!-- can use either white or orange text for the placeholder text i dont mind either I quite like the orange, the white is a little off, up to you though.-->
