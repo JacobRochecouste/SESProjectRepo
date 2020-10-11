@@ -41,7 +41,6 @@ body, html {
 	width: 100%;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 0;
 	font: Arial;
 }
 
@@ -62,6 +61,16 @@ body, html {
 .navBar a.active {
 	background-color: #FF6341;
 	color: white;
+}
+
+.navBar a.title {
+	background-color:#333;
+	color: white;
+	margin: auto;
+	width: 10%; 
+	float: middle;
+	font-size: 25px;
+	padding: 10px 40px;
 }
 
 /*Background Image for Website *Temporary**/

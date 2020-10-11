@@ -44,16 +44,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 
     <body>
 
-        <span class="logoDiv">
-			<a id="homePage" href="LandingPage.php">
-				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
-			</a>
-		</span>
-
-        <!--Title Bar-->
-        <h1 class="title">Hello!</h1>
-
-        <!-- Navigation Menu -->
+       <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
 	    	<a id="aboutLink" href="AboutPage.php">About</a>
@@ -72,7 +63,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <br>
             <br><br>
             <br>
-            <div id="googleMap" class="container1" style="width:800px; height: 800px; margin:50px">
+            <div id="googleMap" class="container1" style="width:800px; height: 800px;">
                 <!--Google map will be embedded here -->
                 <img src="LocationImage.jpg" alt="Image" style="width:100%"> 
                 <button class="btn" type="button" onclick="myMap();">Find Medical Clinics Near Me</button>
@@ -83,7 +74,21 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
                 <img src="BookingIcon.png" alt="Image" style="width: 400px; position: center;"> 
                 <a class="btn" type="button" href="BookingPage.php" style="position: center;">Make a Booking</a>
             </div>
+               <!-- Navigation Menu -->
+            <div class="navBar">
+		        <a id="homeLink" href="LandingPage.php">Home</a>
+	    	    <a id="aboutLink" href="AboutPage.php">About</a>
+    		    <a id="servicesLink" href="ServicesPage.php">Services</a>
+    		    <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
+		        <a id="contactLink" href="ContactPage.php">Contact Us</a>
+                <a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>
+		        <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
+                <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
+		    </div>
+
         </div>
-            
+         
     </body>
+
+    
 </html>
