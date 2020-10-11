@@ -107,6 +107,11 @@ session_start();
             </form>
         </div>
         <br><br><br><br>
+        <div class="footerBar">
+			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="creditLink" href="CreditPage.php">Credits</a>
+			<a class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div> 
     </body>
 
 </html>

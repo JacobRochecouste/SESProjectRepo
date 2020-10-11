@@ -79,7 +79,8 @@ body, html {
 	overflow: hidden;
 	width: 100%;
 	position: -webkit-sticky;
-	position: sticky;
+	position: fixed;
+	bottom: 0;
 	font: Arial;
 }
 
@@ -117,7 +118,8 @@ height: 28px;
 	display: block;
 	float: none;
 	text-align: center;
-	margin-left: 560px;
+	/*change this if the text for the footer ever changes to align to the right */
+	margin-left: 949px;
 	font-size: 14px;
 }
 
@@ -354,16 +356,22 @@ span {
 	height: auto;
 	overflow: hidden;
 	margin: auto;
-	padding: 50px;
+	padding: 20px 40px;
 	background: #ffffff;
 	border-radius: 10px;
 	text-align: left;
 	border: 4px solid #333333;
 }
 
+#signUpTitle {
+	color: #277582;
+	font-size: 30px;
+	padding: 0px;
+}
+
 #signUpFormLbl {
 	color: #000000;
-	font-size: 26px;
+	font-size: 22px;
 }
 
 #signUpField {
@@ -373,6 +381,14 @@ span {
 	border-radius: 3px;
 	padding-left: 8px;
 }
+
+.signUp .signUpBtn:hover {
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color: white;
+}
+
+
 
 /*Default Button Style Declaration*/
 .button {
@@ -635,9 +651,9 @@ hr {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 /*easter egg, will delete this later on and rename subFormStatusS back to subFormStatus and change it for both pages*/
@@ -647,9 +663,9 @@ hr {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 .formStatus #successLbl{
@@ -681,9 +697,9 @@ hr {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 .signUpStatusF {
@@ -692,9 +708,9 @@ hr {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 .signUpStatus #successLbl {
@@ -947,9 +963,9 @@ select.form-control {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 .issueFormStatusF {
@@ -958,9 +974,9 @@ select.form-control {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 .issueStatus #successLbl {
@@ -1135,9 +1151,9 @@ select.form-control {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 .enquiryFormStatusF {
@@ -1146,9 +1162,9 @@ select.form-control {
 	overflow: hidden;
 	margin: auto;
 	padding: 45px;
-	background: #90EE90;
+	background: white;
 	border-radius: 10px;
-	border: 4px solid #9A7B4F;
+	border: 4px solid rgba(0,0,0,0.24);
 }
 
 .enquiryStatus #successLbl {

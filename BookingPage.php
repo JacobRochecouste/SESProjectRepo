@@ -14,14 +14,6 @@ session_start();
 </head>
 
 <body>
-        <span class="logoDiv">
-			<a id="homePage" href="LandingPage.php">
-				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
-			</a>
-		</span>
-
-        <h1 class="title">Welcome to TeleHealth</h1>
-
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
 	    	<a id="aboutLink" href="AboudPage.php">About</a>
@@ -39,6 +31,12 @@ session_start();
                 <!--Setmore Booking Service Embed-->
             <iframe src="https://telehealth3623.setmore.com" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
 
-        </div>
+		</div>
+		<!-- Footer Menu -->
+		<div class="footerBar">
+			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="creditLink" href="CreditPage.php">Credits</a>
+			<a class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div> 		
 </body>
 </html>

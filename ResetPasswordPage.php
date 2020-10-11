@@ -67,7 +67,12 @@ if(isset($_POST['submit']))
             <button type="submit" name="submit" value="submit" class="buttonRounded continueBtn"> Continue </button>
         </form>
     </div>
-
+	<!-- Footer Menu -->
+	<div class="footerBar">
+		<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+		<a id="creditLink" href="CreditPage.php">Credits</a>
+		<a class="copyRight"> &copy; 2020 TeleHealth </a>
+	</div> 
 </body>
 
 </html>

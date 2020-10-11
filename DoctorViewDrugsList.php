@@ -24,17 +24,6 @@ $result = mysqli_query($dbc, $query);
     </head>
 
     <body>
-
-        <!--Logo--> 
-        <span class="logoDiv">
-            <a id="homePage" href="LandingPage.php">
-                <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
-            </a>
-        </span>
-
-        <!--Title Bar-->
-        <h1 class="title"> Medicine Inventory </h1>
-
         <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
@@ -133,7 +122,12 @@ $result = mysqli_query($dbc, $query);
             </form>
         </div>
         <br><br><br><br>
-
+		<!-- Footer Menu -->
+		<div class="footerBar">
+			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="creditLink" href="CreditPage.php">Credits</a>
+			<a class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div> 
     </body>
 
 </html>

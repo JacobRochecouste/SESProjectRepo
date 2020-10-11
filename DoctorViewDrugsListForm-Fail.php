@@ -13,17 +13,6 @@ session_start();
     </head>
 
     <body>
-
-        <!--Logo-->
-        <span class="logoDiv">
-            <a id="homePage" href="LandingPage.php">
-                <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
-            </a>
-        </span>
-
-        <!--Title Bar-->
-        <h1 class="title"> Drug Issue Report </h1>
-
         <!-- Navigation Menu -->
         <div class="navBar">
             <a id="homeLink" href="LandingPage.php">Home</a>
@@ -42,7 +31,7 @@ session_start();
         <!--Content of Page-->
         <div class="subFormStatusF" align="justify">
             <form class="formStatus">
-                <label id="failLbl"><b> Submission Failed! ( ╯°□°)╯ ┻━━┻ </b></label>
+                <label id="failLbl"><b> Submission Failed! </b></label>
                 <br><br>
                 <label id="statusPText"> An error has occured and your report was not submitted, please return to the 
                 <a href="DoctorViewDrugsList.php"> drugs inventory page</a> 
@@ -57,7 +46,12 @@ session_start();
                 <label id="statusPText"> <br><br>We greatly apologise for any inconveniences caused. </label>
             </form>
         </div>
-
+		<!-- Footer Menu -->
+		<div class="footerBar">
+			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="creditLink" href="CreditPage.php">Credits</a>
+			<a class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div> 
     </body>
 
 </html>

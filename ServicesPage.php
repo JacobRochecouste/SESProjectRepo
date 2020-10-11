@@ -14,13 +14,6 @@ session_start();
 
 	<body>
 
-		<!--Logo-->
-		<span class="logoDiv">
-			<a id="homePage" href="LandingPage.php">
-				<img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:200px;height:200px;">
-			</a>
-		</span>
-
 		<!-- Navigation Menu -->
 		<div class="navBar">
 			<a id="homeLink" href="LandingPage.php">Home</a>
@@ -76,7 +69,13 @@ session_start();
 					<br><br>
 			</form>
 		</div>
-	
+		
+		<!-- Footer Menu -->
+		<div class="footerBar">
+			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="creditLink" href="CreditPage.php">Credits</a>
+			<a class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div> 	
 	</body>
 
 </html>
