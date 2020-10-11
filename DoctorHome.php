@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true){
     header("location: LoginPage.php");
@@ -17,7 +17,8 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 		
 			<meta>
 			<link rel="stylesheet" type="text/css" href="stylesheet1.css">
-			<title>TeleHealth</title>
+			<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+			<title>Home</title>
 	</head>
 
 	<body>

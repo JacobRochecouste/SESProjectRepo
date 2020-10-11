@@ -7,8 +7,9 @@ session_start();
 <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="stylesheet1.css">
-	<title>TeleHealth</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet1.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+	<title>Bookings</title>
 
 </head>
 
