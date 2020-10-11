@@ -55,6 +55,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
+            <a id="title" class="title" href="DoctorHome.php" style="width: 18%; float: middle"><b>TeleHealth</b></a>
         </div>
 
         
@@ -80,8 +81,8 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
                 Google map will be embedded here
                 <img src="LocationImage.jpg" alt="Image" style="width:100%"> 
                 <button class="btn" type="button" onclick="myMap();">Find Medical Clinics Near Me</button>
-               don't delete this one'
-            </div>
+               don't delete this one' -->
+        </div>
             
         <!-- Footer Menu -->
 		<div class="navBar">
@@ -92,6 +93,5 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 		</div> 
 
     </body>
-
     
 </html>

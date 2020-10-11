@@ -13,16 +13,6 @@ session_start();
     </head>
 
     <body>
-        
-        <!--Logo--> 
-        <span class="logoDiv">
-            <a id="homePage" href="LandingPage.php">
-                <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
-            </a>
-        </span>
-
-        <!--Title Bar-->
-        <h1 class="title"> Create Patient Subscription</h1>
 
         <!-- Navigation Menu -->
         <div class="navBar">

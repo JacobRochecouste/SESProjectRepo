@@ -14,11 +14,10 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	
 	<head>
-		
-			<meta>
-			<link rel="stylesheet" type="text/css" href="stylesheet1.css">
-			<link rel="icon" type="image/x-icon" href="favicon.ico"/>
-			<title>Home</title>
+		<meta>
+		<link rel="stylesheet" type="text/css" href="stylesheet1.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		<title>Home</title>
 	</head>
 
 	<body>
@@ -32,11 +31,11 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
 			<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
 			<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-			<a id="title" class="title" href="DoctorHome.php" style="margin: auto; width: 20%; float: middle"><b>TeleHealth</b></a>
+			<a id="title" class="title" href="DoctorHome.php" style="width: 26%; float: middle"><b>TeleHealth</b></a>
 		</div>
 
 		<!--Content of Page-->
-		<div class="parallax">
+		<div class="parallaxDoc">
 			<br><br><br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
 			<h3>What would you like to do?</h3>
@@ -47,14 +46,13 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 				<br><br><br>
 				<button class="button" onclick="location.href='DoctorCreateSubscription.php'">Create a Subscription</button>
 				<br><br><br>
-				<button class="button" onclick="location.href='DoctorViewDrugsList.php'">View the Drug Inventory</button>
+				<button class="button" onclick="location.href='DoctorViewDrugsList.php'" target="_blank">View the Drug Inventory</button>
 				<br><br><br>
 				<button class="button" onclick="location.href='http://localhost:3000/'">Start a Chat with a Patient</button>
 				</div>
 
 				<!-- can use either white or orange text for the placeholder text i dont mind either I quite like the orange, the white is a little off, up to you though.-->
-
-        </div>
+		</div>
 
 		<!-- Footer Menu -->
 		<div class="navBar">
@@ -62,9 +60,9 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<a id="aboutLink" href="AboutPage.php">About</a>
 			<a id="servicesLink" href="ServicesPage.php">Services</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
-			
-		</div>
-
+			<a class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div> 
+		
 	</body>
 
 </html>
