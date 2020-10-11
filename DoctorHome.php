@@ -38,7 +38,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 		<!--Content of Page-->
 		<div class="parallax">
 			<br><br><br> 
-			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
+			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
 			<h3>What would you like to do?</h3>
 			<br><br>
           
@@ -49,8 +49,6 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 				<br><br><br>
 				<button class="button" onclick="location.href='DoctorViewDrugsList.php'">View the Drug Inventory</button>
 				<br><br><br>
-
-				<!-- currently references itself, Ivan to fix -->
 				<button class="button" onclick="location.href='http://localhost:3000/'">Start a Chat with a Patient</button>
 				</div>
 
@@ -58,7 +56,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 
         </div>
 
-		<!-- Navigation Menu -->
+		<!-- Footer Menu -->
 		<div class="navBar">
 			<a id="homeLink" href="LandingPage.php" style="margin-left: 630px;">Home</a>
 			<a id="aboutLink" href="AboutPage.php">About</a>

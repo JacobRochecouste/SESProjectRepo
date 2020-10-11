@@ -950,6 +950,28 @@ select.form-control {
 	color: #404040;
 }
 
+.patHomeButtons {
+
+}
+
+.patHomeButtons button {
+	width: 1000px;
+	height: 60px;
+	overflow: hidden;
+	box-shadow: 3px 6px #bababa;
+	border-radius: 4px;
+	background-color: #404040;
+	border: 2px solid #ff9900;
+	color: #ff9900;
+	font-size: 24px;
+}
+
+.patHomeButtons button:hover {
+	background-color: #ff9900;
+	opacity: 0.8;
+	color: #404040;
+}
+
 /*Enquiry Page Stuff*/
 .enquiryPage {
 	width: 750px;

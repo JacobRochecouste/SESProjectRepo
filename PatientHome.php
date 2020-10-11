@@ -45,7 +45,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 
     <body>
 
-       <!-- Navigation Menu -->
+        <!-- Navigation Menu -->
         <div class="navBar">
 		    <a id="homeLink" href="LandingPage.php">Home</a>
 	    	<a id="aboutLink" href="AboutPage.php">About</a>
@@ -55,40 +55,42 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-		</div>
+        </div>
 
         
-		<div class="parallax">
-            <br> <br> <br>
-                <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></h1>
-            <br>
+        <div class="parallax">
+            <br><br><br>
+            <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
+            <h3>What would you like to do?</h3>
             <br><br>
-            <br>
-            <div id="googleMap" class="container1" style="width:800px; height: 800px;">
-                <!--Google map will be embedded here -->
+                
+                <div class="patHomeButtons" align="center">
+				    <button class="button" onclick="location.href='https://my.setmore.com/calendar#weekly/r88971600744316499/05102020'">View the Setmore Booking Page</button>
+				    <br><br><br>
+				    <button class="button" onclick="location.href='BookingPage.php'">Make a Booking</button>
+				    <br><br><br>
+				    <button class="button" onclick="location.href='PatientViewSubscription.php'">View your Medical Reports</button>
+				    <br><br><br>
+				    <button class="button" onclick="location.href='x'">Start a Chat with a Doctor</button>
+                    <br><br><br>
+                    <button class="button" onclick="location.href='EnquiryPage.php'">Make an Enquiry</button>
+				</div>
+
+            <!-- <div id="googleMap" class="container1" style="width:800px; height: 800px;">
+                Google map will be embedded here
                 <img src="LocationImage.jpg" alt="Image" style="width:100%"> 
                 <button class="btn" type="button" onclick="myMap();">Find Medical Clinics Near Me</button>
-               
+               don't delete this one'
             </div>
             
-            <div class="container2">
-                <img src="BookingIcon.png" alt="Image" style="width: 400px; position: center;"> 
-                <a class="btn" type="button" href="BookingPage.php" style="position: center;">Make a Booking</a>
-            </div>
-               <!-- Navigation Menu -->
-            <div class="navBar">
-		        <a id="homeLink" href="LandingPage.php">Home</a>
-	    	    <a id="aboutLink" href="AboutPage.php">About</a>
-    		    <a id="servicesLink" href="ServicesPage.php">Services</a>
-    		    <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
-		        <a id="contactLink" href="ContactPage.php">Contact Us</a>
-                <a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>
-		        <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-                <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-		    </div>
+        <!-- Footer Menu -->
+		<div class="navBar">
+			<a id="homeLink" href="LandingPage.php" style="margin-left: 630px;">Home</a>
+			<a id="aboutLink" href="AboutPage.php">About</a>
+			<a id="servicesLink" href="ServicesPage.php">Services</a>
+			<a id="contactLink" href="ContactPage.php">Contact Us</a>
+		</div> 
 
-        </div>
-         
     </body>
 
     
