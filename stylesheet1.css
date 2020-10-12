@@ -262,7 +262,7 @@ height: 28px;
 
 h1 {
 	text-align: center;
-	color: #000000#;
+	color: #000000;
 	font-size: 52px;
 }
 
@@ -313,11 +313,22 @@ h3 {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#error {
+#errorLogin {
 	padding-left: 25px;
 	color: red;
 	font-weight: bold;
 }
+
+#errorUpdate {
+	color: red;
+	font-weight: bold;
+}
+
+#success {
+	color:green;
+	font-weight: bold;
+}
+
 span {
 	color: black;
 	font-size: 17px;

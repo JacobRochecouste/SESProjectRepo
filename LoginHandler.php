@@ -43,7 +43,7 @@ if(mysqli_num_rows($result) == 1)
 else
 {
     $_SESSION["Error"] = "Incorrect Username/Password";
-    echo $_SESSION["Error"];
+    // echo $_SESSION["Error"];
     header("Location: LoginPage.php");
 }
 

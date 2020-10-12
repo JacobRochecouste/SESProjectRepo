@@ -8,18 +8,12 @@ $dbname='telehealth';
 
 $dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error); 
-$docemail = $_SESSION["email"];
+$docEmail = $_SESSION["email"];
 
-$sqlValue = "SELECT * FROM Users WHERE Email='$docemail'";
+$sqlValue = "SELECT * FROM Users WHERE Email='$docEmail'";
 $resultValue = mysqli_query($dbc,$sqlValue);
 
-
-// was trying to find the session stuff to see if pass and address were there and nope rip
-echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
-
-if (mysqli_num_rows($resultValue) >= 1) {
+if (mysqli_num_rows($resultValue) == 1) {
 	while($row = $resultValue->fetch_assoc()) {
 		$firstname = $row['FirstName'];
 		$lastname = $row['LastName'];
@@ -30,34 +24,7 @@ if (mysqli_num_rows($resultValue) >= 1) {
 		$doctorid = $row['DoctorID'];
 	}
 }
-	
-$firstname = $_GET['docFirstName'];
-$lastname = $_GET['docLastName'];
-$phonenumber = $_GET['docPhone'];
-$email = $_GET['docEmail'];
-$address = $_GET['docAddr'];
-$password = MD5($_GET['docPass']);
-$doctorid = $_GET['docID'];
-	
-//if($_SERVER["REQUEST_METHOD"] == "POST"){
-if(isset($_GET['submit'])) {
-	if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($doctorid)) { 
-	$message = "Please fill in all the required fields"; 
-	}
-} else { 
-	$sql = "UPDATE Users SET FirstName='$firstname', LastName='$lastname', Email='$email', PhoneNo='$phonenumber', Address='$address', Pass='$password', DoctorID='$doctorid' WHERE Email='$docemail'";
-	//$result = mysqli_query($dbc,$sql);
-	//if (mysqli_num_rows($result) == 1) {
-	//Pass
-	//	$query = "INSERT INTO Users (FirstName, LastName, Email, PhoneNo, Address, Pass, DoctorID) VALUES ('$firstname', '$lastname', '$email', '$phonenumber', '$address', '$password', '$doctorid')";
-	//	if ($dbc->query($query) === TRUE) {
-	//		$message = "Your account details were sucessfully updated"; 
-	//	} else {
-	//		$message = "Oops :/ \n An error occured updating your account details, please try again.";
-	//	}
-	//	
-	//}
-} 
+
 ?>	
 <!DOCTYPE html>
 
@@ -79,8 +46,6 @@ if(isset($_GET['submit'])) {
 	    	<a id="servicesLink" href="ServicesPage.php">Services</a>
 		    <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
 		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
-		    <a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>
-            <a id="drugsTable" href="DoctorViewDrugsList.php" target="_blank">View Drugs</a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
     		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
     	</div>
@@ -88,11 +53,23 @@ if(isset($_GET['submit'])) {
         <!--Content of Page-->
         <br>
         <div class="docEdit">
-            <form class="docForm" method="get" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <form class="docForm" method="get" action="SettingsPageHandler-Doctor.php">
 				<label id="editLbl"><b> Account Settings</b></label>
 				<hr>
 				<label class="editTxt"> You can use this page to update any errors you made to your settings! </label>
-				<br><br>	
+				<br><br>
+				<?php 
+					if(isset($_SESSION['Success']))
+					{
+						$msg = $_SESSION['Success'];
+						echo "<label id='success'>$msg </label><br><br>";
+					}
+					if(isset($_SESSION['Failed']))
+					{
+						$msg = $_SESSION['Failed'];
+						echo "<label id='errorUpdate'>$msg </label><br><br>";
+					}
+				?>	
 				<label id="editLabels"><b>First Name</b></label>
 				<br>
 					<input type="text" id="docFirstName" name="docFirstName" value="<?php echo $firstname ?>" required>
@@ -113,10 +90,11 @@ if(isset($_GET['submit'])) {
 				<br>
 					<input type="text" id="docAddr" name="docAddr" value="<?php echo $address ?>" required>
 				<br><br>
-				<label id="editLabels"><b>Password</b></label>
+				<!-- Temporary comment out while dealing with password -->
+				<!-- <label id="editLabels"><b>Password</b></label>
 				<br>
-					<input type="password" id="docPass" name="docPass" value="<?php echo $password ?>" required>
-				<br><br>
+					<input type="password" id="docPass" name="docPass">
+				<br><br> -->
 				<label id="editLabels"><b>Doctor ID</b> </label>
 				<br>
 					<input type="text" id="docID" name="docID" value="<?php echo $doctorid ?>" required>
@@ -134,5 +112,6 @@ if(isset($_GET['submit'])) {
 
 </html>
 <?php 
-unset($_SESSION["Error"]);
+unset($_SESSION["Success"]);
+unset($_SESSION["Failure"]);
 ?>

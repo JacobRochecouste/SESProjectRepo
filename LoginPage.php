@@ -39,7 +39,7 @@ session_start();
                 if(isset($_SESSION["Error"]))
                 {
                     $error = $_SESSION["Error"];
-                    echo "<span id='error'>$error</span><br>";
+                    echo "<span id='errorLogin'>$error</span><br>";
                 }
                 ?>
                 <button type="submit" class="buttonLog logInBtn"> Log In </button>
