@@ -63,9 +63,9 @@ session_start();
 					<br>Need a question answered? Something you don't understand? <br>
 					Our amazing on demand support team can be found <a href="ContactPage.php">here!</a> </label>
 					<br><br>
-				<label id="mpHText"><u><b> put something here </b></u></label>
+				<label id="mpHText"><u><b> Urgent Consultations: </b></u></label>
 				<label id="mpText">
-					<br> put something here </label>
+					<br> Need help urgently? Book an appointment immediately with one of our dedicated doctors. </label>
 					<br><br>
 			</form>
 		</div>
