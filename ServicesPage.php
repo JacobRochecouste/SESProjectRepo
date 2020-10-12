@@ -20,7 +20,7 @@ session_start();
 			<a id="aboutLink" href="AboutPage.php">About</a>
 			<a id="servicesLink" class="active" href="ServicesPage.php">Services</a>
 			<a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
-			<a id="contactLink" href="ContactPage.php">Contact Us</a>
+			<a id="title" class="title" style="width: 26%; float: middle; margin-left: 295px;"><b>TeleHealth</b></a>
 			<?php
 			if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
 			{
@@ -29,15 +29,6 @@ session_start();
 			}
 			else
 			{
-				if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient")
-				{
-					echo '<a id="createSub" href="DoctorCreateSubscription.php">Create Subscription</a>';
-					echo '<a id="drugsTable" href="DoctorViewDrugsList.php">View Drugs</a>';
-				}
-				if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor")
-				{
-					echo '<a id="viewSub" href="PatientViewSubscription.php">View Subscriptions</a>';
-				}
 				echo '<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>';
 				echo '<a id="docHome" href="DoctorHome.php" style="float: right;">', $_SESSION["FName"]," ",$_SESSION["LName"], '</a>';
 			}
@@ -73,6 +64,7 @@ session_start();
 		<!-- Footer Menu -->
 		<div class="footerBar">
 			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
 		</div> 	

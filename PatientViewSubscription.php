@@ -33,10 +33,9 @@ $result = mysqli_query($dbc, $query);
 		    <a id="aboutLink" href="AboutPage.php" >About</a>
 	    	<a id="servicesLink" href="ServicesPage.php" >Services</a>
 		    <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
-		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
-		    <a id="viewSub" class="active" href="PatientViewSubscription.php">View Subscriptions</a>
+		    <a id="title" class="title" style="width: 26%; float: middle; margin-left: 295px;"><b>TeleHealth</b></a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-    		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
+    		<a id="patHome" href="PatientHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
     	</div>
 
         <!--Content of Page-->
@@ -98,7 +97,8 @@ $result = mysqli_query($dbc, $query);
 		<!-- Footer Menu -->
 		<div class="footerBar">
 			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
-			<a id="creditLink" href="CreditPage.php">Credits</a>
+            <a id="contactLink" href="ContactPage.php">Contact Us</a>
+            <a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
 		</div> 
     </body>
