@@ -144,7 +144,7 @@ session_start();
 		<div class="footerBar">
 			<a id="FAQLink" href="FAQPage.php" class="active" style="margin-left: 630px;">FAQ</a>
 			<a id="creditLink" href="CreditPage.php">Credits</a>
-			<a class="copyRight"> &copy; 2020 TeleHealth </a>
+			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
 		</div> 
 	</body>
 
