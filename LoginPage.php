@@ -30,7 +30,7 @@ session_start();
         <div class="loginPage">
             <form id="loginForm" method="get" action="LoginHandler.php">
                 <label id="loginFormLbl"><b> Email Address: </b><br></label>
-                <input type="text" name="Uname" id='Uname' placeholder="Email Address" required>
+                <input type="email" name="Uname" id='Uname' placeholder="Email Address" required>
                 <br><br>
                 <label id="loginFormLbl"><b> Password: </b><br></label>
                 <input type="Password" name="Pass" id="Pass" placeholder="Password" required>
@@ -42,7 +42,7 @@ session_start();
                     echo "<span id='error'>$error</span><br>";
                 }
                 ?>
-                <input type="submit" name="log" id="log" value="Log In">
+                <button type="submit" class="buttonLog logInBtn"> Log In </button>
                 <br><br>
                 <input type="checkbox" id="cbox">
                 <span>Remember Me</span>
