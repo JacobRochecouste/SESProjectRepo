@@ -34,20 +34,20 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 		</div>
 
 		<!--Content of Page-->
-		<div class="parallaxDoc">
+		<div class="parallax">
 			<br><br><br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
 			<h3>What would you like to do?</h3>
 			<br><br>
           
 				<div class="docHomeButtons" align="center">
-				<button class="button" onclick="location.href='https://my.setmore.com/calendar#weekly/r88971600744316499/05102020'">View the Setmore Booking Page</button>
+				<button class="button" onclick="window.open('https://my.setmore.com/calendar#weekly/r88971600744316499/05102020', '_blank'); return false;">View the Setmore Booking Page</button>
 				<br><br><br>
 				<button class="button" onclick="location.href='DoctorCreateSubscription.php'">Create a Subscription</button>
 				<br><br><br>
 				<button class="button" onclick="location.href='DoctorViewDrugsList.php'" target="_blank">View the Drug Inventory</button>
 				<br><br><br>
-				<button class="button" onclick="location.href='http://localhost:3000/'">Start a Chat with a Patient</button>
+				<button class="button" onclick="window.open('http://localhost:3000/', '_blank'); return false;">Start a Chat with a Patient</button>
 				<br><br><br>
 				<button class="button" onclick="location.href='UserSettingPage-Doctor.php'">Change Account Settings</button>
 				</div>

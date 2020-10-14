@@ -81,7 +81,7 @@ $result = mysqli_query($dbc, $query);
             <br><br>
             <label id="viewReportLbl" for="viewReportLbl"> Select a report to generate! </label>
             <br><br>
-            <form method='get' action='ViewSubscription-Report.php'>
+            <form method='get' action='ViewSubscription-Report.php' target="_blank">
                 <select name='FormID'>
                     <option> Select a form </option>
                     <?php

@@ -26,9 +26,9 @@ session_start();
         
 		<div class="parallax">
 
-            <br> <br> <br><br>
-                <!--Setmore Booking Service Embed-->
-            <iframe src="https://telehealth3623.setmore.com" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
+            <br>
+            <!--Setmore Booking Service Embed-->
+            <iframe src="https://telehealth3623.setmore.com" scrolling="no" width="95%" height="100%" frameborder="0"></iframe>
 
 		</div>
 		<!-- Footer Menu -->

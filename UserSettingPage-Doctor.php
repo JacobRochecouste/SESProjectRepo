@@ -41,14 +41,14 @@ if (mysqli_num_rows($resultValue) == 1) {
 
         <!-- Navigation Menu -->
         <div class="navBar">
-		    <a id="homeLink" href="LandingPage.php">Home</a>
-		    <a id="aboutLink" href="AboutPage.php">About</a>
-	    	<a id="servicesLink" href="ServicesPage.php">Services</a>
-		    <a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
-		    <a id="contactLink" href="ContactPage.php">Contact Us</a>
-		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-    		<a id="docHome" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-    	</div>
+			<a id="homeLink" href="LandingPage.php">Home</a>
+			<a id="aboutLink" href="AboutPage.php">About</a>
+			<a id="servicesLink" href="ServicesPage.php">Services</a>
+			<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
+			<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
+			<a id="docHome" class="active" href="DoctorHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
+			<a id="title" class="title" style="width: 26%; float: middle; margin-left: 295px;"><b>TeleHealth</b></a>
+		</div>
 
         <!--Content of Page-->
         <br>
@@ -107,7 +107,15 @@ if (mysqli_num_rows($resultValue) == 1) {
                 </table>
             </form>
         </div>
-        <br><br><br><br>
+
+		<!-- Footer Menu -->
+		<div class="footerBar">
+			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="contactLink" href="ContactPage.php">Contact Us</a>
+			<a id="creditLink" href="CreditPage.php">Credits</a>
+			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div>
+
     </body>
 
 </html>
