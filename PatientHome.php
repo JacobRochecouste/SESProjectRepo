@@ -21,26 +21,6 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 			<title>Home</title>
     
 	    <title>TeleHealth</title>
-
-        <script>
-            function myMap() {
-                var mapProp= {
-                    center:new google.maps.LatLng(-33.86984543,151),
-                    zoom:10,
-                };
-                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-                
-                var ClinicPos = {lat: -33.883665,lng: 151.200807};
-                var marker = new google.maps.Marker({
-                    position: ClinicPos,
-                    map: map,
-                    title: 'Medical Clinic'
-                });
-             }   
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYWvsmEcY5HF_GSj1bx07SFDjX4Ud_dsQ"></script>
-
     </head>
 
     <body>
@@ -51,7 +31,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 	    	<a id="aboutLink" href="AboutPage.php">About</a>
     		<a id="servicesLink" href="ServicesPage.php">Services</a>
     		<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
-            <a id="title" class="title" style="width: 26%; float: middle; margin-left: 295px;"><b>TeleHealth</b></a>
+            <a id="title" class="title" style="width: 26%; float: middle; margin-left: 175px;"><b>TeleHealth</b></a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
         </div>
@@ -64,7 +44,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <br><br>
                 
                 <div class="patHomeButtons" align="center">
-				    <button class="button" onclick="location.href='https://my.setmore.com/calendar#weekly/r88971600744316499/05102020'">View the Setmore Booking Page</button>
+				    <button class="button" onclick="location.href='LocationsPage.php'">Find Clinics Near Me</button>
 				    <br><br><br>
 				    <button class="button" onclick="location.href='BookingPage.php'">Make a Booking</button>
 				    <br><br><br>
@@ -74,12 +54,6 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
                     <br><br><br>
                     <button class="button" onclick="location.href='EnquiryPage.php'">Make an Enquiry</button>
 				</div>
-
-            <!-- <div id="googleMap" class="container1" style="width:800px; height: 800px;">
-                Google map will be embedded here
-                <img src="LocationImage.jpg" alt="Image" style="width:100%"> 
-                <button class="btn" type="button" onclick="myMap();">Find Medical Clinics Near Me</button>
-               don't delete this one' -->
         </div>
             
 		<!-- Footer Menu -->
