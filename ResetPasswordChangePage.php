@@ -30,11 +30,11 @@ session_start();
             <form class="changeForm" method="get" action="ResetPasswordChangePage-Handler.php">
                 <label id="changeLbl"><b> Enter your Password </b></label>
                 <hr>
-                <?php 
+                <?php
                 if(isset($_SESSION["Error"]))
                 {
                     $error = $_SESSION["Error"];
-                    echo "<br><span id='error'> $error </span><br><br>";
+                    echo "<br><label id='errorUpdate'>$error </label><br><br>";
                 }
                 ?>
                 <label id="changeLabel"><b> New Password </b></label>
@@ -48,7 +48,7 @@ session_start();
 
                 <table class="resetFormTable">
                     <tr>
-                        <td align="left"> <button class="buttonRounded cancelBtn" type="reset" onclick="location.href='LoginPage.php'"> Cancel </button> </td>
+                        <td align="left"> <button class="buttonRounded cancelBtn" type="reset" onclick="location.href='DoctorHome.php'"> Cancel </button> </td>
                         <td align="right"> <button class="buttonRounded submitBtn" type="submit" onclick="return passValidate()"> Submit </button> </td>
                     </tr>
                 </table>
@@ -79,6 +79,6 @@ session_start();
     </body>
 
 </html>
-<?php 
+<?php
 unset($_SESSION["Error"]);
 ?>

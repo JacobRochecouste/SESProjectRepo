@@ -319,8 +319,7 @@ h3 {
 	font-weight: bold;
 }
 
-#error {
-	padding-left: 25px;
+#errorRPP {
 	color: red;
 	font-weight: bold;
 }
@@ -328,11 +327,18 @@ h3 {
 #errorUpdate {
 	color: red;
 	font-weight: bold;
+	font-size: 20px;
+}
+
+#errorEmail {
+	color: red;
+	font-weight: bold;
 }
 
 #success {
 	color:green;
 	font-weight: bold;
+	font-size: 20px;
 }
 
 span {
@@ -499,7 +505,7 @@ span {
 	color: #277582;
 	font-size: 30px;
 	padding: 0px;
-	margin-left: 90px;
+	margin-left: 95px;
 }
 
 .resetForm #resetText {
@@ -611,6 +617,27 @@ span {
 	background-color: #4CAF50;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 	color: white;
+}
+
+.changeStatusS {
+	width: 700px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: #e0e0e0;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.changeStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.changeStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
 }
 
 /*DoctorCreateSubscription <Form> Style*/
@@ -1341,6 +1368,11 @@ select.form-control {
 	text-align: justify;
 }
 
+.docForm #forgotTxt {
+	font-size: 20px;
+	text-align: justify;
+}
+
 .docForm #editLabels {
 	font-size: 24px;
 }
@@ -1434,3 +1466,95 @@ iframe {
 	justify-content: center;
 	align-items: center;
 }*/
+
+.patEdit {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.patForm #editLbl {
+	font-size: 32px;
+	color: #277582;
+	margin-left: 250px;
+}
+
+.patForm #editTxt {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.patForm #forgotTxt {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.patForm #editLabels {
+	font-size: 24px;
+}
+
+.patForm .radio-inline {
+	display: block;
+	font-size: 18px;
+	line-height: 2;
+}
+
+.patForm #patFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patPhone {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patAddr {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm .updateBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.patForm .clearBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.patBtnTable {
+	width: 100%;
+}

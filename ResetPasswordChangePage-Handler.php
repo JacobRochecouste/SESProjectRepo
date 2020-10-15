@@ -8,17 +8,16 @@ $dbname='telehealth';
 $dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error);
 
-$pass = $_GET['pass'];
-$email = $_GET['email'];
+$pass = MD5($_GET['pass']);
+$email = $_SESSION['email'];
 
-$query = "UPDATE Users SET Pass = '$pass' WHERE Pass='$email'";
+$query = "UPDATE Users SET Pass = '$pass' WHERE Email='$email'";
 if($dbc->query($query) === TRUE) {
-    $_SESSION['Success'] = "Successfully updated User Details";
-    header("Location: successpage.php");
+    header("Location: ResetPasswordSuccessPage.php");
 }
 else {
-    $_SESSION['Failed'] = "Password failed to Update";
-    include("ResetPasswordChangePage.php");
+    $_SESSION['Failed'] = "Password failed to update, please try again.";
+    header("Location: ResetPasswordChangePage.php");
 }  
 $dbc->close()
 ?>

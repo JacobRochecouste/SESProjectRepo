@@ -44,7 +44,13 @@ CREATE TABLE Drugs (
 CREATE TABLE IssueList (
   IssueID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   IDName varchar(100) NOT NULL,
-  IssueNote varchar(250) NOT NULL
+  IssueNote varchar(250) NOT NULL,
+  DocFirstName varchar(100) NOT NULL,
+  DocLastName varchar(100) NOT NULL,
+  DocEmail varchar(100) NOT NULL,
+  DocPhoneNo varchar(15) NOT NULL,
+  DocID INT UNSIGNED,
+  CreationDate date NOT NULL
 );
 
 CREATE TABLE Enquiry (

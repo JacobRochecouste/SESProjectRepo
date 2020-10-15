@@ -8,18 +8,12 @@ $dbname='telehealth';
 
 $dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error); 
-$patemail = $_SESSION["email"];
+$patEmail = $_SESSION["email"];
 
-$sqlValue = "SELECT * FROM Users WHERE Email='$patemail'";
+$sqlValue = "SELECT * FROM Users WHERE Email='$patEmail'";
 $resultValue = mysqli_query($dbc,$sqlValue);
 
-
-// was trying to find the session stuff to see if pass and address were there and nope rip
-echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
-
-if (mysqli_num_rows($resultValue) >= 1) {
+if (mysqli_num_rows($resultValue) == 1) {
 	while($row = $resultValue->fetch_assoc()) {
 		$firstname = $row['FirstName'];
 		$lastname = $row['LastName'];
@@ -27,37 +21,9 @@ if (mysqli_num_rows($resultValue) >= 1) {
 		$address = $row['Address'];
 		$email = $row['Email'];
 		$password = $row['Pass'];
-		$patientid = $row['PatientID'];
 	}
-}
-	
-$firstname = $_GET['patFirstName'];
-$lastname = $_GET['patLastName'];
-$phonenumber = $_GET['patPhone'];
-$email = $_GET['patEmail'];
-$address = $_GET['patAddr'];
-$password = MD5($_GET['patPass']);
-$patientid = $_GET['PatID'];
-	
-//if($_SERVER["REQUEST_METHOD"] == "POST"){
-if(isset($_GET['submit'])) {
-	if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($patientid)) { 
-	$message = "Please fill in all the required fields"; 
-	}
-} else { 
-	$sql = "UPDATE Users SET FirstName='$firstname', LastName='$lastname', Email='$email', PhoneNo='$phonenumber', Address='$address', Pass='$password', PatientID='$patientid' WHERE Email='$patemail'";
-	//$result = mysqli_query($dbc,$sql);
-	//if (mysqli_num_rows($result) == 1) {
-	//Pass
-	//	$query = "INSERT INTO Users (FirstName, LastName, Email, PhoneNo, Address, Pass, PatientID) VALUES ('$firstname', '$lastname', '$email', '$phonenumber', '$address', '$password', '$patientid')";
-	//	if ($dbc->query($query) === TRUE) {
-	//		$message = "Your account details were sucessfully updated"; 
-	//	} else {
-	//		$message = "Oops :/ \n An error occured updating your account details, please try again.";
-	//	}
-	//	
-	//}
 } 
+
 ?>
 <!DOCTYPE html>
 
@@ -86,11 +52,23 @@ if(isset($_GET['submit'])) {
         <!--Content of Page-->
         <br>
         <div class="patEdit">
-            <form class="patForm" method="get" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <form class="patForm" method="get" action="SettingsPageHandler-Patient.php">
                 <label id="editLbl"><b> Account Settings</b></label>
                 <hr>
                 <label class="editTxt"> You can use this page to update any errors you made to your settings! </label>
-                <br><br>	
+                <br><br>
+                <?php 
+					if(isset($_SESSION['Success']))
+					{
+						$msg = $_SESSION['Success'];
+						echo "<label id='success'>$msg </label><br><br>";
+					}
+					if(isset($_SESSION['Failed']))
+					{
+						$msg = $_SESSION['Failed'];
+						echo "<label id='errorUpdate'>$msg </label><br><br>";
+					}
+				?>	
                 <label id="editLabels"><b>First Name</b></label>
                 <br>
                     <input type="text" id="patFirstName" name="patFirstName" value="<?php echo $firstname ?>" required>
@@ -111,13 +89,7 @@ if(isset($_GET['submit'])) {
                 <br>
                     <input type="text" id="patAddr" name="patAddr" value="<?php echo $address ?>" required>
                 <br><br>
-                <label id="editLabels"><b>Password</b></label>
-                <br>
-                    <input type="password" id="patPass" name="patPass" value="<?php echo $password ?>" required>
-                <br><br>
-                    <label id="editLabels"><b>Patient ID</b> </label>
-                <br>
-                    <input type="text" id="patID" name="patID" value="<?php echo $patid ?>" required>
+                <label id="forgotTxt"> Change your password <a href="ResetPasswordChangePage.php">here!</a></label>
                 <br><br>
                 <table class="patBtnTable">
                     <tr>
@@ -127,10 +99,18 @@ if(isset($_GET['submit'])) {
                 </table>
             </form>
         </div>
-        <br><br><br><br>
+
+        <!-- Footer Menu -->
+		<div class="footerBar">
+			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="contactLink" href="ContactPage.php">Contact Us</a>
+			<a id="creditLink" href="CreditPage.php">Credits</a>
+			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
+		</div>
     </body>
 
 </html>
 <?php 
-unset($_SESSION["Error"]);
+unset($_SESSION["Success"]);
+unset($_SESSION["Failed"]);
 ?>

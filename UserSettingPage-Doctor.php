@@ -90,14 +90,11 @@ if (mysqli_num_rows($resultValue) == 1) {
 				<br>
 					<input type="text" id="docAddr" name="docAddr" value="<?php echo $address ?>" required>
 				<br><br>
-				<!-- Temporary comment out while dealing with password -->
-				<!-- <label id="editLabels"><b>Password</b></label>
-				<br>
-					<input type="password" id="docPass" name="docPass">
-				<br><br> -->
 				<label id="editLabels"><b>Doctor ID</b> </label>
 				<br>
 					<input type="text" id="docID" name="docID" value="<?php echo $doctorid ?>" required>
+				<br><br>
+				<label id="forgotTxt"> Change your password <a href="ResetPasswordChangePage.php">here!</a></label>
 				<br><br>
 				<table class="docBtnTable">
                     <tr>
@@ -121,5 +118,5 @@ if (mysqli_num_rows($resultValue) == 1) {
 </html>
 <?php 
 unset($_SESSION["Success"]);
-unset($_SESSION["Failure"]);
+unset($_SESSION["Failed"]);
 ?>

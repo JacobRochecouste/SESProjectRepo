@@ -19,10 +19,10 @@ if(mysqli_num_rows($result) == 1)
 {
     while($row = $result->fetch_assoc())
     {
-        $email = $row['Email'];
         $firstname = $row['FirstName'];
         $lastname = $row['LastName'];
         if ( $userFName == $firstname && $userLName == $lastname) {
+            $_SESSION["email"]=$row['Email'];
             header("Location: ResetPasswordChangePage.php");
         }
         else {
@@ -32,7 +32,7 @@ if(mysqli_num_rows($result) == 1)
     }
 }
 else {
-    $_SESSION["Error"] = "Database Check: Email '" . $userEmail . "' is incorrect.";
+    $_SESSION["Error"] = "Database Check: Email '" . $userEmail . "' is not a registered email.";
 	header("Location: ResetPasswordPage.php");
 }  
 $dbc->close()

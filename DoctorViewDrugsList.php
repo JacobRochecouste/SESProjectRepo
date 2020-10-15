@@ -95,6 +95,18 @@ $result = mysqli_query($dbc, $query);
             <form class="issueForm" method="get" action="ListIssueHandler.php">
                 <label id="issueFormLbl"><b> Drugs Inventory Issue Form </b> </label>
                 <hr>
+                <?php 
+					if(isset($_SESSION['Success']))
+					{
+						$msg = $_SESSION['Success'];
+						echo "<br><label id='success'>$msg </label><br><br>";
+					}
+					if(isset($_SESSION['Failed']))
+					{
+						$msg = $_SESSION['Failed'];
+						echo "<br><label id='errorUpdate'>$msg </label><br><br>";
+					}
+				?>	
                 <label id="ifLabelTxt">
                     The purpose of this form is to inform the team about any errors found
                     in the Drug's List Table.
@@ -130,3 +142,7 @@ $result = mysqli_query($dbc, $query);
     </body>
 
 </html>
+<?php
+unset($_SESSION["Success"]);
+unset($_SESSION["Failed"]);
+?>
