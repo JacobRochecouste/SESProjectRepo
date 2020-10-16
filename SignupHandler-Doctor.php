@@ -21,7 +21,7 @@ $query = "INSERT INTO Users (FirstName, LastName, Email, PhoneNo, Address, Pass,
 if($dbc->query($query) === TRUE)
 {
     //echo "<script>alert('Registration Successful');</script>";
-    header("Location: Signup-Success.html");
+    header("Location: Signup-Success.php");
 
 } 
 else 

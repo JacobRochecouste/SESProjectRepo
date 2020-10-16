@@ -19,7 +19,7 @@ $type = 'patient';
 $query = "INSERT INTO Users (FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES ('$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', NULL)";
 if($dbc->query($query) === TRUE)
 {
-    header("Location: Signup-Success.html");
+    header("Location: Signup-Success.php");
     //echo "<script>alert('Registration Successful');</script>";
 } 
 else 
