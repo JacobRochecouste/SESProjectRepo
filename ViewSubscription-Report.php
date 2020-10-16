@@ -81,7 +81,7 @@ $pdf->Cell(16,10, 'Email: ',0,0);
 $pdf->SetFont('Arial','',14);
 $pdf->Cell(0,10, $report['DocEmail'],0,1);
 $pdf->SetFont('Arial','B',14);
-$pdf->Cell(37,10, 'Phone Number: ',0,0);
+$pdf->Cell(38,10, 'Phone Number: ',0,0);
 $pdf->SetFont('Arial','',14);
 $pdf->Cell(0,10, $report['DocPhoneNo'],0,1);
 

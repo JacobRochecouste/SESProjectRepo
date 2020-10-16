@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $dbhost='db4free.net';
 $dbuser='siteuser';
 $dbpass='securepassword';
@@ -26,8 +26,8 @@ if($dbc->query($query) === TRUE)
 } 
 else 
 {
-    //echo "Sign up Failed " . $dbc->error; 
-    header("Location: Signup-Fail.html");   
+    $_SESSION["Error"] = "Sign Up Failure: Database is not responding";
+    header("Location: SignupDoctorPage.php"); 
 }
 
 $dbc->close()

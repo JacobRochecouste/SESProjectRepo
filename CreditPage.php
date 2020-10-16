@@ -37,7 +37,8 @@ session_start();
 		</div>
 
 		<!--Content of Page-->
-		<br><br><br><br>	
+		<div class="parallax">
+		<br><br><br><br>
 			<form class="mpForm" align="center">
 				<label id="creditspLbl"><b> Software Engineering Studio 1A  </b></label>
 				<br><br>
@@ -55,11 +56,11 @@ session_start();
 					William Susanto - Documentation
 				</label>
 			</form>
-		<br><br><br><br>
+		</div>
 
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php">FAQ</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="creditLink" class="active" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

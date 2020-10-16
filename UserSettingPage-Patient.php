@@ -50,6 +50,7 @@ if (mysqli_num_rows($resultValue) == 1) {
         </div>
 
         <!--Content of Page-->
+        <div class="parallax" style="height: 900px;">
         <br>
         <div class="patEdit">
             <form class="patForm" method="get" action="SettingsPageHandler-Patient.php">
@@ -99,10 +100,11 @@ if (mysqli_num_rows($resultValue) == 1) {
                 </table>
             </form>
         </div>
+        </div>
 
         <!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php">FAQ</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

@@ -52,10 +52,6 @@ session_start();
                     <br>
                 </label>
                 <br>
-                <!--my label for subFormLbl at line 36, idk how to center it help me please w-->
-                <!--basically I want the text Post-Consultation Subscription Form to be centered that^-->
-
-                <!--Patient Details Section-->
                 <label for="patientsDetails" id="patientsDetails"><b> Patients Details </b></label>
                 <hr>
                 <label id="pdLabels" for="patFirstName"><b>First Name</b></label> 
@@ -109,7 +105,7 @@ session_start();
         </div>
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php">FAQ</a>
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
             <a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

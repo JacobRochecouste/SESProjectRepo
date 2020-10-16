@@ -37,13 +37,19 @@ session_start();
 		</div>
 
 		<!--Content of Page-->
-		
-		<div class="parallax">
-		<br><br><br><br>
+        <div class="parallax" style="height: 980px;">
+		<br>
 		<div class="enquiryPage">
 			<form class="enquiryForm" method="get" action="EnquiryHandler.php" align="justify">
 				<label id="enquiryLbl"><b> Enquiry Form </b> </label>
                 <hr>
+				<?php 
+                if(isset($_SESSION["Error"]))
+                {
+                    $error = $_SESSION["Error"];
+                    echo "<br><span id='errorEmail'>$error</span><br><br>";
+                }
+                ?>
                 <label id="enquiryTxt">
                     Please use this form to list your concerns or for any other agenda.
 					<br>
@@ -89,9 +95,10 @@ session_start();
 			</form>
 		</div>
 		</div>
+
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php">FAQ</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
@@ -99,3 +106,6 @@ session_start();
 	</body>
 
 </html>
+<?php 
+unset($_SESSION["Error"]);
+?>

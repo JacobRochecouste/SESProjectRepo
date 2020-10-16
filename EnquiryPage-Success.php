@@ -36,9 +36,9 @@ session_start();
 
 		</div>
         
-        <br><br><br><br>
-        
         <!--Content of Page-->
+		<div class="parallax">
+		<br><br><br><br><br><br><br><br><br>
         <div class="enquiryFormStatusS" align="justify">
             <form class="enquiryStatus">
                 <label id="successLbl"><b> Enquiry Submitted! </b></label>
@@ -46,9 +46,11 @@ session_start();
                 <label id="statusPText"> The enquiry has submitted succesfully, you may now return to the <a href="LandingPage.php">main page</a> and proceed with other actions. </label>
             </form>
         </div>
+		</div>
+
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php">FAQ</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

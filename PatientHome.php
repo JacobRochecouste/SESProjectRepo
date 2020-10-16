@@ -41,8 +41,10 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <br><br><br>
             <h1>Welcome <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
             <h3>What would you like to do?</h3>
-            <br><br>
-                
+            <br>
+             
+            <div class="buttonForm" align="center">
+			<br>
                 <div class="patHomeButtons" align="center">
 				    <button class="button" onclick=" window.open('LocationsPage.php', '_blank'); return false;">Find Clinics Near Me</button>
 				    <br><br><br>
@@ -56,11 +58,13 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
                     <br><br><br>
                     <button class="button" onclick="location.href='UserSettingPage-Patient.php'">Change Account Settings</button>
 				</div>
+            <br>
+            </div>
         </div>
             
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php">FAQ</a>
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
             <a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

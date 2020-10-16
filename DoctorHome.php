@@ -38,26 +38,29 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<br><br><br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
 			<h3>What would you like to do?</h3>
-			<br><br>
-          
+			<br>
+			
+			<div class="buttonForm" align="center">
+			<br>
 				<div class="docHomeButtons" align="center">
-				<button class="button" onclick="window.open('https://my.setmore.com/calendar#weekly/r88971600744316499/05102020', '_blank'); return false;">View the Setmore Booking Page</button>
-				<br><br><br>
-				<button class="button" onclick="location.href='DoctorCreateSubscription.php'">Create a Subscription</button>
-				<br><br><br>
-				<button class="button" onclick="location.href='DoctorViewDrugsList.php'" target="_blank">View the Drug Inventory</button>
-				<br><br><br>
-				<button class="button" onclick="window.open('http://localhost:3000/', '_blank'); return false;">Start a Chat with a Patient</button>
-				<br><br><br>
-				<button class="button" onclick="location.href='UserSettingPage-Doctor.php'">Change Account Settings</button>
+					<button class="button" onclick="window.open('https://my.setmore.com/calendar#weekly/r88971600744316499/05102020', '_blank'); return false;">View the Setmore Booking Page</button>
+					<br><br><br>
+					<button class="button" onclick="location.href='DoctorCreateSubscription.php'">Create a Subscription</button>
+					<br><br><br>
+					<button class="button" onclick="location.href='DoctorViewDrugsList.php'" target="_blank">View the Drug Inventory</button>
+					<br><br><br>
+					<button class="button" onclick="window.open('http://localhost:3000/', '_blank'); return false;">Start a Chat with a Patient</button>
+					<br><br><br>
+					<button class="button" onclick="location.href='UserSettingPage-Doctor.php'">Change Account Settings</button>
 				</div>
-
+			<br>
+			</div>
 				<!-- can use either white or orange text for the placeholder text i dont mind either I quite like the orange, the white is a little off, up to you though.-->
 		</div>
 
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php">FAQ</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

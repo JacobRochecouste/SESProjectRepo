@@ -37,6 +37,7 @@ session_start();
 		</div>
 
 		<!--Content of Page-->
+		<div class="parallax" style="height: 1600px;">
 		<br>
 		<div class="faqForm">
 			<form class="qForm" align="justify">
@@ -133,7 +134,7 @@ session_start();
 		<br><br><br><br>
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php" class="active" style="margin-left: 630px;">FAQ</a>
+			<a id="FAQLink" href="FAQPage.php" class="active">FAQ</a>
 			<a id="contactLink" href="ContactPage.php">Contact Us</a>
 			<a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

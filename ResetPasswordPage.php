@@ -1,33 +1,5 @@
 ﻿<?php
 session_start();
-//$dbhost='db4free.net';
-//$dbuser='siteuser';
-//$dbpass='securepassword';
-//$dbname='telehealth';
-
-//$dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
-//or die('Could not connect %s\n'. $dbc->connect_error);
-
-//if(isset($_POST['submit']))
-//{
-    //$user_id = $_POST['userEmail'];
-    //$result = mysqli_query($dbc,"SELECT * FROM Users where Email ='" . $_POST['userEmail'] . "'");
-    //$row = mysqli_fetch_assoc($result);
-	//$fetch_user_id=$row['Email'];
-	//$email_id=$row['Email'];
-	//$password=$row['Pass'];
-	//if($user_id==$fetch_user_id) {
-				//$to = $email_id;
-                //$subject = "Password";
-                //$txt = "Your password is : $password.";
-                //$headers = "From: telehealthsupport@tele.health.au" . "\r\n" .
-                //"CC: telehealthdev@tele.health.au";
-                //mail($to,$subject,$txt,$headers);
-			//}
-				//else{
-					//echo 'invalid User Email';
-				//}
-//}
 ?>
 <!DOCTYPE html>
 
@@ -89,7 +61,7 @@ session_start();
 
 	    <!-- Footer Menu -->
 	    <div class="footerBar">
-		    <a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>
+		    <a id="FAQLink" href="FAQPage.php">FAQ</a>
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
             <a id="creditLink" href="CreditPage.php">Credits</a>
 		    <a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>

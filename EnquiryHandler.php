@@ -22,6 +22,7 @@ if($dbc->query($query) === TRUE)
 }
 else
 {
-    header("Location: EnquiryPage-Fail.php");
+    $_SESSION["Error"] = "Enquiry Creation Failed: Please try again.";
+    header("Location: EnquiryPage.php");
 }
 ?>
