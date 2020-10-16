@@ -36,6 +36,7 @@ $result = mysqli_query($dbc, $query);
     	</div>
 
         <!--Content of Page-->
+        <div class="parallax" style="height: 1200px">
         <div class="drugsList" id="drugsList">
 			<br>
             <table align="center">
@@ -126,7 +127,9 @@ $result = mysqli_query($dbc, $query);
             <a id="contactLink" href="ContactPage.php">Contact Us</a>
             <a id="creditLink" href="CreditPage.php">Credits</a>
 			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
-		</div> 
+		</div>
+        <br><br><br>
+        </div>
     </body>
 
 </html>

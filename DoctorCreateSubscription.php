@@ -26,6 +26,7 @@ session_start();
     	</div>
 
         <!--Content of Page-->
+        <div class="parallax" style="height: 1600px;">
         <br>
         <div class="createSub">
             <form class="subForm" method="get" action="CreateSubHandler.php">
@@ -105,6 +106,7 @@ session_start();
             </form>
         </div>
         <br><br><br><br>
+        </div>
 		<!-- Footer Menu -->
 		<div class="footerBar">
 			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>

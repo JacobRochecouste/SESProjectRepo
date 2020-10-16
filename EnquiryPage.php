@@ -37,7 +37,9 @@ session_start();
 		</div>
 
 		<!--Content of Page-->
-		<br>
+		
+		<div class="parallax">
+		<br><br><br><br>
 		<div class="enquiryPage">
 			<form class="enquiryForm" method="get" action="EnquiryHandler.php" align="justify">
 				<label id="enquiryLbl"><b> Enquiry Form </b> </label>
@@ -86,7 +88,7 @@ session_start();
                 </table>
 			</form>
 		</div>
-		<br><br><br><br>
+		</div>
 		<!-- Footer Menu -->
 		<div class="footerBar">
 			<a id="FAQLink" href="FAQPage.php" style="margin-left: 630px;">FAQ</a>

@@ -7,7 +7,7 @@ title {
 	font-size: 70px;
 	text-align: center;
 	padding-bottom: 120px;
-	background-color: #ffffff;
+	background-color: #e0e0e0;
 	color: rgb(65, 63, 63);
 }
 
@@ -18,7 +18,7 @@ title {
 	padding: 70px;
 	margin: 0px 0px 0px -20px;
 	padding-bottom: 80px;
-	background-color: #ffffff;
+	background-color: #e0e0e0;
 	color: rgb(65, 63, 63);
 }
 
@@ -152,7 +152,7 @@ height: 28px;
 	width: 90%;
 	height: 60%;
 	font-size: 26px;
-	background-color: #ffffff;
+	background-color: #e0e0e0;
 	padding: 15px;
 	border: 4px solid #b05858;
 	margin: 0px 0px 0px 70px;
@@ -254,7 +254,7 @@ height: 28px;
 	overflow: hidden;
 	margin: auto;
 	padding: 50px;
-	background: #ffffff;
+	background: #e0e0e0;
 	border-radius: 10px;
 	text-align: left;
 	border: 4px solid #333333;
@@ -351,7 +351,7 @@ span {
 	overflow: hidden;
 	margin: auto;
 	padding: 50px;
-	background: #ffffff;
+	background: #e0e0e0;
 	border-radius: 10px;
 	border: 4px solid #333333;
 }
@@ -361,7 +361,7 @@ span {
 	height: auto;
 	margin: auto;
 	padding: 20px 40px;
-	background: #ffffff;
+	background: #e0e0e0;
 	border-radius: 10px;
 	text-align: left;
 	border: 4px solid #333333;
@@ -483,7 +483,7 @@ span {
 	overflow: hidden;
 	margin: auto;
 	padding: 15px;
-	background: #ffffff;
+	background: #e0e0e0;
 	border: 4px solid black;
 	border-radius: 10px;
 }
@@ -523,6 +523,7 @@ span {
 	padding: 15px;
 	text-align: left;
 	border: 4px solid rgba(0,0,0,0.24);
+	background: #e0e0e0;
 }
 
 /*Use <hr> in the html code to get a straight black line across the screen */
@@ -849,6 +850,8 @@ hr {
 #viewPatientSubscriptions {
 	margin: auto;
 	border: 3px solid #f1f1f1;
+	background: #e0e0e0;
+	height: 1000p
 }
 
 .viewPatientSubscriptions {
@@ -902,15 +905,18 @@ select.form-control {
 #drugsList {
 	margin: auto;
 	border: 3px solid #f1f1f1;
+	background: #e0e0e0;
 }
 
 .drugsList {
 	padding: 16px;
 	margin: auto;
+	background: #e0e0e0;
 }
 
 .drugsList #drugsListTitle {
 	font-size: 30px;
+	background: #e0e0e0;
 }
 
 .drugsList table {
@@ -942,6 +948,7 @@ select.form-control {
 	margin: auto;
 	padding: 15px;
 	border: 4px solid rgba(0,0,0,0.24);
+	background: #e0e0e0;
 }
 
 .issueForm #issueFormLbl {
@@ -1087,6 +1094,7 @@ select.form-control {
 	padding: 15px;
 	text-align: left;
 	border: 4px solid rgba(0,0,0,0.24);
+	background: #e0e0e0;
 }
 
 .enquiryForm #enquiryLbl {

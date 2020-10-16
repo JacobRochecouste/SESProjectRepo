@@ -34,7 +34,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 		</div>
 
 		<!--Content of Page-->
-		<div class="parallaxDoc">
+		<div class="parallax">
 			<br><br><br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
 			<h3>What would you like to do?</h3>
