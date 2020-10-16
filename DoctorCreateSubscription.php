@@ -36,7 +36,7 @@ session_start();
                 if(isset($_SESSION["Error"]))
                 {
                     $error = $_SESSION["Error"];
-                    echo "<br><span id='error'>$error</span><br><br>";
+                    echo "<br><span id='errorEmail'>$error</span><br><br>";
                 }
                 ?>
                 <label id="pcsfLabelTxt">

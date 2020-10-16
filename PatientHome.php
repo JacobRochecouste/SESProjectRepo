@@ -31,7 +31,7 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 	    	<a id="aboutLink" href="AboutPage.php">About</a>
     		<a id="servicesLink" href="ServicesPage.php">Services</a>
     		<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
-            <a id="title" class="title" style="width: 26%; float: middle; margin-left: 175px;"><b>TeleHealth</b></a>
+            <a id="title" class="title" style="width: 26%; float: middle; margin-left: 295px;"><b>TeleHealth</b></a>
 		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
             <a id="patHome" class="active" href="PatientHome.php" style="float:right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
         </div>
@@ -44,15 +44,17 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
             <br><br>
                 
                 <div class="patHomeButtons" align="center">
-				    <button class="button" onclick="location.href='LocationsPage.php'">Find Clinics Near Me</button>
+				    <button class="button" onclick=" window.open('LocationsPage.php', '_blank'); return false;">Find Clinics Near Me</button>
 				    <br><br><br>
 				    <button class="button" onclick="location.href='BookingPage.php'">Make a Booking</button>
 				    <br><br><br>
 				    <button class="button" onclick="location.href='PatientViewSubscription.php'">View your Medical Reports</button>
 				    <br><br><br>
-				    <button class="button" onclick="location.href='http://localhost:3000/'">Start a Chat with a Doctor</button>
+				    <button class="button" onclick="window.open('http://localhost:3000/', '_blank'); return false;">Start a Chat with a Doctor</button>
                     <br><br><br>
                     <button class="button" onclick="location.href='EnquiryPage.php'">Make an Enquiry</button>
+                    <br><br><br>
+                    <button class="button" onclick="location.href='UserSettingPage-Patient.php'">Change Account Settings</button>
 				</div>
         </div>
             

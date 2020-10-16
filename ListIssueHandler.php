@@ -1,5 +1,5 @@
 ﻿<?php
-
+session_start();
 $dbhost='db4free.net';
 $dbuser='siteuser';
 $dbpass='securepassword';
@@ -10,17 +10,22 @@ or die('Could not connect %s\n'. $dbc->connect_error);
 
 $IDName = $_GET['drugSummary'];
 $IssueNote = $_GET['issueSummary'];
+$docid = $_SESSION['DocID'];
+$firstname = $_SESSION['FName'];
+$lastname = $_SESSION['LName'];
+$email = $_SESSION['email'];
+$phonenumber = $_SESSION['PhoneNo'];
 
-$query = "INSERT INTO IssueList (IDName, IssueNote) VALUES ('$IDName', '$IssueNote')";
+$query = "INSERT INTO IssueList (IDName, IssueNote, DocFirstName, DocLastName, DocEmail, DocPhoneNo, DocID, CreationDate) VALUES ('$IDName', '$IssueNote', '$firstname', '$lastname', '$email', '$phonenumber', '$docid', CURRENT_DATE)";
 if($dbc->query($query) === TRUE)
 {
-    //echo "<script>alert('Issue Succesfully Notified');</script>";
-    header("Location: DoctorViewDrugsList-Success.php");
+    $_SESSION['Success'] = "Successfully Submitted Report";
+    header("Location: DoctorViewDrugsList.php");
 }
 else
 {
-    //$errMsg = "Incorrectly Filled Form Request: " . addslashes($dbc->error);
-    header("Location: DoctorCreateSubscription-Fail.php");
-    //echo "<script type='text/javascript'>alert('$errMsg');</script>";
+    $_SESSION['Failed'] = "Failed to Submit Report";
+    header("Location: DoctorViewDrugsList.php");
 }
+$dbc->close()
 ?>

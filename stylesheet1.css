@@ -64,19 +64,18 @@ body, html {
 }
 
 .navBar a.title {
-	background-color:#333;
+	background-color: #333;
 	color: white;
-	margin: auto;
-	width: 10%; 
-	float: middle;
+	margin: 0 auto;
+	width: 10%;
+	display: block;
 	font-size: 26px;
 	padding: 10px 40px;
-	height: 28px;
+	height: 28px; 
 }
 
 .footerBar {
 	background-color: #333;
-	overflow: hidden;
 	width: 100%;
 	position: -webkit-sticky;
 	position: fixed;
@@ -85,36 +84,37 @@ body, html {
 }
 
 .footerBar a {
-float: left;
-color: #f2f2f2;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-font-size: 17px;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
 }
 
 .footerBar a:hover {
-background-color: #ddd;
-color: black;
+	background-color: #ddd;
+	color: black;
 }
 
 .footerBar a.active {
-background-color: #FF6341;
-color: white;
+	background-color: #FF6341;
+	color: white;
 }
 
 .footerBar a.title {
-background-color: #333;
-color: white;
-margin: auto;
-width: 10%;
-float: middle;
-font-size: 26px;
-padding: 10px 40px;
-height: 28px;
+	background-color: #333;
+	color: white;
+	margin: auto;
+	width: 10%;
+	font-size: 26px;
+	padding: 10px 40px;
+	height: 28px;
 }
 
-.copyRight {
+.footerBar a.copyRight {
+	background-color: #333;
+	color: white;
 	display: block;
 	float: right;
 	text-align: center;
@@ -319,7 +319,18 @@ h3 {
 	font-weight: bold;
 }
 
+#errorRPP {
+	color: red;
+	font-weight: bold;
+}
+
 #errorUpdate {
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#errorEmail {
 	color: red;
 	font-weight: bold;
 }
@@ -327,6 +338,7 @@ h3 {
 #success {
 	color:green;
 	font-weight: bold;
+	font-size: 20px;
 }
 
 span {
@@ -490,9 +502,19 @@ span {
 
 /*Password Page H2 Text Style*/
 .resetForm #passwordLbl {
-	color: #000000;
+	color: #277582;
 	font-size: 30px;
 	padding: 0px;
+	margin-left: 95px;
+}
+
+.resetForm #resetText {
+	font-size: 18px;
+	text-align: justify;
+}
+
+.resetForm #resetLabel {
+	font-size: 24px;
 }
 
 .resetForm #userEmail {
@@ -503,15 +525,119 @@ span {
 	padding-left: 8px;
 }
 
-.resetForm #resetText {
-	font-size: 18px;
+.resetForm #userFName {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.resetForm #userLName {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.resetFormTable {
+	width: 100%;
 }
 
 /*Button used in Reset Password Page*/
+.resetForm .backBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .resetForm .continueBtn:hover {
 	background-color: #4CAF50;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 	color: white;
+}
+
+.changePassword {
+	width: 450px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	background: #ffffff;
+	border: 4px solid black;
+	border-radius: 10px;
+}
+
+/*Password Page H2 Text Style*/
+.changeForm #changeLbl {
+	color: #277582;
+	font-size: 30px;
+	padding: 0px;
+	margin-left: 75px;
+}
+
+.changeForm #changeText {
+	font-size: 18px;
+	text-align: justify;
+}
+
+.changeForm #changeLabel {
+	font-size: 24px;
+}
+
+.changeForm #pass {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.changeForm #confirm {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.changeFormTable {
+	width: 100%;
+}
+
+/*Button used in Reset Password Page*/
+.changeForm .cancelBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.changeForm .submitBtn:hover {
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color: white;
+}
+
+.changeStatusS {
+	width: 700px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: #e0e0e0;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.changeStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.changeStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
 }
 
 /*DoctorCreateSubscription <Form> Style*/
@@ -1250,6 +1376,11 @@ select.form-control {
 	text-align: justify;
 }
 
+.docForm #forgotTxt {
+	font-size: 20px;
+	text-align: justify;
+}
+
 .docForm #editLabels {
 	font-size: 24px;
 }
@@ -1329,5 +1460,109 @@ select.form-control {
 }
 
 .docBtnTable {
+	width: 100%;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
+}
+
+/*just paste this code into a div and it centers every object inside to the center*/
+/*.containerCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}*/
+
+.patEdit {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.patForm #editLbl {
+	font-size: 32px;
+	color: #277582;
+	margin-left: 250px;
+}
+
+.patForm #editTxt {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.patForm #forgotTxt {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.patForm #editLabels {
+	font-size: 24px;
+}
+
+.patForm .radio-inline {
+	display: block;
+	font-size: 18px;
+	line-height: 2;
+}
+
+.patForm #patFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patPhone {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patAddr {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm .updateBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.patForm .clearBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.patBtnTable {
 	width: 100%;
 }

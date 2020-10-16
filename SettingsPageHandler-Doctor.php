@@ -17,11 +17,12 @@ $address= $_GET['docAddr'];
 $pass= MD5($_GET['docPass']);
 $type = 'doctor';
 $doctorid = $_GET['docID'];
-$query = "UPDATE Users SET FirstName='$firstname', LastName='$lastname', Email='$email', PhoneNo='$phoneno', Address='$address', DoctorID='$doctorid' WHERE Email='$docEmail'";
+
+$query = "UPDATE Users SET FirstName='$firstname', LastName='$lastname', Email='$docEmail', PhoneNo='$phoneno', Address='$address', DoctorID='$doctorid' WHERE Email='$docEmail'";
 if($dbc->query($query) === TRUE)
 {
     $_SESSION['Success'] = "Successfully updated User Details";
-    $_SESSION["email"]=$email;
+    $_SESSION["email"]=$docEmail;
     $_SESSION["FName"]=$firstname;
     $_SESSION["LName"]=$lastname;
     $_SESSION["UserType"]=$type;
