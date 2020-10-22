@@ -82,8 +82,8 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 
              }   
         </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYWvsmEcY5HF_GSj1bx07SFDjX4Ud_dsQ"></script>
+	<!-- removed API key as repo was made public to prevent anyone stealing it. -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=GetYourOwn"></script>
 
     </head>
 
