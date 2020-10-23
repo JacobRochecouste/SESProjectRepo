@@ -1,44 +1,92 @@
-﻿
-.title 
-{
+﻿* {
+	font-family: Arial;
+}
+
+title {
 	font-family: Arial;
 	font-size: 70px;
 	text-align: center;
-	padding: 20px;
-	margin: 0px 0px 0px -10px;
-	padding-bottom: 70px;
-	background-color: #DCDCDC;
-	color: white;
+	padding-bottom: 120px;
+	background-color: #e0e0e0;
+	color: rgb(65, 63, 63);
 }
 
-body, html
-{
-	height: 3000px;
+.title2 {
+	font-family: Arial;
+	font-size: 70px;
+	text-align: center;
+	padding: 70px;
+	margin: 0px 0px 0px -20px;
+	padding-bottom: 80px;
+	background-color: #e0e0e0;
+	color: rgb(65, 63, 63);
+}
+
+body, html {
 	font-family: Arial;
 	margin: 0px 0px 0px 0px;
+	height: 100%;
 }
 
-.logoDiv
-{
+.logoDiv {
 	width: 100px; 
 	float:left; 
-	height:100px; 
+	height:200px; 
 	margin:10px
 }
 
-.navBar
-{
+.navBar {
 	background-color: #333;
 	overflow: hidden;
 	width: 100%;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 0;
 	font: Arial;
 }
 
-.navBar a
-{
+.navBar a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	text-decoration: underline;
+}
+
+.navBar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.navBar a.active {
+	background-color: #FF6341;
+	color: white;
+}
+
+.navBar a.title {
+	background-color: #333;
+	color: white;
+	margin: 0 auto;
+	width: 10%;
+	display: block;
+	font-size: 26px;
+	padding: 10px 40px;
+	height: 28px; 
+	border: none; 
+	text-decoration: none;
+}
+
+.footerBar {
+	background-color: #333;
+	width: 100%;
+	position: -webkit-sticky;
+	position: fixed;
+	bottom: 0;
+	font: Arial;
+}
+
+.footerBar a {
 	float: left;
 	color: #f2f2f2;
 	text-align: center;
@@ -47,93 +95,1485 @@ body, html
 	font-size: 17px;
 }
 
-.navBar a:hover
-{
+.footerBar a:hover {
 	background-color: #ddd;
 	color: black;
 }
 
-.navBar a.active
-{
+.footerBar a.active {
 	background-color: #FF6341;
 	color: white;
 }
 
-.parallax
-{
+.footerBar a.title {
+	background-color: #333;
+	color: white;
+	margin: auto;
+	width: 10%;
+	font-size: 26px;
+	padding: 10px 40px;
+	height: 28px;
+}
+
+.footerBar a.copyRight {
+	background-color: #333;
+	color: white;
+	display: block;
+	float: right;
+	text-align: center;
+	font-size: 14px;
+}
+
+/*Background Image for Website *Temporary**/
+.parallax {
 	background-image: url('Landing Background.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100%;
+	height: 110%;
 	width: 100%;
-	
 }
 
-.logtable 
-{
-    width: 800px;
+.parallaxDoc {
+	background-image: url('Landing Background.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 89.2%;
+	width: 100%;
+}
+
+.logtable {
+    max-width: 500px;
+	max-height: 500px;
     float: left;
 }
 
-.divMessage 
-{
-    width: 350px;
-    position:relative;
-    right:-5px;
-    top: -20px;
-
+.divText {
+	width: 90%;
+	height: 60%;
+	font-size: 26px;
+	background-color: #e0e0e0;
+	padding: 15px;
+	border: 4px solid #b05858;
+	margin: 0px 0px 0px 70px;
 }
 
-.login {
-	width: 382px;
+.mpForm {
+	width: 50%;
+	height: auto;
 	overflow: hidden;
 	margin: auto;
-	margin: 20 0 0 450px;
-	padding: 80px;
-	background: #90EE90;
-	border-radius: 15px;
+	padding: 45px;
+	background: #e0e0e0;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.mpForm #mpLbl {
+	font-size: 52px;
+	margin-left: 150px;
+}
+
+
+.mpForm #mpText {
+	font-size: 24px;
+}
+
+.mpForm #reasonsList {
+	font-size: 18px;
+}
+
+.mpForm #apLbl {
+	font-size: 52px;
+	margin-left: 315px;
+}
+
+.mpForm #mpHText {
+	font-size: 30px;
+}
+
+.mpForm #spLbl {
+	font-size: 52px;
+	color: black;
+	margin-left: 220px;
+}
+
+.mpForm #epLbl {
+	font-size: 52px;
+	color: black;
+	margin-left: 190px;
+}
+
+.mpForm #cpLbl {
+	font-size: 52px;
+	color: black;
+	/*margin-left: 280px;*/
+}
+
+.mpForm #creditspLbl {
+	font-size: 52px;
+	color: black;
+}
+
+.mpForm #creditsSLbl {
+	font-size: 38px;
+	color: #277582;
+}
+
+.faqForm {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+	background: white;
+}
+
+.qForm #faqpLbl {
+	font-size: 30px;
+	color: #277582;
+	margin-left: 172px;
+}
+
+.qForm #qpHText {
+	font-size: 24px;
+}
+
+.qForm #qpText {
+	font-size: 18px;
+}
+
+.qForm #reasonsList {
+	font-size: 18px;
+}
+
+/*Login Page Form Style*/
+.loginPage {
+	width: 300px;
+	height: 255px;
+	overflow: hidden;
+	margin: auto;
+	padding: 50px;
+	background: #e0e0e0;
+	border-radius: 10px;
+	text-align: left;
+	border: 4px solid #333333;
+}
+
+h1 {
+	text-align: center;
+	color: #000000;
+	font-size: 52px;
 }
 
 h2 {
 	text-align: center;
 	color: #277582;
-	padding: 20px;
 }
 
-label {
+h3 {
+	text-align: center;
 	color: #000000;
-	font-size: 22px;
+	font-size: 32px;
 }
 
+.h2signUpUserType {
+	text-align: center;
+	color: #277582;
+	font-size: 36px;
+}
+
+#loginFormLbl {
+	color: #000000;
+	font-size: 26px;
+}
+
+/*Login Page Username Text*/
 #Uname {
 	width: 300px;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
 
+/*Login Page Password Text*/
 #Pass {
 	width: 300px;
 	height: 30px;
-	border: none;
+	border: border-box;
 	border-radius: 3px;
 	padding-left: 8px;
 }
 
-#log {
-	width: 300px;
-	height: 30px;
-	border: none;
-	border-radius: 17px;
-	padding-left: 7px;
-	color: darkblue;
-	font-size: 16px;
+/*Login Page Login Button*/
+.logInBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#errorLogin {
+	padding-left: 25px;
+	color: red;
+	font-weight: bold;
+}
+
+#errorRPP {
+	color: red;
+	font-weight: bold;
+}
+
+#errorUpdate {
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#errorEmail {
+	color: red;
+	font-weight: bold;
+}
+
+#success {
+	color:green;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 span {
 	color: black;
 	font-size: 17px;
+}
+
+/*Currently used as the body class style for Login and SignUp pages*/
+.loginStyle {
+	background-image: url('Landing Background.jpg');
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*this is the form style for the SignupUserType page*/
+.signUpUserType {
+	width: 300px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 50px;
+	background: #e0e0e0;
+	border-radius: 10px;
+	border: 4px solid #333333;
+}
+
+.signUp {
+	width: 300px;
+	height: auto;
+	margin: auto;
+	padding: 20px 40px;
+	background: #e0e0e0;
+	border-radius: 10px;
+	text-align: left;
+	border: 4px solid #333333;
+}
+
+#signUpTitle {
+	color: #277582;
+	font-size: 30px;
+	padding: 0px;
+}
+
+#signUpFormLbl {
+	color: #000000;
+	font-size: 22px;
+}
+
+#signUpField {
+	width: 300px;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#Password {
+	width: 300px;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#Confirm {
+	width: 300px;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.signUp .signUpBtn:hover {
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color: white;
+}
+
+
+
+/*Default Button Style Declaration*/
+.button {
+	border: none;
+	color: black;
+	padding: 15px;
+	font-size: 16px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	width: 49%;
+}
+
+/*Smaller Button Style to use*/
+.buttonSmall {
+	border: none;
+	color: black;
+	padding: 15px;
+	font-size: 16px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border-radius: 15px;
+	width: 150px;
+}
+
+.buttonRounded {
+	border: none;
+	color: black;
+	padding: 15px;
+	font-size: 16px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border-radius: 15px;
+	width: 49%;
+}
+
+.buttonLog {
+	border: none;
+	color: black;
+	padding-left: 7px;
+	font-size: 16px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border-radius: 15px;
+	width: 313px;
+	height: 30px;
+}
+
+/*SignUp User Types Page Doctor Button*/
+.doctorBtn:hover {
+	background-color: #2CC2FA;
+	width: 49%;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	opacity: 0.8;
+}
+
+/*SignUp User Types Page Patient Button*/
+.patientBtn:hover {
+	background-color: #CE404D;
+	width: 49%;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	opacity: 0.8;
+}
+
+/*this is the form style for the ResetPassword page*/
+.resetPassword {
+	width: 450px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	background: #e0e0e0;
+	border: 4px solid black;
+	border-radius: 10px;
+}
+
+/*Password Page H2 Text Style*/
+.resetForm #passwordLbl {
+	color: #277582;
+	font-size: 30px;
+	padding: 0px;
+	margin-left: 95px;
+}
+
+.resetForm #resetText {
+	font-size: 18px;
+	text-align: justify;
+}
+
+.resetForm #resetLabel {
+	font-size: 24px;
+}
+
+.resetForm #userEmail {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.resetForm #userFName {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.resetForm #userLName {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.resetFormTable {
+	width: 100%;
+}
+
+/*Button used in Reset Password Page*/
+.resetForm .backBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.resetForm .continueBtn:hover {
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color: white;
+}
+
+.changePassword {
+	width: 450px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	background: #ffffff;
+	border: 4px solid black;
+	border-radius: 10px;
+}
+
+/*Password Page H2 Text Style*/
+.changeForm #changeLbl {
+	color: #277582;
+	font-size: 30px;
+	padding: 0px;
+	margin-left: 75px;
+}
+
+.changeForm #changeText {
+	font-size: 18px;
+	text-align: justify;
+}
+
+.changeForm #changeLabel {
+	font-size: 24px;
+}
+
+.changeForm #pass {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.changeForm #confirm {
+	width: 95%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.changeFormTable {
+	width: 100%;
+}
+
+/*Button used in Reset Password Page*/
+.changeForm .cancelBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.changeForm .submitBtn:hover {
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color: white;
+}
+
+.changeStatusS {
+	width: 700px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.changeStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.changeStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
+}
+
+/*DoctorCreateSubscription <Form> Style*/
+.createSub {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+	background: white;
+}
+
+/*Use <hr> in the html code to get a straight black line across the screen */
+hr {
+	border: 1px solid black;
+}
+
+/*General Label Styling for every single lable in the page*/
+.subForm #pdLabels {
+	font-size: 18px;
+}
+
+.subForm #subFormLbl {
+	font-size: 30px;
+	color: #277582;
+	margin-left: 110px;
+}
+
+.subForm #pcsfLabelTxt {
+	font-size: 16px;
+}
+
+/*Patient Details Section in the CreateSubscription Page*/
+.subForm #patientsDetails {
+	font-size: 26px;
+}
+
+.subForm #patFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box ;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm #patLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm #patEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+/*Consultation Details Section in the CreateSubscription Page*/
+.subForm #consultationDetails {
+	font-size: 26px;
+}
+
+/*This is the text that can be found under the Consultation Details Header in DoctorCreateSubscription Page*/
+.subForm #consultationPText {
+	font-size: 18px;
+}
+
+.subForm .radio-inline {
+	display: block;
+	font-size: 18px;
+	line-height: 2;
+}
+
+.subForm #bookingID {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm #consultationText {
+	font-size: 18px;
+}
+
+.subForm textarea {
+	width: 100%;
+	font-size: 18px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	background: #f1f1f1;
+	text-align: justify;
+}
+
+/*Doctor's Details Section in the CreateSubscription Page*/
+.subForm #doctorsDetails{
+	font-size: 26px;
+}
+
+.subForm #docFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm #docLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm #docEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm #docPhoneNum {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm #docID {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.subForm .submitBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.subForm .cancelBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*For the Table Row in the CreateSubscription Page to keep the buttons at left/right sides perfectly */
+.tableCreateSub {
+	width: 100%;
+}
+
+/*CreateSub Form Status*/
+.subFormStatusS {
+	width: 500px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+/*easter egg, will delete this later on and rename subFormStatusS back to subFormStatus and change it for both pages*/
+.subFormStatusF {
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border-radius: 10px;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.formStatus #successLbl{
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.formStatus #failLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+
+.formStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.formStatus #reasonsList {
+	font-size: 18px;
+}
+
+/*Sign Up Success and Fail Pages*/
+.signUpStatusS {
+	width: 550px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.signUpStatusF {
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border-radius: 10px;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.signUpStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.signUpStatus #failLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+
+.signUpStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.signUpStatus #reasonsList {
+	font-size: 18px;
+}
+
+.container1 {
+  width: 400px; 
+  float:left; 
+  height:400px; 
+  margin:10px;
+  max-width: 400px;
+}
+
+.container1 img {
+  width: 100%;
+  height: auto;
+  -ms-transform: translate(50%, -10%);
+  transform: translate(50%, -10%);
+  width: 100px; 
+  float:left; 
+  margin:10px;
+  border:1px solid black;
+}
+
+.container1 .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #999999;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transform: translate(-175%, 700%);
+
+}
+
+.container1 .btn:hover {
+  background-color: #e0e0e0;
+  color: black
+}
+
+.container2 {
+  width: 400px; 
+  float:left; 
+  height:400px; 
+  max-width: 400px;
+}
+
+.container2 img {
+  width: 100%;
+  height: 400px;
+  transform: translate(130%, 2%);
+  width: 100px; 
+  float:left; 
+  margin:10px;
+  border:1px solid black;
+}
+
+.container2 .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #999999;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transform: translate(195%, 700%);
+}
+
+.container2 .btn:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+/* Table View in PatientViewSubscription Page*/
+#viewPatientSubscriptions {
+	margin: auto;
+	border: 3px solid #f1f1f1;
+}
+
+.viewPatientSubscriptions {
+	padding: 16px;
+	margin: auto;
+}
+
+.viewPatientSubscriptions #viewSubTitle {
+	font-size: 36px;
+}
+
+.viewPatientSubscriptions table {
+	font-family: Arial;
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 100%;
+}
+
+.viewPatientSubscriptions td, th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 8px;
+}
+
+.viewPatientSubscriptions tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+.viewPatientSubscriptions #viewReportLbl {
+	font-size: 22px;
+}
+
+.viewPatientSubscriptions .generateBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*Purely for the select box used in ViewSubscription Page */
+select.form-control {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: 1ex;
+	background-origin: content-box;
+}
+
+/*This section is for the Drugs Listing Page*/
+#drugsList {
+	margin: auto;
+	border: 3px solid #f1f1f1;
+	background: white;
+}
+
+.drugsList {
+	padding: 16px;
+	margin: auto;
+}
+
+.drugsList #drugsListTitle {
+	font-size: 30px;
+}
+
+.drugsList table {
+	font-family: Arial;
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 100%;
+	text-align: center;
+}
+
+.drugsList td, th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 8px;
+}
+
+.drugsList tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+.drugsList #drugsListNote {
+	font-size: 22px;
+}
+
+.drugsListIssue {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	border: 4px solid rgba(0,0,0,0.24);
+	background: white;
+}
+
+.issueForm #issueFormLbl {
+	font-size: 32px;
+	color: #277582;
+	margin-left: 180px;
+}
+
+.issueForm #ifLabelTxt {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.issueForm #issueLabels {
+	font-size: 20px;
+}
+
+.issueForm textarea {
+	width: 100%;
+	font-size: 18px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	background: #f1f1f1;
+	text-align: justify;
+}
+
+.issueForm .submitBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.issueForm .clearBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* For the Table Row in View Drugs List Page */
+.createIssueForm {
+	width: 100%;
+}
+
+/*Issue Form Succes and Fail Pages*/
+.issueFormStatusS {
+	width: 500px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border-radius: 10px;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.issueFormStatusF {
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border-radius: 10px;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.issueStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.issueStatus #failLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+
+.issueStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.issueStatus #reasonsList {
+	font-size: 18px;
+}
+
+.buttonForm {
+	width: 1000px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+	background: #e0e0e0;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.docHomeButtons {
+	
+}
+
+.docHomeButtons button {
+	width: 1000px;
+	height: 60px;
+	overflow: hidden;
+	box-shadow: 5px 10px #bababa7;
+	/* I'm assuming its supposed to be #bababa without the 7 and also maybe 3px 6px looks better than 5 10*/
+	border-radius: 4px;
+	background-color: #404040;
+	border: 2px solid #ff9900;
+	color: #ff9900;
+	font-size: 24px;
+}
+
+.docHomeButtons button:hover {
+	background-color: #ff9900;
+	opacity: 0.8;
+	color: #404040;
+}
+
+.patHomeButtons {
+
+}
+
+.patHomeButtons button {
+	width: 1000px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 4px;
+	background-color: #404040;
+	border: 2px solid #ff9900;
+	color: #ff9900;
+	font-size: 24px;
+}
+
+.patHomeButtons button:hover {
+	background-color: #ff9900;
+	opacity: 0.8;
+	color: #404040;
+}
+
+/*Enquiry Page Stuff*/
+.enquiryPage {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+	background: white;
+}
+
+.enquiryForm #enquiryLbl {
+	font-size: 32px;
+	color: #277582;
+	margin-left: 273px;
+}
+
+.enquiryForm #enquiryTxt {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.enquiryForm #enquiryLabels {
+	font-size: 20px;
+}
+
+.enquiryForm .radio-inline {
+	display: block;
+	font-size: 18px;
+	line-height: 2;
+}
+
+.enquiryForm #eqLabels {
+	font-size: 18px;
+}
+
+.enquiryForm #userFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm #userLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm #userEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm #userPhone {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.enquiryForm textarea {
+	width: 100%;
+	font-size: 18px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	background: #f1f1f1;
+	text-align: justify;
+}
+
+.enquiryForm .submitBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.enquiryForm .clearBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* For the Table Row in View Drugs List Page */
+.createEnquiryForm {
+	width: 100%;
+}
+
+/*Issue Form Succes and Fail Pages*/
+.enquiryFormStatusS {
+	width: 500px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.enquiryFormStatusF {
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 45px;
+	background: white;
+	border-radius: 10px;
+	border: 4px solid rgba(0,0,0,0.24);
+}
+
+.enquiryStatus #successLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.enquiryStatus #failLbl {
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+
+.enquiryStatus #statusPText {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.enquiryStatus #reasonsList {
+	font-size: 18px;
+}
+
+/* Doctor Settings Page Style*/
+.docEdit {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+	background: white;
+}
+
+.docForm #editLbl {
+	font-size: 32px;
+	color: #277582;
+	margin-left: 250px;
+}
+
+.docForm #editTxt {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.docForm #forgotTxt {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.docForm #editLabels {
+	font-size: 24px;
+}
+
+.docForm .radio-inline {
+	display: block;
+	font-size: 18px;
+	line-height: 2;
+}
+
+.docForm #docFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.docForm #docLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.docForm #docEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.docForm #docPhone {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.docForm #docPass {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.docForm #docID {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.docForm #docAddr {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.docForm .updateBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.docForm .clearBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.docBtnTable {
+	width: 100%;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
+}
+
+/*just paste this code into a div and it centers every object inside to the center*/
+/*.containerCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}*/
+
+.patEdit {
+	width: 750px;
+	height: auto;
+	overflow: hidden;
+	margin: auto;
+	padding: 15px;
+	text-align: left;
+	border: 4px solid rgba(0,0,0,0.24);
+	background: white;
+}
+
+.patForm #editLbl {
+	font-size: 32px;
+	color: #277582;
+	margin-left: 250px;
+}
+
+.patForm #editTxt {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.patForm #forgotTxt {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.patForm #editLabels {
+	font-size: 24px;
+}
+
+.patForm .radio-inline {
+	display: block;
+	font-size: 18px;
+	line-height: 2;
+}
+
+.patForm #patFirstName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patLastName {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patEmail {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patPhone {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm #patAddr {
+	width: 50%;
+	height: 30px;
+	border: border-box;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+.patForm .updateBtn:hover {
+	color: white;
+	background-color: #4CAF50;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.patForm .clearBtn:hover {
+	color: white;
+	background-color: #f44336;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.patBtnTable {
+	width: 100%;
 }

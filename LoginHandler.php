@@ -1,17 +1,18 @@
 <?php
+session_start();
 
-$dbhost='localhost';
-$dbuser='site';
+$dbhost='db4free.net';
+$dbuser='siteuser';
 $dbpass='securepassword';
-$dbname='TeleHealth';
+$dbname='telehealth';
 
-$dbc = new mqsqli($dbhost, $dbuser, $dbpass, $dbname)
+$dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error);
 
-$username = $_POST['Email'];
-$password = $_POST['Pass'];
+$username = $_GET['Uname'];
+$password = $_GET['Pass'];
 
-$query = "SELECT * FROM 'Users' WHERE 'Email'='$username' AND 'Pass'='$password'";
+$query = "SELECT * FROM Users WHERE Email='$username' AND Pass=MD5('$password')";
 $result = mysqli_query($dbc, $query);
 
 if(mysqli_num_rows($result) == 1)
@@ -19,22 +20,31 @@ if(mysqli_num_rows($result) == 1)
     while($row = $result->fetch_assoc())
     {
         $firstname=$row['FirstName'];
-        $firstname=$row['FirstName'];
+        $lastname=$row['LastName'];
         $usertype=$row['UserType'];
+        $_SESSION["email"]=$username;
+        $_SESSION["FName"]=$firstname;
+        $_SESSION["LName"]=$lastname;
+        $_SESSION["LoggedIn"]=true;
+        $_SESSION["UserType"]=$usertype;
         if($usertype=="patient")
         {
-            include("PatientHome.html");
+            header("Location: PatientHome.php");
         }
         elseif($usertype=="doctor")
         {
-            include("DoctorHome.html");
+            $_SESSION["DocID"]=$row['DoctorID'];
+            $_SESSION["PhoneNo"]=$row['PhoneNo'];
+            header("Location: DoctorHome.php");
         }
             
     }
 }
 else
 {
-    echo "Incorrect Username or Password";
+    $_SESSION["Error"] = "Incorrect Username/Password";
+    // echo $_SESSION["Error"];
+    header("Location: LoginPage.php");
 }
 
 

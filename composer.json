@@ -1,0 +1,5 @@
+{
+    "require": {
+        "webeweb/fpdf-library": "^1.8"
+    }
+}

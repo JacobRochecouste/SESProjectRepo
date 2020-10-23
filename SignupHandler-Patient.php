@@ -1,29 +1,31 @@
 <?php
-
-$dbhost='localhost';
-$dbuser='site';
+session_start();
+$dbhost='db4free.net';
+$dbuser='siteuser';
 $dbpass='securepassword';
-$dbname='TeleHealth';
+$dbname='telehealth';
 
 $dbc = new mysqli($dbhost, $dbuser, $dbpass, $dbname)
 or die('Could not connect %s\n'. $dbc->connect_error);
 
-$firstname = $_POST['FirstName'];
-$lastname= $_POST['LastName'];
-$email= $_POST['Email'];
-$phoneno= $_POST['PhoneNo'];
-$address= $_POST['Address'];
-$pass= $_POST['Pass'];
+$firstname = $_GET['FirstName'];
+$lastname= $_GET['LastName'];
+$email= $_GET['Email'];
+$phoneno= $_GET['PhoneNo'];
+$address= $_GET['Address'];
+$pass= MD5($_GET['Password']);
 $type = 'patient';
 
-$query = "INSERT INTO Users (UserID, FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES (NULL, '$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', NULL)";
+$query = "INSERT INTO Users (FirstName, LastName, Email, PhoneNo, Address, Pass, UserType, DoctorID) VALUES ('$firstname', '$lastname', '$email', '$phoneno', '$address', '$pass', '$type', NULL)";
 if($dbc->query($query) === TRUE)
 {
-    echo "Sign Up Successful";
+    header("Location: Signup-Success.php");
+    //echo "<script>alert('Registration Successful');</script>";
 } 
 else 
 {
-    echo "Sign up Failed " . $dbc->error;    
+    $_SESSION["Error"] = "Sign Up Failure: Database is not responding";
+    header("Location: SignupPatientPage.php"); 
 }
 
 $dbc->close()
