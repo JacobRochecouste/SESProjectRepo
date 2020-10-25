@@ -17,7 +17,7 @@ Refer to the User Story Map (https://lucid.app/publicSegments/view/577f0566-b522
 - Doctors must be able to fill out medical subscriptions for patients, view available drugs for prescription to patients, and chat with patients in real time.
 
 - Both users must be able to update their details through changing their user settings, and reset their password.
-</p>.
+</p>
 
 ### Team Members
 Project Leader and Scrum Master - Jacob Rochecouste
