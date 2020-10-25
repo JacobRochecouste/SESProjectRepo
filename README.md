@@ -5,6 +5,7 @@
  This project is is an web application serving the purpose of an online medical healthcare system designed for use by patients and doctors.
 
 ## User Functions
+Refer to the User Story Map (https://lucid.app/publicSegments/view/577f0566-b522-486e-ad99-e45fc329764a/image.png) 
 
 - Two user types: Patients and Doctors that are accessed through registration and login forms
 - Patients must be able to book online consultations (normal or urgent) with doctors, find medical clinics near their location, and chat with doctors in real time.
